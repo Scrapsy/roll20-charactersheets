@@ -1,0 +1,1720 @@
+<table>
+    <tr>
+        <td>
+            <div class="general">
+                <table>
+                    <tr>
+                        <td>
+                            Name:
+                        </td>
+                        <td>
+                            <input type="text" name="attr_character_name" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Cabal:
+                        </td>
+                        <td>
+                            <input type="text" name="attr_cabal" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Current Objective:
+                        </td>
+                        <td>
+                            <input type="text" name="attr_objective"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Distinguising Characteristics:
+                        </td>
+                        <td>
+                            <input type="text" name="attr_characteristics"></textarea>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </td>
+        <td>
+            <div class="rational">
+                <table>
+                    <tr>
+                        <td>
+                            Rage:
+                        </td>
+                        <td>
+                            <input type="text" name="attr_rage" />
+                            <input type="checkbox" name="attr_rage_used" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Noble:
+                        </td>
+                        <td>
+                            <input type="text" name="attr_noble" />
+                            <input type="checkbox" name="attr_noble_used" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Fear:
+                        </td>
+                        <td>
+                            <input type="text" name="attr_fear" />
+                            <input type="checkbox" name="attr_fear_used" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Tied to:
+                        </td>
+                        <td>
+                            <select name="att_fear_tied_to">
+                                <option value="helplessness">Helplessness</option>
+                                <option value="isolation">Isolation</option>
+                                <option value="self">Self</option>
+                                <option value="unnatural">Unnatural</option>
+                                <option value="violence">Violence</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </td>
+    </tr>
+</table>
+<br />
+<table>
+    <tr>
+        <td>
+            <div class="contact">
+                <table>
+                    <tr>
+                        <td>
+                            <input class="sheet-short" type="text" name="attr_favorite_name" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="number" name="attr_favorite_value" />%
+                            <button type='roll' value='&{template:normal} {{name=@{favorite_name} (Favorite)}} {{roll=[[1d100]]}} {{value=[[@{favorite_value} + ?{Shift|0}]]}}' name='roll_favorite_check'></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Favorite (status)
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </td>
+        <td>
+            <div class="contact">
+                <table>
+                    <tr>
+                        <td>
+                            <input class="sheet-short" type="text" name="attr_guru_name" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="number" name="attr_guru_value" />%
+                            <button type='roll' value='&{template:normal} {{name=@{guru_name} (Guru)}} {{roll=[[1d100]]}} {{value=[[@{guru_value} + ?{Shift|0}]]}}' name='roll_guru_check'></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Guru (notice)
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </td>
+        <td>
+            <div class="contact">
+                <table>
+                    <tr>
+                        <td>
+                            <input class="sheet-short" type="text" name="attr_mentor_name" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="number" name="attr_mentor_value" />%
+                            <button type='roll' value='&{template:normal} {{name=@{mentor_name} (Mentor)}} {{roll=[[1d100]]}} {{value=[[@{mentor_value} + ?{Shift|0}]]}}' name='roll_mentor_check'></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Mentor (connect)
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </td>
+        <td>
+            <div class="contact">
+                <table>
+                    <tr>
+                        <td>
+                            <input class="sheet-short" type="text" name="attr_responsibility_name" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="number" name="attr_responsibility_value" />%
+                            <button type='roll' value='&{template:normal} {{name=@{responsibility_name} (Responsibility)}} {{roll=[[1d100]]}} {{value=[[@{responsibility_value} + ?{Shift|0}]]}}' name='roll_responsibility_check'></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Responsibility (knowledge)
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </td>
+        <td>
+            <div class="contact">
+                <table>
+                    <tr>
+                        <td>
+                            <input class="sheet-short" type="text" name="attr_protege_name" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="number" name="attr_protege_value" />%
+                            <button type='roll' value='&{template:normal} {{name=@{protege_name} (protege)}} {{roll=[[1d100]]}} {{value=[[@{protege_value} + ?{Shift|0}]]}}' name='roll_protege_check'></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Protégé (fitness)
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </td>
+    </tr>
+</table>
+<div class="sheet-contact-group">
+    <div class="sheet-tab-title">Close </div><input type="radio" name="attr_contact_tab" class="sheet-tab sheet-contact-tab1" value="1" checked="checked" />
+    <div class="sheet-tab-title">Favorite </div><input type="radio" name="attr_contact_tab" class="sheet-tab sheet-contact-tab2" value="2" />
+    <div class="sheet-tab-title">Guru </div><input type="radio" name="attr_contact_tab" class="sheet-tab sheet-contact-tab3" value="3" />
+    <div class="sheet-tab-title">Mentor </div><input type="radio" name="attr_contact_tab" class="sheet-tab sheet-contact-tab4" value="4" />
+    <div class="sheet-tab-title">Responsibility </div><input type="radio" name="attr_contact_tab" class="sheet-tab sheet-contact-tab5" value="5" />
+    <div class="sheet-tab-title">Protégé </div><input type="radio" name="attr_contact_tab" class="sheet-tab sheet-contact-tab6" value="6" />
+    <div class="sheet-contact-tab sheet-contact-tab2">
+        Favorite, Additional information:
+        <textarea rows=1 name="attr_favorite_additional_notes"></textarea>
+    </div>
+    <div class="sheet-contact-tab sheet-contact-tab3">
+        Guru, Additional information:
+        <textarea rows=1 name="attr_guru_additional_notes"></textarea>
+    </div>
+    <div class="sheet-contact-tab sheet-contact-tab4">
+        Mentor, Additional information:
+        <textarea rows=1 name="attr_mentor_additional_notes"></textarea>
+    </div>
+    <div class="sheet-contact-tab sheet-contact-tab5">
+        Responsibility, Additional information:
+        <textarea rows=1 name="attr_responsibility_additional_notes"></textarea>
+    </div>
+    <div class="sheet-contact-tab sheet-contact-tab6">
+        Protégé, Additional information:
+        <textarea rows=1 name="attr_protege_additional_notes"></textarea>
+    </div>
+</div>
+<br />
+<div class="personality">
+    <table>
+        <tr>
+            <td>
+                Helplessness
+            </td>
+            <td>
+                <div class="scale">
+                    <table>
+                        <tr>
+                            <td>
+                                Fitness
+                            </td>
+                            <td>
+                                60
+                            </td>
+                            <td>
+                                55
+                            </td>
+                            <td>
+                                50
+                            </td>
+                            <td>
+                                45
+                            </td>
+                            <td>
+                                40
+                            </td>
+                            <td>
+                                35
+                            </td>
+                            <td>
+                                30
+                            </td>
+                            <td>
+                                25
+                            </td>
+                            <td>
+                                20
+                            </td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            </td>
+                            <td>
+                                <input type="checkbox" name="attr_helplessness_1" />
+                            </td>
+                            <td>
+                                <input type="checkbox" name="attr_helplessness_2" />
+                            </td>
+                            <td>
+                                <input type="checkbox" name="attr_helplessness_3" />
+                            </td>
+                            <td>
+                                <input type="checkbox" name="attr_helplessness_4" />
+                            </td>
+                            <td>
+                                <input type="checkbox" name="attr_helplessness_5" />
+                            </td>
+                            <td>
+                                <input type="checkbox" name="attr_helplessness_6" />
+                            </td>
+                            <td>
+                                <input type="checkbox" name="attr_helplessness_7" />
+                            </td>
+                            <td>
+                                <input type="checkbox" name="attr_helplessness_8" />
+                            </td>
+                            <td>
+                                <input type="checkbox" name="attr_helplessness_9" />
+                            </td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            </td>
+                            <td>
+                                20
+                            </td>
+                            <td>
+                                25
+                            </td>
+                            <td>
+                                30
+                            </td>
+                            <td>
+                                35
+                            </td>
+                            <td>
+                                40
+                            </td>
+                            <td>
+                                45
+                            </td>
+                            <td>
+                                50
+                            </td>
+                            <td>
+                                55
+                            </td>
+                            <td>
+                                60
+                            </td>
+                            <td>
+                                Dodge
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+            <td>
+                <div class="failures">
+                    <table>
+                        <tr>
+                            <td>
+                                Failures
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="attr_helplessness_failure_1" />
+                                <input type="checkbox" name="attr_helplessness_failure_2" />
+                                <input type="checkbox" name="attr_helplessness_failure_3" />
+                                <input type="checkbox" name="attr_helplessness_failure_4" />
+                                <input type="checkbox" name="attr_helplessness_failure_5" />
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+            <td>
+                <table>
+                    <tr>
+                        <td>
+                            Defend with Status
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Attack with Connect
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Isolation
+            </td>
+            <td>
+                <div class="scale">
+                    <table>
+                        <tr>
+                            <td>
+                                Status
+                            </td>
+                            <td>
+                                60
+                            </td>
+                            <td>
+                                55
+                            </td>
+                            <td>
+                                50
+                            </td>
+                            <td>
+                                45
+                            </td>
+                            <td>
+                                40
+                            </td>
+                            <td>
+                                35
+                            </td>
+                            <td>
+                                30
+                            </td>
+                            <td>
+                                25
+                            </td>
+                            <td>
+                                20
+                            </td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            </td>
+                            <td>
+                                <input type="checkbox" name="attr_isolation_1" />
+                            </td>
+                            <td>
+                                <input type="checkbox" name="attr_isolation_2" />
+                            </td>
+                            <td>
+                                <input type="checkbox" name="attr_isolation_3" />
+                            </td>
+                            <td>
+                                <input type="checkbox" name="attr_isolation_4" />
+                            </td>
+                            <td>
+                                <input type="checkbox" name="attr_isolation_5" />
+                            </td>
+                            <td>
+                                <input type="checkbox" name="attr_isolation_6" />
+                            </td>
+                            <td>
+                                <input type="checkbox" name="attr_isolation_7" />
+                            </td>
+                            <td>
+                                <input type="checkbox" name="attr_isolation_8" />
+                            </td>
+                            <td>
+                                <input type="checkbox" name="attr_isolation_9" />
+                            </td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            </td>
+                            <td>
+                                20
+                            </td>
+                            <td>
+                                25
+                            </td>
+                            <td>
+                                30
+                            </td>
+                            <td>
+                                35
+                            </td>
+                            <td>
+                                40
+                            </td>
+                            <td>
+                                45
+                            </td>
+                            <td>
+                                50
+                            </td>
+                            <td>
+                                55
+                            </td>
+                            <td>
+                                60
+                            </td>
+                            <td>
+                                Pursuit
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+            <td>
+                <div class="failures">
+                    <table>
+                        <tr>
+                            <td>
+                                Failures
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="attr_isolation_failure_1" />
+                                <input type="checkbox" name="attr_isolation_failure_2" />
+                                <input type="checkbox" name="attr_isolation_failure_3" />
+                                <input type="checkbox" name="attr_isolation_failure_4" />
+                                <input type="checkbox" name="attr_isolation_failure_5" />
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+            <td>
+                <table>
+                    <tr>
+                        <td>
+                            Defend with Connect
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Attack with Status
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Self
+            </td>
+            <td>
+                <div class="scale">
+                    <table>
+                        <tr>
+                            <td>
+                                Knowledge
+                            </td>
+                            <td>
+                                60
+                            </td>
+                            <td>
+                                55
+                            </td>
+                            <td>
+                                50
+                            </td>
+                            <td>
+                                45
+                            </td>
+                            <td>
+                                40
+                            </td>
+                            <td>
+                                35
+                            </td>
+                            <td>
+                                30
+                            </td>
+                            <td>
+                                25
+                            </td>
+                            <td>
+                                20
+                            </td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            </td>
+                            <td>
+                                <input type="checkbox" name="attr_self_1" />
+                            </td>
+                            <td>
+                                <input type="checkbox" name="attr_self_2" />
+                            </td>
+                            <td>
+                                <input type="checkbox" name="attr_self_3" />
+                            </td>
+                            <td>
+                                <input type="checkbox" name="attr_self_4" />
+                            </td>
+                            <td>
+                                <input type="checkbox" name="attr_self_5" />
+                            </td>
+                            <td>
+                                <input type="checkbox" name="attr_self_6" />
+                            </td>
+                            <td>
+                                <input type="checkbox" name="attr_self_7" />
+                            </td>
+                            <td>
+                                <input type="checkbox" name="attr_self_8" />
+                            </td>
+                            <td>
+                                <input type="checkbox" name="attr_self_9" />
+                            </td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            </td>
+                            <td>
+                                20
+                            </td>
+                            <td>
+                                25
+                            </td>
+                            <td>
+                                30
+                            </td>
+                            <td>
+                                35
+                            </td>
+                            <td>
+                                40
+                            </td>
+                            <td>
+                                45
+                            </td>
+                            <td>
+                                50
+                            </td>
+                            <td>
+                                55
+                            </td>
+                            <td>
+                                60
+                            </td>
+                            <td>
+                                Lie
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+            <td>
+                <div class="failures">
+                    <table>
+                        <tr>
+                            <td>
+                                Failures
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="attr_self_failure_1" />
+                                <input type="checkbox" name="attr_self_failure_2" />
+                                <input type="checkbox" name="attr_self_failure_3" />
+                                <input type="checkbox" name="attr_self_failure_4" />
+                                <input type="checkbox" name="attr_self_failure_5" />
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+            <td>
+                <table>
+                    <tr>
+                        <td>
+                            Defend with Notice
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Attack with Knowledge
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Unnatural
+            </td>
+            <td>
+                <div class="scale">
+                    <table>
+                        <tr>
+                            <td>
+                                Notice
+                            </td>
+                            <td>
+                                60
+                            </td>
+                            <td>
+                                55
+                            </td>
+                            <td>
+                                50
+                            </td>
+                            <td>
+                                45
+                            </td>
+                            <td>
+                                40
+                            </td>
+                            <td>
+                                35
+                            </td>
+                            <td>
+                                30
+                            </td>
+                            <td>
+                                25
+                            </td>
+                            <td>
+                                20
+                            </td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            </td>
+                            <td>
+                                <input type="checkbox" name="attr_unnatural_1" />
+                            </td>
+                            <td>
+                                <input type="checkbox" name="attr_unnatural_2" />
+                            </td>
+                            <td>
+                                <input type="checkbox" name="attr_unnatural_3" />
+                            </td>
+                            <td>
+                                <input type="checkbox" name="attr_unnatural_4" />
+                            </td>
+                            <td>
+                                <input type="checkbox" name="attr_unnatural_5" />
+                            </td>
+                            <td>
+                                <input type="checkbox" name="attr_unnatural_6" />
+                            </td>
+                            <td>
+                                <input type="checkbox" name="attr_unnatural_7" />
+                            </td>
+                            <td>
+                                <input type="checkbox" name="attr_unnatural_8" />
+                            </td>
+                            <td>
+                                <input type="checkbox" name="attr_unnatural_9" />
+                            </td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            </td>
+                            <td>
+                                20
+                            </td>
+                            <td>
+                                25
+                            </td>
+                            <td>
+                                30
+                            </td>
+                            <td>
+                                35
+                            </td>
+                            <td>
+                                40
+                            </td>
+                            <td>
+                                45
+                            </td>
+                            <td>
+                                50
+                            </td>
+                            <td>
+                                55
+                            </td>
+                            <td>
+                                60
+                            </td>
+                            <td>
+                                Secrecy
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+            <td>
+                <div class="failures">
+                    <table>
+                        <tr>
+                            <td>
+                                Failures
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="attr_unnatural_failure_1" />
+                                <input type="checkbox" name="attr_unnatural_failure_2" />
+                                <input type="checkbox" name="attr_unnatural_failure_3" />
+                                <input type="checkbox" name="attr_unnatural_failure_4" />
+                                <input type="checkbox" name="attr_unnatural_failure_5" />
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+            <td>
+                <table>
+                    <tr>
+                        <td>
+                            Defend with Knowledge
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Attack with Secrecy
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Violence
+            </td>
+            <td>
+                <div class="scale">
+                    <table>
+                        <tr>
+                            <td>
+                                Connect
+                            </td>
+                            <td>
+                                60
+                            </td>
+                            <td>
+                                55
+                            </td>
+                            <td>
+                                50
+                            </td>
+                            <td>
+                                45
+                            </td>
+                            <td>
+                                40
+                            </td>
+                            <td>
+                                35
+                            </td>
+                            <td>
+                                30
+                            </td>
+                            <td>
+                                25
+                            </td>
+                            <td>
+                                20
+                            </td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            </td>
+                            <td>
+                                <input type="checkbox" name="attr_violence_1" />
+                            </td>
+                            <td>
+                                <input type="checkbox" name="attr_violence_2" />
+                            </td>
+                            <td>
+                                <input type="checkbox" name="attr_violence_3" />
+                            </td>
+                            <td>
+                                <input type="checkbox" name="attr_violence_4" />
+                            </td>
+                            <td>
+                                <input type="checkbox" name="attr_violence_5" />
+                            </td>
+                            <td>
+                                <input type="checkbox" name="attr_violence_6" />
+                            </td>
+                            <td>
+                                <input type="checkbox" name="attr_violence_7" />
+                            </td>
+                            <td>
+                                <input type="checkbox" name="attr_violence_8" />
+                            </td>
+                            <td>
+                                <input type="checkbox" name="attr_violence_9" />
+                            </td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            </td>
+                            <td>
+                                20
+                            </td>
+                            <td>
+                                25
+                            </td>
+                            <td>
+                                30
+                            </td>
+                            <td>
+                                35
+                            </td>
+                            <td>
+                                40
+                            </td>
+                            <td>
+                                45
+                            </td>
+                            <td>
+                                50
+                            </td>
+                            <td>
+                                55
+                            </td>
+                            <td>
+                                60
+                            </td>
+                            <td>
+                                Struggle
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+            <td>
+                <div class="failures">
+                    <table>
+                        <tr>
+                            <td>
+                                Failures
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="attr_violence_failure_1" />
+                                <input type="checkbox" name="attr_violence_failure_2" />
+                                <input type="checkbox" name="attr_violence_failure_3" />
+                                <input type="checkbox" name="attr_violence_failure_4" />
+                                <input type="checkbox" name="attr_violence_failure_5" />
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+            <td>
+                <table>
+                    <tr>
+                        <td>
+                            Defend with Fitness
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Attack with Struggle
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</div>
+<br />
+<div class="skills">
+    <table>
+        <tr>
+            <td>
+                <button type='roll' value='&{template:normal} {{name=Connect}} {{roll=[[1d100]]}} {{value=[[@{connect} + ?{Shift|0}]]}}' name='roll_connect_check'>
+                    Connect
+                </button>
+            </td>
+            <td>
+                <button type='roll' value='&{template:normal} {{name=Dodge}} {{roll=[[1d100]]}} {{value=[[@{dodge} + ?{Shift|0}]]}}' name='roll_dodge_check'>
+                    Dodge
+                </button>
+            </td>
+            <td>
+                <button type='roll' value='&{template:normal} {{name=Fitness}} {{roll=[[1d100]]}} {{value=[[@{fitness} + ?{Shift|0}]]}}' name='roll_fitness_check'>
+                    Fitness
+                </button>
+            </td>
+            <td>
+                <button type='roll' value='&{template:normal} {{name=Knowledge}} {{roll=[[1d100]]}} {{value=[[@{knowledge} + ?{Shift|0}]]}}' name='roll_knowledge_check'>
+                    Knowledge
+                </button>
+            </td>
+            <td>
+                <button type='roll' value='&{template:normal} {{name=Lie}} {{roll=[[1d100]]}} {{value=[[@{lie} + ?{Shift|0}]]}}' name='roll_lie_check'>
+                    Lie
+                </button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button type='roll' value='&{template:normal} {{name=Notice}} {{roll=[[1d100]]}} {{value=[[@{notice} + ?{Shift|0}]]}}' name='roll_notice_check'>
+                    Notice
+                </button>
+            </td>
+            <td>
+                <button type='roll' value='&{template:normal} {{name=Pursuit}} {{roll=[[1d100]]}} {{value=[[@{pursuit} + ?{Shift|0}]]}}' name='roll_pursuit_check'>
+                    Pursuit
+                </button>
+            </td>
+            <td>
+                <button type='roll' value='&{template:normal} {{name=Secrecy}} {{roll=[[1d100]]}} {{value=[[@{secrecy} + ?{Shift|0}]]}}' name='roll_secrecy_check'>
+                    Secrecy
+                </button>
+            </td>
+            <td>
+                <button type='roll' value='&{template:normal} {{name=Status}} {{roll=[[1d100]]}} {{value=[[@{status} + ?{Shift|0}]]}}' name='roll_status_check'>
+                    Status
+                </button>
+            </td>
+            <td>
+                <button type='roll' value='&{template:normal} {{name=Struggle}} {{roll=[[1d100]]}} {{value=[[@{struggle} + ?{Shift|0}]]}}' name='roll_struggle_check'>
+                    Struggle
+                </button>
+            </td>
+        </tr>
+    </table>
+</div>
+<br />
+<div>
+    Identities
+</div>
+<table>
+    <tr>
+        <td>
+            <div class="identity">
+                <table>
+                    <tr>
+                        <td>
+                            I'm a <input type="text" name="attr_identity_name_1" /><input type="number" name="attr_identity_value_1" />%
+                            <button type='roll' value='&{template:identity} {{character=@{character_name}}} {{name=@{identity_name_1}}} {{roll=[[1d100]]}} {{value=[[@{identity_value_1} + ?{Shift|0}]]}} {{ability=@{identity_substitutes_1}}} {{obsession=[[@{identity_obsession_1}]]}} {{feat_1=@{identity_feature_1_1}}} {{feat_2=@{identity_feature_1_2}}} {{suggestion=@{identity_suggestions_1}}}' name='roll_identity_1_check'></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Of course I can:
+                            <textarea name="attr_identity_suggestions_1" rows=2></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <table>
+                                <tr>
+                                    <td>
+                                        Substitutes for Ability:
+                                    </td>
+                                    <td>
+                                        <select name="attr_identity_substitutes_1">
+                                            <option value=" ">None</option>
+                                            <option value="connect">Connect</option>
+                                            <option value="dodge">Dodge</option>
+                                            <option value="fitness">Fitness</option>
+                                            <option value="knowledge">Knowledge</option>
+                                            <option value="lie">Lie</option>
+                                            <option value="notice">Notice</option>
+                                            <option value="pursuit">Pursuit</option>
+                                            <option value="secrecy">Secrecy</option>
+                                            <option value="status">Status</option>
+                                            <option value="struggle">Struggle</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Feature:
+                                    </td>
+                                    <td>
+                                        <input type="text" name="attr_identity_feature_1_1" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Feature:
+                                    </td>
+                                    <td>
+                                        <input type="text" name="attr_identity_feature_1_2" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Obsession:
+                            <input type="checkbox" name="attr_identity_obsession_1" value="1" />
+                            Experience:
+                            <input type="checkbox" name="attr_identity_experience_1" />
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="identity">
+                <table>
+                    <tr>
+                        <td>
+                            I'm a <input type="text" name="attr_identity_name_2" /><input type="number" name="attr_identity_value_2" />%
+                            <button type='roll' value='&{template:identity} {{character=@{character_name}}} {{name=@{identity_name_2}}} {{roll=[[1d100]]}} {{value=[[@{identity_value_2} + ?{Shift|0}]]}} {{ability=@{identity_substitutes_2}}} {{obsession=[[@{identity_obsession_2}]]}} {{feat_1=@{identity_feature_2_1}}} {{feat_2=@{identity_feature_2_2}}} {{suggestion=@{identity_suggestions_2}}}' name='roll_identity_2_check'></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Of course I can:
+                            <textarea name="attr_identity_suggestions_2" rows=2></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <table>
+                                <tr>
+                                    <td>
+                                        Substitutes for Ability:
+                                    </td>
+                                    <td>
+                                        <select name="attr_identity_substitutes_2">
+                                            <option value=" ">None</option>
+                                            <option value="connect">Connect</option>
+                                            <option value="dodge">Dodge</option>
+                                            <option value="fitness">Fitness</option>
+                                            <option value="knowledge">Knowledge</option>
+                                            <option value="lie">Lie</option>
+                                            <option value="notice">Notice</option>
+                                            <option value="pursuit">Pursuit</option>
+                                            <option value="secrecy">Secrecy</option>
+                                            <option value="status">Status</option>
+                                            <option value="struggle">Struggle</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Feature:
+                                    </td>
+                                    <td>
+                                        <input type="text" name="attr_identity_feature_2_1" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Feature:
+                                    </td>
+                                    <td>
+                                        <input type="text" name="attr_identity_feature_2_2" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Obsession:
+                            <input type="checkbox" name="attr_identity_obsession_2" value="1" />
+                            Experience:
+                            <input type="checkbox" name="attr_identity_experience_2" />
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </td>
+        <td>
+            <div class="identity">
+                <table>
+                    <tr>
+                        <td>
+                            I'm a <input type="text" name="attr_identity_name_3" /><input type="number" name="attr_identity_value_3" />%
+                            <button type='roll' value='&{template:identity} {{character=@{character_name}}} {{name=@{identity_name_3}}} {{roll=[[1d100]]}} {{value=[[@{identity_value_3} + ?{Shift|0}]]}} {{ability=@{identity_substitutes_3}}} {{obsession=[[@{identity_obsession_3}]]}} {{feat_1=@{identity_feature_3_1}}} {{feat_2=@{identity_feature_3_2}}} {{suggestion=@{identity_suggestions_3}}}' name='roll_identity_3_check'></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Of course I can:
+                            <textarea name="attr_identity_suggestions_3" rows=2 ></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <table>
+                                <tr>
+                                    <td>
+                                        Substitutes for Ability:
+                                    </td>
+                                    <td>
+                                        <select name="attr_identity_substitutes_3">
+                                            <option value=" ">None</option>
+                                            <option value="connect">Connect</option>
+                                            <option value="dodge">Dodge</option>
+                                            <option value="fitness">Fitness</option>
+                                            <option value="knowledge">Knowledge</option>
+                                            <option value="lie">Lie</option>
+                                            <option value="notice">Notice</option>
+                                            <option value="pursuit">Pursuit</option>
+                                            <option value="secrecy">Secrecy</option>
+                                            <option value="status">Status</option>
+                                            <option value="struggle">Struggle</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Feature:
+                                    </td>
+                                    <td>
+                                        <input type="text" name="attr_identity_feature_3_1" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Feature:
+                                    </td>
+                                    <td>
+                                        <input type="text" name="attr_identity_feature_3_2" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Obsession:
+                            <input type="checkbox" name="attr_identity_obsession_3" value="1" />
+                            Experience:
+                            <input type="checkbox" name="attr_identity_experience_3" />
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="identity">
+                <table>
+                    <tr>
+                        <td>
+                            I'm a <input type="text" name="attr_identity_name_4" /><input type="number" name="attr_identity_value_4" />%
+                            <button type='roll' value='&{template:identity} {{character=@{character_name}}} {{name=@{identity_name_4}}} {{roll=[[1d100]]}} {{value=[[@{identity_value_4} + ?{Shift|0}]]}} {{ability=@{identity_substitutes_4}}} {{obsession=[[@{identity_obsession_4}]]}} {{feat_1=@{identity_feature_4_1}}} {{feat_2=@{identity_feature_4_2}}} {{suggestion=@{identity_suggestions_4}}}' name='roll_identity_4_check'></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Of course I can:
+                            <textarea name="attr_identity_suggestions_4" rows=2 ></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <table>
+                                <tr>
+                                    <td>
+                                        Substitutes for Ability:
+                                    </td>
+                                    <td>
+                                        <select name="attr_identity_substitutes_4">
+                                            <option value=" ">None</option>
+                                            <option value="connect">Connect</option>
+                                            <option value="dodge">Dodge</option>
+                                            <option value="fitness">Fitness</option>
+                                            <option value="knowledge">Knowledge</option>
+                                            <option value="lie">Lie</option>
+                                            <option value="notice">Notice</option>
+                                            <option value="pursuit">Pursuit</option>
+                                            <option value="secrecy">Secrecy</option>
+                                            <option value="status">Status</option>
+                                            <option value="struggle">Struggle</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Feature:
+                                    </td>
+                                    <td>
+                                        <input type="text" name="attr_identity_feature_4_1" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Feature:
+                                    </td>
+                                    <td>
+                                        <input type="text" name="attr_identity_feature_4_2" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Obsession:
+                            <input type="checkbox" name="attr_identity_obsession_4" value="1" />
+                            Experience:
+                            <input type="checkbox" name="attr_identity_experience_4" />
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </td>
+    </tr>
+</table>
+<br />
+<table>
+    <tr>
+        <td>
+            Wound threshold: <input type="number" name="attr_wound_threshold" value="50" />
+        </td>
+    </tr>
+</table>
+<input type="radio" name="attr_category" class="none_category" value="none" />None
+<input type="radio" name="attr_category" class="supernatural_category" value="supernatural" />Supernatural
+<input type="radio" name="attr_category" class="adept_category" value="adept" />Adept
+<input type="radio" name="attr_category" class="avatar_category" value="avatar" />Avatar
+<br />
+<div class="charges">
+    <table>
+        <tr>
+            <th>
+                Charges:
+            </th>
+        </tr>
+        <tr>
+            <td>
+                Minor: <input type="number" name="attr_minor_charges" />
+                Significant: <input type="number" name="attr_significant_charges" />
+                Major: <input type="number" name="attr_major_charges" />
+            </td>
+        </tr>
+    </table>
+</div>
+<div id="supernatural_category">
+    <table>
+        <tr>
+            <td>
+                00823
+            </td>
+            <td>
+                <table>
+                    <tr>
+                        <td>
+                            a. Percentage <input type="number" name="attr_supernatural_value" />%
+                            <button type='roll' value='&{template:normal} {{name=@{supernatural_ability}}} {{roll=[[1d100]]}} {{value=[[@{supernatural_value} + ?{Shift|0}]]}}' name='roll_supernatural_check'></button>
+                            <input type="checkbox" name="attr_supernatural_experience" />
+                        </td>
+                        <td>
+                            For official use only ST-0-LZ3
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                1. Supernatural Ability <input type="text" name="attr_supernatural_ability" />
+            </td>
+            <td>
+                <table>
+                    <tr>
+                        <td>
+                            2a.
+                        </td>
+                        <td>
+                            <input type="checkbox" name="attr_supernatural_vague" /> Vague
+                        </td>
+                        <td>
+                            <input type="checkbox" name="attr_supernatural_specific" /> Specific
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            2b.
+                        </td>
+                        <td>
+                            <input type="checkbox" name="attr_supernatural_harm" /> Harm
+                        </td>
+                        <td>
+                            <input type="checkbox" name="attr_supernatural_information" /> Information
+                        </td>
+                        <td>
+                            <input type="checkbox" name="attr_supernatural_protection" /> Protection
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            3.
+                        </td>
+                        <td>
+                            <input type="checkbox" name="attr_supernatural_influence" /> Influence
+                        </td>
+                        <td>
+                            <input type="checkbox" name="attr_supernatural_versatility" /> Versatility
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <div>
+        4. Notes
+    </div>
+    <div class="textarea">
+        <textarea rows=1 name="attr_supernatural_notes" rows="1" cols="20"></textarea>
+    </div>
+    <div>Form <b>Supernatural 3</b> permission to photocopy for personal use</div>
+</div>
+<div id="adept_category" class="hidden">
+    <table>
+        <tr>
+            <td>
+                56070
+            </td>
+            <td>
+                1a. Adept School <input type="text" name="attr_adept_name" />
+            </td>
+            <td>
+                1b. Percentage <input type="number" name="attr_adept_value" />
+                <button type='roll' value='&{template:normal} {{name=@{adept_name}}} {{roll=[[1d100]]}} {{value=[[@{adept_value} + ?{Shift|0}]]}}' name='roll_adept_check'></button>
+                <input type="checkbox" name="attr_adept_experience" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                2a. Spell Name: <input type="text" name="attr_adept_spell_1_name" />
+            </td>
+            <td>
+                2b. Effect: <input type="text" name="attr_adept_spell_1_description" />
+            </td>
+            <td>
+                2c. Cost: <input type="number" name="attr_adept_spell_1_cost" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                3a. Spell Name: <input type="text" name="attr_adept_spell_2_name" />
+            </td>
+            <td>
+                3b. Effect: <input type="text" name="attr_adept_spell_2_description" />
+            </td>
+            <td>
+                3c. Cost: <input type="number" name="attr_adept_spell_2_cost" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                4a. Spell Name: <input type="text" name="attr_adept_spell_3_name" />
+            </td>
+            <td>
+                4b. Effect: <input type="text" name="attr_adept_spell_3_description" />
+            </td>
+            <td>
+                4c. Cost: <input type="number" name="attr_adept_spell_3_cost" />
+            </td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <td>
+                5. Taboos
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="textarea">
+                    <textarea rows=1 name="attr_adept_taboos"></textarea>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                6. Domain
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="textarea">
+                    <textarea rows=1 name="attr_adept_domain"></textarea>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                7a. Minor Charges
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="textarea">
+                    <textarea rows=1 name="attr_adept_minor"></textarea>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                7b. Significant Charges
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="textarea">
+                    <textarea rows=1 name="attr_adept_significant"></textarea>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                7c. Major Charges
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="textarea">
+                    <textarea rows=1 name="attr_adept_major"></textarea>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <div>
+        Form <b>Adept ATL-G 4MS</b> permission granted to photocopy for personal use
+    </div>
+</div>
+<div id="avatar_category" class="hidden">
+    <table>
+        <tr>
+            <td>
+                00386
+            </td>
+            <td>
+                1a. Archetype <input type="text" name="attr_avatar_archetype" />
+            </td>
+            <td>
+                1b. Percentage <input type="number" name="attr_avatar_value" />%
+                <button type='roll' value='&{template:normal} {{name=@{avatar_archetype}}} {{roll=[[1d100]]}} {{value=[[@{avatar_value} + ?{Shift|0}]]}}' name='roll_avatar_check'></button>
+                <input type="checkbox" name="attr_avatar_experience" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                2. Taboos <input type="text" name="attr_avatar_taboos" />
+            </td>
+            <td>
+                3. Symbols <input type="text" name="attr_avatar_symbols" />
+            </td>
+            <td>
+            </td>
+        </tr>
+    </table>
+    <div>4. Channels</div>
+    <div>1% - 50%</div>
+    <div class="textarea">
+        <textarea rows=1 name="attr_avatar_low_channel"></textarea>
+    </div>
+    <div>51% - 70%</div>
+    <div class="textarea">
+        <textarea rows=1 name="attr_avatar_mid_channel"></textarea>
+    </div>
+    <div>71% - 90%</div>
+    <div class="textarea">
+        <textarea rows=1 name="attr_avatar_high_channel"></textarea>
+    </div>
+    <div>91% +</div>
+    <div class="textarea">
+        <textarea rows=1 name="attr_avatar_top_channel"></textarea>
+    </div>
+    <div>5. Notes</div>
+    <div class="textarea">
+        <textarea rows=1 name="attr_avatar_notes"></textarea>
+    </div>
+</div>
+<br />
+Additional notes:
+<textarea rows=3 name="attr_notes"></textarea>
+<rolltemplate class="sheet-rolltemplate-flipflop">
+    Flipped value: <div class="flip">{{flip}}</div>
+</rolltemplate>
+<rolltemplate class="sheet-rolltemplate-identity">
+    <div>
+        <table>
+            <tr>
+                <th>
+                    <div class="bold">{{character}}</div> is a <div class="bold">{{name}}</div>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    Of course they can: <div class="bold">{{suggestion}}</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    They rolled: {{roll}} of {{value}} which is a <div class="bold">{{#rollLess() value roll}}failure{{/rollLess() value roll}}{{#^rollLess() value roll }}success{{/^rollLess() value roll }}</div> [Flip-flop](!reverse {{roll}})
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Substitutes for <div class="bold">{{ability}}</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Feature: <div class="bold">{{feat_1}}</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Feature: <div class="bold">{{feat_2}}</div>
+                </td>
+            </tr>
+            {{#^rollTotal() obsession 0}}
+            <tr>
+                <td>
+                    This is their obsession, allowing them to <div class="bold">Flip-Flop</div>!
+                </td>
+            </tr>
+            {{/^rollTotal() obsession 0}}
+        </table>
+    </div>
+</rolltemplate>
+<rolltemplate class="sheet-rolltemplate-normal">
+    <div>
+        <table>
+            <tr>
+                <th>
+                    {{name}}{{#substitutes}} substitutes {{substitutes}}{{/substitutes}}
+                </th>
+            </tr>
+            {{#^rollTotal() obsession 0}}
+            <tr>
+                <td>
+                    Is Obsession
+                </td>
+            </tr>
+            {{/^rollTotal() obsession 0}}
+            <tr>
+                <td>
+                    {{roll}} of {{value}} [Flip-flop](!reverse {{roll}})
+                </td>
+            </tr>
+            {{#^rollLess() value roll }}
+            <tr>
+                <td>
+                    Success
+                </td>
+            </tr>
+            {{/^rollLess() value roll}}
+            {{#rollLess() value roll}}
+            <tr>
+                <td>
+                    Failure
+                </td>
+            </tr>
+            {{/rollLess() value roll}}
+        </table>
+    </div>
+</rolltemplate>
+<script type="text/worker">
+on("change:helplessness_1 change:helplessness_2 change:helplessness_3 change:helplessness_4 change:helplessness_5 change:helplessness_6 change:helplessness_7 change:helplessness_8 change:helplessness_9 change:isolation_1 change:isolation_2 change:isolation_3 change:isolation_4 change:isolation_5 change:isolation_6 change:isolation_7 change:isolation_8 change:isolation_9 change:self_1 change:self_2 change:self_3 change:self_4 change:self_5 change:self_6 change:self_7 change:self_8 change:self_9 change:unnatural_1 change:unnatural_2 change:unnatural_3 change:unnatural_4 change:unnatural_5 change:unnatural_6 change:unnatural_7 change:unnatural_8 change:unnatural_9 change:violence_1 change:violence_2 change:violence_3 change:violence_4 change:violence_5 change:violence_6 change:violence_7 change:violence_8 change:violence_9", function(event) {
+    var name = event.sourceAttribute;
+    var step = parseInt(name.substr(name.length - 1, name.length));
+    var setting = event.newValue;
+    name = name.substr(0, name.length - 1);
+    var payload = {};
+    for (var i = 1; i <= 9; i++) {
+        if (i < step) {
+            payload[name + i] = "on";
+        } else if (i === step) {
+            payload[name + i] = setting;
+        } else {
+            payload[name + i] = 0;
+        }
+    }
+    if (setting === "0") {
+        step--;
+    }
+    
+    var top_value = 65 - (step * 5);
+    var bottom_value = 15 + (step * 5);
+    var attributes = {
+        helplessness_: ["fitness", "dodge"],
+        isolation_: ["status", "pursuit"],
+        self_: ["knowledge", "lie"],
+        unnatural_: ["notice", "secrecy"],
+        violence_: ["connect", "struggle"]
+    }
+    var top_attribute = attributes[name][0];
+    var bottom_attribute = attributes[name][1];
+    
+    payload[top_attribute] = top_value;
+    payload[bottom_attribute] = bottom_value;
+    
+    setAttrs(payload, {silent: true});
+});
+
+on("change:helplessness_failure_1 change:helplessness_failure_2 change:helplessness_failure_3 change:helplessness_failure_4 change:helplessness_failure_5 change:isolation_failure_1 change:isolation_failure_2 change:isolation_failure_3 change:isolation_failure_4 change:isolation_failure_5 change:self_failure_1 change:self_failure_2 change:self_failure_3 change:self_failure_4 change:self_failure_5 change:unnatural_failure_1 change:unnatural_failure_2 change:unnatural_failure_3 change:unnatural_failure_4 change:unnatural_failure_5 change:violence_failure_1 change:violence_failure_2 change:violence_failure_3 change:violence_failure_4 change:violence_failure_5", function (event) {
+   var name = event.sourceAttribute;
+   var setting = event.newValue;
+   var step = parseInt(name.substr(name.length - 1, name.length));
+   name = name.substr(0, name.length - "_failure_X".length);
+   var payload = {};
+   for (var i = 1; i <= 5; i++) {
+        if (i < step) {
+            payload[name + "_failure_" + i] = "on";
+        } else if (i === step) {
+            payload[name + "_failure_" + i] = setting;
+        } else {
+            payload[name + "_failure_" + i] = 0;
+        }
+    }
+    if (setting === "on") {
+        payload[name + "_failure"] = step;
+    } else {
+        payload[name + "_failure"] = step - 1;
+    }
+    setAttrs(payload, {silent: true});
+});
+</script>

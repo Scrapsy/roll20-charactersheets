@@ -1,0 +1,269 @@
+.charsheet {
+    font-family: Lucida Console;
+}
+
+.charsheet input,.charsheet select {
+    background: none;
+}
+
+.charsheet textarea {
+    background: none;
+    height: unset;
+    width: 98%;
+}
+
+.charsheet .sheet-general {
+    padding: 5px;
+    margin: 2px;
+    background: #eef;
+    border: solid #ccc;
+    border-width: 1px 1px 3px 1px;
+}
+
+.charsheet .sheet-general td {
+    border: solid #ccc;
+    border-width: 0px 0px 1px 0px;
+}
+
+.charsheet .sheet-rational {
+    margin: 2px;
+}
+
+.charsheet .sheet-rational td {
+    border: solid #ccc;
+    border-width: 0px 0px 1px 0px;
+}
+
+.charsheet .sheet-contact {
+    background: #ffd;
+    border: solid #ccc;
+    border-width: 1px 1px 3px 1px;
+    text-align: center;
+    margin: 2px;
+    padding: 5px;
+    width: 120px;
+    height: 100px;
+}
+
+.charsheet .sheet-contact .sheet-short {
+    width: 116px;
+    
+}
+
+.charsheet div.sheet-contact-tab { display: none; }
+
+.charsheet input.sheet-contact-tab2:checked ~ div.sheet-contact-tab2,.charsheet input.sheet-contact-tab3:checked ~ div.sheet-contact-tab3,.charsheet input.sheet-contact-tab4:checked ~ div.sheet-contact-tab4,.charsheet input.sheet-contact-tab5:checked ~ div.sheet-contact-tab5,.charsheet input.sheet-contact-tab6:checked ~ div.sheet-contact-tab6
+{
+    display: block;
+}
+
+.charsheet .sheet-personality {
+    padding: 2px;
+    margin: 2px;
+}
+
+.charsheet .sheet-personality > table > tbody > tr {
+    border-bottom: 1px solid #eee;
+}
+
+.charsheet .sheet-scale {
+    margin: 2px;
+}
+
+.charsheet .sheet-scale > table {
+    width: 100%;
+}
+
+.charsheet .sheet-scale td {
+    padding: 0px 2px;
+    border-right: 1px solid #ccc;
+}
+
+.charsheet .sheet-scale td:nth-child(1) {
+    width: 85px;
+}
+
+.charsheet .sheet-scale td:nth-child(11) {
+    width: 85px;
+    text-align: right;
+    border-right: none;
+}
+
+.charsheet .sheet-scale tr:nth-child(2) {
+    background: #ddd;
+}
+
+.charsheet .sheet-failures {
+    margin: 0px 10px;
+    padding: 2px;
+}
+
+.charsheet .sheet-skills {
+    background: #fef;
+    border: solid #ccc;
+    border-width: 1px 2px 3px 1px;
+    padding: 4px;
+    display: inline-block;
+}
+
+.charsheet .sheet-identity {
+    background: #ffe;
+    border: solid #ccc;
+    border-width: 1px 1px 4px 1px;
+    padding: 3px;
+    margin: 3px;
+}
+
+.charsheet .sheet-contact-group {
+    padding: 3px;
+    margin: 3px;
+    background: #ffe;
+    border: solid #ccc;
+    border-width: 1px 1px 4px 1px;
+}
+
+.charsheet .sheet-tab-title {
+    display: inline-block;
+    padding: 0px 5px 0px 5px;
+    border-left: 1px solid #ccc;
+}
+
+.charsheet .sheet-contact-tab {
+    border-top: 1px solid #ccc;
+}
+
+.charsheet .sheet-identity td {
+    border-top: 1px solid #ccc;
+}
+
+.charsheet input.sheet-supernatural_category:not(:checked) ~ #sheet-supernatural_category,.charsheet input.sheet-adept_category:not(:checked) ~ #sheet-adept_category,.charsheet input.sheet-avatar_category:not(:checked) ~ #sheet-avatar_category {
+    display: none;
+}
+
+.charsheet #sheet-supernatural_category {
+    background: #eef;
+    padding: 4px;
+    margin: 2px;
+    border: solid #ccc;
+    border-width: 1px 2px 3px 1px;
+}
+
+.charsheet #sheet-supernatural_category td {
+    border: 1px solid #333;
+    padding: 2px;
+}
+
+.charsheet #sheet-adept_category {
+    background: #eef;
+    padding: 4px;
+    margin: 2px;
+    border: solid #ccc;
+    border-width: 1px 2px 3px 1px;
+}
+
+.charsheet #sheet-adept_category td {
+    border: 1px solid #333;
+    padding: 2px;
+}
+
+.charsheet #sheet-adept_category > table {
+    width: 100%;
+}
+
+.charsheet #sheet-avatar_category {
+    background: #eef;
+    padding: 4px;
+    margin: 2px;
+    border: solid #ccc;
+    border-width: 1px 2px 3px 1px;
+}
+
+.charsheet #sheet-avatar_category td,.charsheet #sheet-avatar_category > div {
+    border: 1px solid #333;
+    padding: 2px;
+}
+
+.charsheet .sheet-charges {
+    padding: 2px 5px;
+    background: #FDD;
+    margin: 5px;
+    border: solid #ccc;
+    border-width: 1px 1px 3px 1px;
+    display: inline-block;
+}
+
+.charsheet .sheet-charges th {
+    border-bottom: 1px solid #ccc;
+}
+
+
+
+.sheet-rolltemplate-normal table {
+    background: #fff;
+    border: solid #333;
+    border-width: 1px 2px 3px 1px;
+}
+
+.sheet-rolltemplate-normal th {
+    background: #faa;
+}
+
+.sheet-rolltemplate-normal td,.sheet-rolltemplate-normal th {
+    padding: 2px;
+}
+
+.sheet-rolltemplate-normal tr:nth-child(odd) {
+    background: #eee;
+}
+
+.sheet-rolltemplate-normal .inlinerollresult {
+    background: #333;
+    border: 2px solid #333;
+    color: #fff;
+}
+
+.sheet-rolltemplate-normal .fullcrit {
+    border: 2px solid #e33;
+}
+
+.sheet-rolltemplate-normal .fullfail {
+    border: 2px solid #3e3;
+}
+
+.sheet-rolltemplate-normal .fullcrit {
+    border: 2px solid #e33 !important;
+}
+
+.sheet-rolltemplate-normal .fullfail {
+    border: 2px solid #3e3 !important;
+}
+
+.sheet-rolltemplate-identity {
+    background: #ffe;
+    border: solid #333;
+    border-width: 1px 2px 3px 1px;
+}
+
+.sheet-rolltemplate-identity .sheet-bold {
+    display: inline-block;
+    font-weight: bold;
+}
+
+.sheet-rolltemplate-identity td {
+    border-top: 1px solid #ccc;
+    padding: 3px;
+}
+
+.sheet-rolltemplate-identity th {
+    background: #faa;
+    padding: 3px;
+}
+
+.sheet-rolltemplate-flipflop .sheet-flip {
+    display: inline-block;
+    color: #fff;
+    font-weight: bold;
+    background: #33d;
+    border: solid #33d;
+    border-width: 2px 5px;
+}

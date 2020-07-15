@@ -1,0 +1,234 @@
+.sheet-gm-only {
+    display: none;
+}
+
+input.sheet-options {
+    cursor: pointer;
+    opacity: 0;
+    position: relative;
+    width: 87px;
+    z-index: 9000;
+}
+
+input.sheet-options + span.sheet-attr {
+    background: white;
+    border-radius: 4px 4px 0px 0px;
+    border: 1px solid black;
+    cursor: pointer;
+    display: inline-block;
+    margin-left: -91px;
+    padding-left: 2px;
+    padding-right: 2px;
+    position: relative;
+    text-align: center;
+    width: 87px;
+}
+
+input.sheet-options:checked + span.sheet-attr {
+    border-bottom: 1px solid white;
+    color: #2A2D80;
+    text-shadow: 0px 0px 0px black;
+    z-index: 9099;
+}
+
+input.sheet-page1 ~ span.sheet-page-1,
+input.sheet-page2 ~ span.sheet-page-2,
+input.sheet-page3 ~ span.sheet-page-3,
+input.sheet-page4 ~ span.sheet-page-4,
+input.sheet-page5 ~ span.sheet-page-5,
+input.sheet-page6 ~ span.sheet-page-6,
+input.sheet-page7 ~ span.sheet-page-7,
+input.sheet-page8 ~ span.sheet-page-8 {
+    display: none;
+}
+
+input.sheet-page1:checked ~ span.sheet-page-1,
+input.sheet-page2:checked ~ span.sheet-page-2,
+input.sheet-page3:checked ~ span.sheet-page-3,
+input.sheet-page4:checked ~ span.sheet-page-4,
+input.sheet-page5:checked ~ span.sheet-page-5,
+input.sheet-page6:checked ~ span.sheet-page-6,
+input.sheet-page7:checked ~ span.sheet-page-7,
+input.sheet-page8:checked ~ span.sheet-page-8 {
+    display: inline-block;
+}
+
+div.sheet-separator {
+    border-top: 1px solid black;
+    display: grid;
+    margin-top: -1px;
+    padding-bottom: 10px;
+    width: 100%;
+}
+
+div.sheet-group {
+    display: inline-block;
+    float: left;
+    padding: 0px 0px 4px 4px;
+}
+
+.sheet-group {
+    font-size: 11px;
+}
+
+.sheet-title {
+    background: #666;
+    border-radius: 8px 8px 0px 0px;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+}
+
+.sheet-group th {
+    background: #dcc;
+    border: 1px solid black;
+}
+
+.sheet-group td {
+    border: 1px solid black;
+}
+
+.sheet-attributes td:nth-child(1),
+.sheet-characteristic td:nth-child(odd),
+.sheet-concept td:nth-child(odd),
+.sheet-insanity td:nth-child(1),
+.sheet-mecha-characteristics td:nth-child(1),
+.sheet-mecha-concept td:nth-child(1),
+.sheet-mecha-damage td:nth-child(1),
+.sheet-mecha-structure td:nth-child(1),
+.sheet-secondary-attributes td:nth-child(1),
+.sheet-skills td:nth-child(2),
+.sheet-skills-combat td:nth-child(2),
+.sheet-wounds td:nth-child(1) {
+    background: #e3e3e3;
+}
+
+.sheet-group th,
+.sheet-group td .sheet-table-header {
+    padding: 0px 5px;
+}
+
+.sheet-attribute-select,
+.sheet-expertise-select,
+.sheet-skills-combat select {
+    margin: 0;
+    padding: 0;
+}
+
+.sheet-attribute-select {
+    width: 60px;
+}
+
+.sheet-expertise-select,
+.sheet-skills-combat select {
+    width: 120px;
+}
+
+.sheet-group textarea {
+    width: 100%;
+    width: -moz-available;
+    width: -webkit-fill-available;
+    width: stretch;
+    height: 50px;
+    margin: 0;
+}
+
+.sheet-skills-special input[type=text]{
+    width: 180px;
+}
+
+.sheet-general-notes td {
+    width: 250px;
+}
+
+.sheet-general-notes textarea,
+.sheet-gear textarea,
+.sheet-personal textarea {
+    height: 250px;
+}
+
+.sheet-rolltemplate-framewerk,
+.sheet-rolltemplate-framewerkresult,
+.sheet-rolltemplate-framewerkspecial,
+.sheet-rolltemplate-framewerkinitiative,
+.sheet-rolltemplate-framewerksimple {
+    font: 11px;
+}
+
+.sheet-rolltemplate-framewerk,
+.sheet-rolltemplate-framewerkspecial,
+.sheet-rolltemplate-framewerkinitiative,
+.sheet-rolltemplate-framewerksimple {
+    margin-bottom: -7px;
+}
+
+.sheet-rolltemplate-framewerk td,
+.sheet-rolltemplate-framewerkresult td,
+.sheet-rolltemplate-framewerkspecial td,
+.sheet-rolltemplate-framewerkinitiative td,
+.sheet-rolltemplate-framewerksimple td {
+    background: #fff;
+    border: 1px solid black;
+    padding: 0px 4px;
+}
+
+.sheet-rolltemplate-framewerk td:nth-child(1),
+.sheet-rolltemplate-framewerkresult td:nth-child(1),
+.sheet-rolltemplate-framewerkspecial td:nth-child(1),
+.sheet-rolltemplate-framewerkinitiative td:nth-child(1),
+.sheet-rolltemplate-framewerksimple td:nth-child(1) {
+    background: #e3e3e3;
+}
+
+.sheet-rolltemplate-framewerk th,
+.sheet-rolltemplate-framewerkresult th,
+.sheet-rolltemplate-framewerkspecial th,
+.sheet-rolltemplate-framewerkinitiative th,
+.sheet-rolltemplate-framewerksimple th {
+    background: #dcc;
+    border: 1px solid black;
+    padding: 0px 4px;
+}
+
+.sheet-rolltemplate-framewerk .sheet-title,
+.sheet-rolltemplate-framewerkresult .sheet-title,
+.sheet-rolltemplate-framewerkspecial .sheet-title,
+.sheet-rolltemplate-framewerkinitiative .sheet-title,
+.sheet-rolltemplate-framewerksimple .sheet-title {
+    background: #666;
+    border-radius: 8px 8px 0px 0px;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+}
+
+.sheet-rolltemplate-framewerk .sheet-result,
+.sheet-rolltemplate-framewerkresult .sheet-result,
+.sheet-rolltemplate-framewerkspecial .sheet-result,
+.sheet-rolltemplate-framewerkinitiative .sheet-result {
+    background: #666;
+    border-radius: 0px 0px 8px 8px;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+}
+
+.sheet-rolltemplate-framewerk > div,
+.sheet-rolltemplate-framewerkresult > div,
+.sheet-rolltemplate-framewerkspecial > div,
+.sheet-rolltemplate-framewerkinitiative > div,
+.sheet-rolltemplate-framewerksimple > div {
+    margin: auto;
+    width: max-content;
+}
+
+.sheet-rolltemplate-framewerkinitiative .inlinerollresult {
+    background: none;
+    border: none !important;
+}

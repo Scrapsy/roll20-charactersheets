@@ -8,16 +8,16 @@ function get_safely(str, attr, def) {
 }
 
 on("chat:message", function(msg) {
-    if(msg.type == "general" && msg.content.indexOf("!calc") !== -1) {
-        bonus = get_safely(msg.content, 'bonus', 0);
-        bonusmod = get_safely(msg.content, 'bonusmod', 0);
-        origin=[];
-        for(var i=0; i<msg.inlinerolls.length;i++) {
+    if((msg.type == "general" || msg.type == "whisper") && msg.content.indexOf("!calc") !== -1) {
+        var bonus = get_safely(msg.content, 'bonus', 0);
+        var bonusmod = get_safely(msg.content, 'bonusmod', 0);
+        var origin=[];
+        for(let i=0; i<msg.inlinerolls.length;i++) {
             rolls=msg.inlinerolls[i];
-            for(var j=0; j<rolls.results.rolls.length;j++) {
+            for(let j=0; j<rolls.results.rolls.length;j++) {
                 dice=rolls.results.rolls[j];
                 if(dice.results!=undefined){
-                    for(var k=0; k<dice.results.length;k++) {
+                    for(let k=0; k<dice.results.length;k++) {
                         die=dice.results[k];
                         origin.push(die.v);
                     }
@@ -32,7 +32,7 @@ on("chat:message", function(msg) {
             last_num = 0;
             highest_combo = {};
             ladder = [];
-            for (var i=0; i<values.length; i++) {
+            for (let i=0; i<values.length; i++) {
                 num = values[i];
                 if (!(num in highest_combo)) {
                     highest_combo[num] = 0;
@@ -57,7 +57,7 @@ on("chat:message", function(msg) {
             }
 
             ladder_total = 0;
-            for (var i=0; i<ladder.length; i++) {
+            for (let i=0; i<ladder.length; i++) {
                 if (2 < ladder[i].length) {
                     ladder_total = ladder[i].reduce((a, b) => a + b, 0)
                 }
@@ -67,7 +67,11 @@ on("chat:message", function(msg) {
                 highest_value = ladder_total;
             }
         }
-        reply = "&{template:framewerkresult} {{roll="+origin+"}} {{best="+highest_value+"}} {{result="+(parseInt(highest_value)+parseInt(bonus)+parseInt(bonusmod))+"}}";
+        var prepend = "";
+        if (msg.type == "whisper") {
+            prepend = "/w GM ";
+        }
+        reply = prepend+"&{template:framewerkresult} {{roll="+origin+"}} {{best="+highest_value+"}} {{result="+(parseInt(highest_value)+parseInt(bonus)+parseInt(bonusmod))+"}}";
         sendChat(msg.who, reply);
     }
 });

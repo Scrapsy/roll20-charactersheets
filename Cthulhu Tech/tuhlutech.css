@@ -1,5 +1,16 @@
-.sheet-gm-only {
+.sheet-show-gm-tools {
+    display: block;
+    position: absolute;
+    top: 52px;
+    right: 43px;
+}
+
+.sheet-show-gm-tools ~ .sheet-gm-only {
     display: none;
+}
+
+.sheet-show-gm-tools:checked ~ .sheet-gm-only {
+    display: inherit;
 }
 
 input.sheet-options {

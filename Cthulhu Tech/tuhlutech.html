@@ -231,6 +231,20 @@
                 <button type="roll" name="roll_check" value="@{output_option} &{template:framewerk} {{name=@{character_name}}} {{attribute=Tenacity}} {{bonus=@{attribute_tenacity}}} {{dice=@{attribute_tenacity_feat}}} {{skill=Tenacity}} {{result=[[[[@{attribute_tenacity_feat}+?{Bonus Dice|0}]]d10]]}} {{bonusmod=?{Bonus Modifier|0}}} {{extradice=?{Bonus Dice|0}}} !calc"></button>
             </td>
         </tr>
+        <tr>
+            <th>
+                <div class='sheet-table-header'>
+                    Sum
+                </div>
+            </th>
+            <td>
+                <input class='sheet-table-text' type='number' name='attr_attribute_sum' placeholder='5' value='[[@{attribute_agility}+@{attribute_intellect}+@{attribute_perception}+@{attribute_presence}+@{attribute_strength}+@{attribute_tenacity}]]' disabled="true" />
+            </td>
+            <td>
+                <input class='sheet-table-text' type='number' name='attr_attribute_sum_feat' placeholder='2' value='[[@{attribute_agility_feat}+@{attribute_intellect_feat}+@{attribute_perception_feat}+@{attribute_presence_feat}+@{attribute_strength_feat}+@{attribute_tenacity_feat}]]' disabled="true" />
+            </td>
+            <td></td>
+        </tr>
     </table>
 </div>
 
@@ -358,7 +372,7 @@
                     </div>
                 </td>
                 <td>
-                    <input class='sheet-table-text' type='text' name='attr_characteristic_age' placeholder='Broad chin, Stirring eyes' />
+                    <input class='sheet-table-text' type='text' name='attr_characteristic_dist_feature' placeholder='Broad chin, Stirring eyes' />
                 </td>
             </tr>
                     <tr>
@@ -918,7 +932,7 @@
                     </div>
                 </td>
                 <td>
-                    <select class='sheet-expertise-select' name='attr_skill_business_level'>
+                    <select class='sheet-expertise-select' name='attr_skill_communications_level'>
                         <option value="0" selected="selected">(0) Unskilled</option>
                         <option value="1">(1) Student</option>
                         <option value="2">(2) Novice</option>
@@ -1133,7 +1147,7 @@
                 </td>
                 <td>
                     <div class='sheet-table-header'>
-                        Hobby 1
+                        Hobby
                     </div>
                 </td>
                 <td>
@@ -1159,42 +1173,7 @@
                     </select>
                 </td>
                 <td>
-                    <button type="roll" name="roll_check" value="@{output_option} &{template:framewerk} {{name=@{character_name}}} {{attribute=Special}} {{bonus=@{skill_hobby_1_attribute}}} {{dice=@{skill_hobby_1_level}}} {{skill=Hobby 1}} {{result=[[[[@{skill_hobby_1_level}+?{Bonus Dice|0}]]d10]]}} {{bonusmod=?{Bonus Modifier|0}}} {{extradice=?{Bonus Dice|0}}} !calc"></button>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <input type='checkbox' name='attr_skill_hobby_2_trained' />
-                </td>
-                <td>
-                    <div class='sheet-table-header'>
-                        Hobby 2
-                    </div>
-                </td>
-                <td>
-                    <div class='sheet-table-header'>
-                        <select name='attr_skill_hobby_2_attribute' class='sheet-attribute-select'>
-                            <option value="@{attribute_agility}" selected="selected">AGI</option>
-                            <option value="@{attribute_intellect}">INT</option>
-                            <option value="@{attribute_perception}">PER</option>
-                            <option value="@{attribute_presence}">PRE</option>
-                            <option value="@{attribute_strength}">STR</option>
-                            <option value="@{attribute_tenacity}">TEN</option>
-                        </select>
-                    </div>
-                </td>
-                <td>
-                    <select class='sheet-expertise-select' name='attr_skill_hobby_2_level'>
-                        <option value="0" selected="selected">(0) Unskilled</option>
-                        <option value="1">(1) Student</option>
-                        <option value="2">(2) Novice</option>
-                        <option value="3">(3) Adept</option>
-                        <option value="4">(4) Expert</option>
-                        <option value="5">(5) Master</option>
-                    </select>
-                </td>
-                <td>
-                    <button type="roll" name="roll_check" value="@{output_option} &{template:framewerk} {{name=@{character_name}}} {{attribute=Special}} {{bonus=@{skill_hobby_2_attribute}}} {{dice=@{skill_hobby_2_level}}} {{skill=Hobby 2}} {{result=[[[[@{skill_hobby_2_level}+?{Bonus Dice|0}]]d10]]}} {{bonusmod=?{Bonus Modifier|0}}} {{extradice=?{Bonus Dice|0}}} !calc"></button>
+                    <button type="roll" name="roll_check" value="@{output_option} &{template:framewerk} {{name=@{character_name}}} {{attribute=Special}} {{bonus=@{skill_hobby_1_attribute}}} {{dice=@{skill_hobby_1_level}}} {{skill=Hobby}} {{result=[[[[@{skill_hobby_1_level}+?{Bonus Dice|0}]]d10]]}} {{bonusmod=?{Bonus Modifier|0}}} {{extradice=?{Bonus Dice|0}}} !calc"></button>
                 </td>
             </tr>
             <tr>
@@ -1651,7 +1630,7 @@
                 </td>
                 <td>
                     <div class='sheet-table-header'>
-                        Pilot 1
+                        Pilot
                     </div>
                 </td>
                 <td>
@@ -1670,35 +1649,7 @@
                     </select>
                 </td>
                 <td>
-                    <button type="roll" name="roll_check" value="@{output_option} &{template:framewerk} {{name=@{character_name}}} {{attribute=Agility}} {{bonus=@{attribute_agility}}} {{dice=@{skill_pilot_1_level}}} {{skill=Pilot 1}} {{result=[[[[@{skill_pilot_1_level}+?{Bonus Dice|0}]]d10]]}} {{bonusmod=?{Bonus Modifier|0}}} {{extradice=?{Bonus Dice|0}}} !calc"></button>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <input type='checkbox' name='attr_skill_pilot_2_trained' />
-                </td>
-                <td>
-                    <div class='sheet-table-header'>
-                        Pilot 2
-                    </div>
-                </td>
-                <td>
-                    <div class='sheet-table-header'>
-                        AGI
-                    </div>
-                </td>
-                <td>
-                    <select class='sheet-expertise-select' name='attr_skill_pilot_2_level'>
-                        <option value="0" selected="selected">(0) Unskilled</option>
-                        <option value="1">(1) Student</option>
-                        <option value="2">(2) Novice</option>
-                        <option value="3">(3) Adept</option>
-                        <option value="4">(4) Expert</option>
-                        <option value="5">(5) Master</option>
-                    </select>
-                </td>
-                <td>
-                    <button type="roll" name="roll_check" value="@{output_option} &{template:framewerk} {{name=@{character_name}}} {{attribute=Agility}} {{bonus=@{attribute_agility}}} {{dice=@{skill_pilot_2_level}}} {{skill=Pilot 2}} {{result=[[[[@{skill_pilot_2_level}+?{Bonus Dice|0}]]d10]]}} {{bonusmod=?{Bonus Modifier|0}}} {{extradice=?{Bonus Dice|0}}} !calc"></button>
+                    <button type="roll" name="roll_check" value="@{output_option} &{template:framewerk} {{name=@{character_name}}} {{attribute=Agility}} {{bonus=@{attribute_agility}}} {{dice=@{skill_pilot_1_level}}} {{skill=Pilot}} {{result=[[[[@{skill_pilot_1_level}+?{Bonus Dice|0}]]d10]]}} {{bonusmod=?{Bonus Modifier|0}}} {{extradice=?{Bonus Dice|0}}} !calc"></button>
                 </td>
             </tr>
             <tr>
@@ -1707,7 +1658,7 @@
                 </td>
                 <td>
                     <div class='sheet-table-header'>
-                        Regional Knowledge 1
+                        Regional Knowledge
                     </div>
                 </td>
                 <td>
@@ -1726,63 +1677,7 @@
                     </select>
                 </td>
                 <td>
-                    <button type="roll" name="roll_check" value="@{output_option} &{template:framewerk} {{name=@{character_name}}} {{attribute=Intellect}} {{bonus=@{attribute_intellect}}} {{dice=@{skill_regional_knowledge_1_level}}} {{skill=Regional Knowledge 1}} {{result=[[[[@{skill_regional_knowledge_1_level}+?{Bonus Dice|0}]]d10]]}} {{bonusmod=?{Bonus Modifier|0}}} {{extradice=?{Bonus Dice|0}}} !calc"></button>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <input type='checkbox' name='attr_skill_regional_knowledge_2_trained' />
-                </td>
-                <td>
-                    <div class='sheet-table-header'>
-                        Regional Knowledge 2
-                    </div>
-                </td>
-                <td>
-                    <div class='sheet-table-header'>
-                        INT
-                    </div>
-                </td>
-                <td>
-                    <select class='sheet-expertise-select' name='attr_skill_regional_knowledge_2_level'>
-                        <option value="0" selected="selected">(0) Unskilled</option>
-                        <option value="1">(1) Student</option>
-                        <option value="2">(2) Novice</option>
-                        <option value="3">(3) Adept</option>
-                        <option value="4">(4) Expert</option>
-                        <option value="5">(5) Master</option>
-                    </select>
-                </td>
-                <td>
-                    <button type="roll" name="roll_check" value="@{output_option} &{template:framewerk} {{name=@{character_name}}} {{attribute=Intellect}} {{bonus=@{attribute_intellect}}} {{dice=@{skill_regional_knowledge_2_level}}} {{skill=Regional Knowledge 2}} {{result=[[[[@{skill_regional_knowledge_2_level}+?{Bonus Dice|0}]]d10]]}} {{bonusmod=?{Bonus Modifier|0}}} {{extradice=?{Bonus Dice|0}}} !calc"></button>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <input type='checkbox' name='attr_skill_regional_knowledge_3_trained' />
-                </td>
-                <td>
-                    <div class='sheet-table-header'>
-                        Regional Knowledge 3
-                    </div>
-                </td>
-                <td>
-                    <div class='sheet-table-header'>
-                        INT
-                    </div>
-                </td>
-                <td>
-                    <select class='sheet-expertise-select' name='attr_skill_regional_knowledge_3_level'>
-                        <option value="0" selected="selected">(0) Unskilled</option>
-                        <option value="1">(1) Student</option>
-                        <option value="2">(2) Novice</option>
-                        <option value="3">(3) Adept</option>
-                        <option value="4">(4) Expert</option>
-                        <option value="5">(5) Master</option>
-                    </select>
-                </td>
-                <td>
-                    <button type="roll" name="roll_check" value="@{output_option} &{template:framewerk} {{name=@{character_name}}} {{attribute=Intellect}} {{bonus=@{attribute_intellect}}} {{dice=@{skill_regional_knowledge_3_level}}} {{skill=Regional Knowledge 3}} {{result=[[[[@{skill_regional_knowledge_3_level}+?{Bonus Dice|0}]]d10]]}} {{bonusmod=?{Bonus Modifier|0}}} {{extradice=?{Bonus Dice|0}}} !calc"></button>
+                    <button type="roll" name="roll_check" value="@{output_option} &{template:framewerk} {{name=@{character_name}}} {{attribute=Intellect}} {{bonus=@{attribute_intellect}}} {{dice=@{skill_regional_knowledge_1_level}}} {{skill=Regional Knowledge}} {{result=[[[[@{skill_regional_knowledge_1_level}+?{Bonus Dice|0}]]d10]]}} {{bonusmod=?{Bonus Modifier|0}}} {{extradice=?{Bonus Dice|0}}} !calc"></button>
                 </td>
             </tr>
             <tr>
@@ -2071,7 +1966,7 @@
                 </td>
                 <td>
                     <div class='sheet-table-header'>
-                        Trivia 1
+                        Trivia
                     </div>
                 </td>
                 <td>
@@ -2090,35 +1985,24 @@
                     </select>
                 </td>
                 <td>
-                    <button type="roll" name="roll_check" value="@{output_option} &{template:framewerk} {{name=@{character_name}}} {{attribute=Intellect}} {{bonus=@{attribute_intellect}}} {{dice=@{skill_trivia_1_level}}} {{skill=Trivia 1}} {{result=[[[[@{skill_trivia_1_level}+?{Bonus Dice|0}]]d10]]}} {{bonusmod=?{Bonus Modifier|0}}} {{extradice=?{Bonus Dice|0}}} !calc"></button>
+                    <button type="roll" name="roll_check" value="@{output_option} &{template:framewerk} {{name=@{character_name}}} {{attribute=Intellect}} {{bonus=@{attribute_intellect}}} {{dice=@{skill_trivia_1_level}}} {{skill=Trivia}} {{result=[[[[@{skill_trivia_1_level}+?{Bonus Dice|0}]]d10]]}} {{bonusmod=?{Bonus Modifier|0}}} {{extradice=?{Bonus Dice|0}}} !calc"></button>
                 </td>
             </tr>
+        </table>
+    </div>
+    <div class='sheet-group sheet-skill-total'>
+        <div class='sheet-title'>
+            Skills
+        </div>
+        <table>
             <tr>
-                <td>
-                    <input type='checkbox' name='attr_skill_trivia_2_trained' />
-                </td>
-                <td>
+                <th>
                     <div class='sheet-table-header'>
-                        Trivia 2
+                        Total
                     </div>
-                </td>
+                </th>
                 <td>
-                    <div class='sheet-table-header'>
-                        INT
-                    </div>
-                </td>
-                <td>
-                    <select class='sheet-expertise-select' name='attr_skill_trivia_2_level'>
-                        <option value="0" selected="selected">(0) Unskilled</option>
-                        <option value="1">(1) Student</option>
-                        <option value="2">(2) Novice</option>
-                        <option value="3">(3) Adept</option>
-                        <option value="4">(4) Expert</option>
-                        <option value="5">(5) Master</option>
-                    </select>
-                </td>
-                <td>
-                    <button type="roll" name="roll_check" value="@{output_option} &{template:framewerk} {{name=@{character_name}}} {{attribute=Intellect}} {{bonus=@{attribute_intellect}}} {{dice=@{skill_trivia_2_level}}} {{skill=Trivia 2}} {{result=[[[[@{skill_trivia_2_level}+?{Bonus Dice|0}]]d10]]}} {{bonusmod=?{Bonus Modifier|0}}} {{extradice=?{Bonus Dice|0}}} !calc"></button>
+                    <input class='sheet-table-text' type='number' name='attr_skill_total' value='[[ [[@{skill_armed_fighting_level}]]+[[@{skill_appraisal_level}]]+[[@{skill_archanotechnician_level}]]+[[@{skill_archanotechengineering_level}]]+[[@{skill_armorer_level}]]+[[@{skill_artist_1_level}]]+[[@{skill_artist_2_level}]]+[[@{skill_athletics_level}]]+[[@{skill_bureaucracy_level}]]+[[@{skill_business_level}]]+[[@{skill_communications_level}]]+[[@{skill_computers_level}]]+[[@{skill_criminal_level}]]+[[@{skill_culture_level}]]+[[@{skill_demolitions_level}]]+[[@{skill_dodge_level}]]+[[@{skill_education_level}]]+[[@{skill_engineering_level}]]+[[@{skill_fighting_level}]]+[[@{skill_history_level}]]+[[@{skill_hobby_1_level}]]+[[@{skill_intimidate_level}]]+[[@{skill_language_1_level}]]+[[@{skill_language_2_level}]]+[[@{skill_language_3_level}]]+[[@{skill_language_4_level}]]+[[@{skill_larceny_level}]]+[[@{skill_law_enforcement_level}]]+[[@{skill_literacy_level}]]+[[@{skill_marksman_level}]]+[[@{skill_medicine_level}]]+[[@{skill_misdirect_level}]]+[[@{skill_munitions_level}]]+[[@{skill_observation_level}]]+[[@{skill_occult_level}]]+[[@{skill_performance_1_level}]]+[[@{skill_performance_2_level}]]+[[@{skill_persuade_level}]]+[[@{skill_pilot_1_level}]]+[[@{skill_regional_knowledge_1_level}]]+[[@{skill_research_level}]]+[[@{skill_savoir_faire_level}]]+[[@{skill_science:_earth_level}]]+[[@{skill_science:_life_level}]]+[[@{skill_science:_physical_level}]]+[[@{skill_security_level}]]+[[@{skill_seduction_level}]]+[[@{skill_support_weapons_level}]]+[[@{skill_surveillance_level}]]+[[@{skill_survival_level}]]+[[@{skill_technician_level}]]+[[@{skill_thrown_weapons_level}]]+[[@{skill_trivia_1_level}]] ]]' disabled="true" />
                 </td>
             </tr>
         </table>
@@ -2376,8 +2260,8 @@
                         <option value="{{attribute=Intellect}} {{bonus=@{attribute_intellect}}} {{dice=@{skill_engineering_level}}} {{skill=Engineering}} {{result=[[[[@{skill_engineering_level}+@{skill_specialization_0_expertise}]]d10]]}}">Engineering</option>
                         <option value="{{attribute=Agility}} {{bonus=@{attribute_agility}}} {{dice=@{skill_fighting_level}}} {{skill=Fighting}} {{result=[[[[@{skill_fighting_level}+@{skill_specialization_0_expertise}]]d10]]}}">Fighting</option>
                         <option value="{{attribute=Intellect}} {{bonus=@{attribute_intellect}}} {{dice=@{skill_history_level}}} {{skill=History}} {{result=[[[[@{skill_history_level}+@{skill_specialization_0_expertise}]]d10]]}}">History</option>
-                        <option value="{{attribute=Special}} {{bonus=@{skill_hobby_1_attribute}}} {{dice=@{skill_hobby_1_level}}} {{skill=Hobby 1}} {{result=[[[[@{skill_hobby_1_level}+@{skill_specialization_0_expertise}]]d10]]}}">Hobby 1</option>
-                        <option value="{{attribute=Special}} {{bonus=@{skill_hobby_2_attribute}}} {{dice=@{skill_hobby_2_level}}} {{skill=Hobby 2}} {{result=[[[[@{skill_hobby_2_level}+@{skill_specialization_0_expertise}]]d10]]}}">Hobby 2</option>
+                        <option value="{{attribute=Special}} {{bonus=@{skill_hobby_1_attribute}}} {{dice=@{skill_hobby_1_level}}} {{skill=Hobby}} {{result=[[[[@{skill_hobby_1_level}+@{skill_specialization_0_expertise}]]d10]]}}">Hobby</option>
+
                         <option value="{{attribute=Presence}} {{bonus=@{attribute_presence}}} {{dice=@{skill_intimidate_level}}} {{skill=Intimidate}} {{result=[[[[@{skill_intimidate_level}+@{skill_specialization_0_expertise}]]d10]]}}">Intimidate</option>
                         <option value="{{attribute=Intellect}} {{bonus=@{attribute_intellect}}} {{dice=@{skill_language_1_level}}} {{skill=Language 1}} {{result=[[[[@{skill_language_1_level}+@{skill_specialization_0_expertise}]]d10]]}}">Language 1</option>
                         <option value="{{attribute=Intellect}} {{bonus=@{attribute_intellect}}} {{dice=@{skill_language_2_level}}} {{skill=Language 2}} {{result=[[[[@{skill_language_2_level}+@{skill_specialization_0_expertise}]]d10]]}}">Language 2</option>
@@ -2395,11 +2279,9 @@
                         <option value="{{attribute=Presence}} {{bonus=@{attribute_presence}}} {{dice=@{skill_performance_1_level}}} {{skill=Performance 1}} {{result=[[[[@{skill_performance_1_level}+@{skill_specialization_0_expertise}]]d10]]}}">Performance 1</option>
                         <option value="{{attribute=Presence}} {{bonus=@{attribute_presence}}} {{dice=@{skill_performance_2_level}}} {{skill=Performance 2}} {{result=[[[[@{skill_performance_2_level}+@{skill_specialization_0_expertise}]]d10]]}}">Performance 2</option>
                         <option value="{{attribute=Presence}} {{bonus=@{attribute_presence}}} {{dice=@{skill_persuade_level}}} {{skill=Persuade}} {{result=[[[[@{skill_persuade_level}+@{skill_specialization_0_expertise}]]d10]]}}">Persuade</option>
-                        <option value="{{attribute=Agility}} {{bonus=@{attribute_agility}}} {{dice=@{skill_pilot_1_level}}} {{skill=Pilot 1}} {{result=[[[[@{skill_pilot_1_level}+@{skill_specialization_0_expertise}]]d10]]}}">Pilot 1</option>
-                        <option value="{{attribute=Agility}} {{bonus=@{attribute_agility}}} {{dice=@{skill_pilot_2_level}}} {{skill=Pilot 2}} {{result=[[[[@{skill_pilot_2_level}+@{skill_specialization_0_expertise}]]d10]]}}">Pilot 2</option>
-                        <option value="{{attribute=Intellect}} {{bonus=@{attribute_intellect}}} {{dice=@{skill_regional_knowledge_1_level}}} {{skill=Regional Knowledge 1}} {{result=[[[[@{skill_regional_knowledge_1_level}+@{skill_specialization_0_expertise}]]d10]]}}">Regional Knowledge 1</option>
-                        <option value="{{attribute=Intellect}} {{bonus=@{attribute_intellect}}} {{dice=@{skill_regional_knowledge_2_level}}} {{skill=Regional Knowledge 2}} {{result=[[[[@{skill_regional_knowledge_2_level}+@{skill_specialization_0_expertise}]]d10]]}}">Regional Knowledge 2</option>
-                        <option value="{{attribute=Intellect}} {{bonus=@{attribute_intellect}}} {{dice=@{skill_regional_knowledge_3_level}}} {{skill=Regional Knowledge 3}} {{result=[[[[@{skill_regional_knowledge_3_level}+@{skill_specialization_0_expertise}]]d10]]}}">Regional Knowledge 3</option>
+                        <option value="{{attribute=Agility}} {{bonus=@{attribute_agility}}} {{dice=@{skill_pilot_1_level}}} {{skill=Pilot}} {{result=[[[[@{skill_pilot_1_level}+@{skill_specialization_0_expertise}]]d10]]}}">Pilot</option>
+                        <option value="{{attribute=Intellect}} {{bonus=@{attribute_intellect}}} {{dice=@{skill_regional_knowledge_1_level}}} {{skill=Regional Knowledge}} {{result=[[[[@{skill_regional_knowledge_1_level}+@{skill_specialization_0_expertise}]]d10]]}}">Regional Knowledge</option>
+
                         <option value="{{attribute=Perception}} {{bonus=@{attribute_perception}}} {{dice=@{skill_research_level}}} {{skill=Research}} {{result=[[[[@{skill_research_level}+@{skill_specialization_0_expertise}]]d10]]}}">Research</option>
                         <option value="{{attribute=Intellect}} {{bonus=@{attribute_intellect}}} {{dice=@{skill_savoir_faire_level}}} {{skill=Savoir Faire}} {{result=[[[[@{skill_savoir_faire_level}+@{skill_specialization_0_expertise}]]d10]]}}">Savoir Faire</option>
                         <option value="{{attribute=Intellect}} {{bonus=@{attribute_intellect}}} {{dice=@{skill_science:_earth_level}}} {{skill=Science: Earth}} {{result=[[[[@{skill_science:_earth_level}+@{skill_specialization_0_expertise}]]d10]]}}">Science: Earth</option>
@@ -2412,8 +2294,7 @@
                         <option value="{{attribute=Tenacity}} {{bonus=@{attribute_tenacity}}} {{dice=@{skill_survival_level}}} {{skill=Survival}} {{result=[[[[@{skill_survival_level}+@{skill_specialization_0_expertise}]]d10]]}}">Survival</option>
                         <option value="{{attribute=Intellect}} {{bonus=@{attribute_intellect}}} {{dice=@{skill_technician_level}}} {{skill=Technician}} {{result=[[[[@{skill_technician_level}+@{skill_specialization_0_expertise}]]d10]]}}">Technician</option>
                         <option value="{{attribute=Agility}} {{bonus=@{attribute_agility}}} {{dice=@{skill_thrown_weapons_level}}} {{skill=Thrown Weapons}} {{result=[[[[@{skill_thrown_weapons_level}+@{skill_specialization_0_expertise}]]d10]]}}">Thrown Weapons</option>
-                        <option value="{{attribute=Intellect}} {{bonus=@{attribute_intellect}}} {{dice=@{skill_trivia_1_level}}} {{skill=Trivia 1}} {{result=[[[[@{skill_trivia_1_level}+@{skill_specialization_0_expertise}]]d10]]}}">Trivia 1</option>
-                        <option value="{{attribute=Intellect}} {{bonus=@{attribute_intellect}}} {{dice=@{skill_trivia_2_level}}} {{skill=Trivia 2}} {{result=[[[[@{skill_trivia_2_level}+@{skill_specialization_0_expertise}]]d10]]}}">Trivia 2</option>
+                        <option value="{{attribute=Intellect}} {{bonus=@{attribute_intellect}}} {{dice=@{skill_trivia_1_level}}} {{skill=Trivia}} {{result=[[[[@{skill_trivia_1_level}+@{skill_specialization_0_expertise}]]d10]]}}">Trivia</option>
                     </select>
                 </td>
                 <td>
@@ -3034,6 +2915,162 @@
                 </td>
                 <td>
                     <button type="roll" name="roll_rollspecialization" value="@{output_option} &{template:framewerkspecial} {{name=@{character_name}}} @{skill_specialization_8_skill} {{specialization=@{skill_specialization_8}}} {{bonusdice=@{skill_specialization_8_expertise}}} {{bonusmod=?{Bonus Modifier|0}}} {{extradice=?{Bonus Dice|0}}} !calc"></button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class='sheet-group sheet-hobbies'>
+        <div class='sheet-title'>
+            Hobbies
+        </div>
+        <table>
+            <tr>
+                <th>
+                    <div class='sheet-table-header'>
+                        Hobby titles
+                    </div>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <input class='sheet-table-text' type='text' name='attr_skill_specific_hobby_1' />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input class='sheet-table-text' type='text' name='attr_skill_specific_hobby_2' />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input class='sheet-table-text' type='text' name='attr_skill_specific_hobby_3' />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input class='sheet-table-text' type='text' name='attr_skill_specific_hobby_4' />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input class='sheet-table-text' type='text' name='attr_skill_specific_hobby_5' />
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class='sheet-group sheet-piloting'>
+        <div class='sheet-title'>
+            Piloting
+        </div>
+        <table>
+            <tr>
+                <th>
+                    <div class='sheet-table-header'>
+                        Vehicles
+                    </div>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <input class='sheet-table-text' type='text' name='attr_skill_specific_pilot_1' />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input class='sheet-table-text' type='text' name='attr_skill_specific_pilot_2' />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input class='sheet-table-text' type='text' name='attr_skill_specific_pilot_3' />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input class='sheet-table-text' type='text' name='attr_skill_specific_pilot_4' />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input class='sheet-table-text' type='text' name='attr_skill_specific_pilot_5' />
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class='sheet-group sheet-region'>
+        <div class='sheet-title'>
+            Regional Knowledge
+        </div>
+        <table>
+            <tr>
+                <th>
+                    <div class='sheet-table-header'>
+                        Region
+                    </div>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <input class='sheet-table-text' type='text' name='attr_skill_specific_region_1' />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input class='sheet-table-text' type='text' name='attr_skill_specific_region_2' />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input class='sheet-table-text' type='text' name='attr_skill_specific_region_3' />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input class='sheet-table-text' type='text' name='attr_skill_specific_region_4' />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input class='sheet-table-text' type='text' name='attr_skill_specific_region_5' />
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class='sheet-group sheet-trivia'>
+        <div class='sheet-title'>
+            Trivia
+        </div>
+        <table>
+            <tr>
+                <th>
+                    <div class='sheet-table-header'>
+                        Subject
+                    </div>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <input class='sheet-table-text' type='text' name='attr_skill_specific_trivia_1' />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input class='sheet-table-text' type='text' name='attr_skill_specific_trivia_2' />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input class='sheet-table-text' type='text' name='attr_skill_specific_trivia_3' />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input class='sheet-table-text' type='text' name='attr_skill_specific_trivia_4' />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input class='sheet-table-text' type='text' name='attr_skill_specific_trivia_5' />
                 </td>
             </tr>
         </table>
@@ -5575,7 +5612,7 @@
                 </th>
                 <th>
                     <div class='sheet-table-header'>
-                        What about your friends?
+                        What are your friends like?
                     </div>
                 </th>
             </tr>
@@ -5644,6 +5681,34 @@
                 </td>
                 <td>
                     <textarea class='sheet-table-text' type='text' name='attr_personal_trust'></textarea>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <div class='sheet-table-header'>
+                        What is your favorite past-time?
+                    </div>
+                </th>
+                <th>
+                    <div class='sheet-table-header'>
+                        While walking along in desert sand, you suddenly look down and see a tortoise crawling toward you. You reach down and flip it over onto its back. The tortoise lies there, its belly baking in the hot sun, beating its legs, trying to turn itself over, but it cannot do so without your help. You are not helping. Why?
+                    </div>
+                </th>
+                <th>
+                    <div class='sheet-table-header'>
+                        What is your religious beliefs?
+                    </div>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <textarea class='sheet-table-text' type='text' name='attr_personal_pasttime'></textarea>
+                </td>
+                <td>
+                    <textarea class='sheet-table-text' type='text' name='attr_personal_tortoise'></textarea>
+                </td>
+                <td>
+                    <textarea class='sheet-table-text' type='text' name='attr_personal_religious'></textarea>
                 </td>
             </tr>
         </table>

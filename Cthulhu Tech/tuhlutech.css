@@ -112,6 +112,9 @@ div.sheet-group {
 .sheet-secondary-attributes td:nth-child(1),
 .sheet-skills td:nth-child(2),
 .sheet-skills-combat td:nth-child(2),
+.sheet-tager-attributes td:nth-child(1),
+.sheet-tager-characteristics td:nth-child(1),
+.sheet-tager-secondary td:nth-child(1),
 .sheet-wounds td:nth-child(1) {
     background: #e3e3e3;
 }
@@ -239,7 +242,14 @@ div.sheet-group {
     width: max-content;
 }
 
+.sheet-rolltemplate-framewerk .inlinerollresult,
+.sheet-rolltemplate-framewerksimple .inlinerollresult,
 .sheet-rolltemplate-framewerkinitiative .inlinerollresult {
     background: none;
     border: none !important;
+}
+
+.sheet-rolltemplate-framewerkresult .sheet-table-danger-row td {
+    background: #ebb !important;
+    color: #003;
 }

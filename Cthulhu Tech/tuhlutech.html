@@ -577,6 +577,50 @@
                     <textarea class='sheet-table-text' type='text' name='attr_quality_special_3_description'></textarea>
                 </td>
             </tr>
+            <tr>
+                <td>
+                    <input class='sheet-table-text' type='text' name='attr_quality_asset_4_title' />
+                </td>
+                <td>
+                    <input class='sheet-table-text' type='text' name='attr_quality_drawback_4_title' />
+                </td>
+                <td>
+                    <input class='sheet-table-text' type='text' name='attr_quality_special_4_title' />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <textarea class='sheet-table-text' type='text' name='attr_quality_asset_4_description'></textarea>
+                </td>
+                <td>
+                    <textarea class='sheet-table-text' type='text' name='attr_quality_drawback_4_description'></textarea>
+                </td>
+                <td>
+                    <textarea class='sheet-table-text' type='text' name='attr_quality_special_4_description'></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input class='sheet-table-text' type='text' name='attr_quality_asset_5_title' />
+                </td>
+                <td>
+                    <input class='sheet-table-text' type='text' name='attr_quality_drawback_5_title' />
+                </td>
+                <td>
+                    <input class='sheet-table-text' type='text' name='attr_quality_special_5_title' />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <textarea class='sheet-table-text' type='text' name='attr_quality_asset_5_description'></textarea>
+                </td>
+                <td>
+                    <textarea class='sheet-table-text' type='text' name='attr_quality_drawback_5_description'></textarea>
+                </td>
+                <td>
+                    <textarea class='sheet-table-text' type='text' name='attr_quality_special_5_description'></textarea>
+                </td>
+            </tr>
         </table>
     </div>
     <div class='sheet-group sheet-insanity'>
@@ -4134,7 +4178,357 @@
     </div>
 </span>
 <span class='sheet-page-6'>
-    #TODO, Make the Tager page
+    <div class='sheet-group sheet-tager-characteristics'>
+        <div class='sheet-title'>
+            Tager Characteristics
+        </div>
+        <table>
+            <tr>
+                <td>
+                    <div class='sheet-table-header'>
+                        Manifestation
+                    </div>
+                </td>
+                <td>
+                    <input class='sheet-table-text' type='text' name='attr_tager_characteristics_manifestaion' />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class='sheet-table-header'>
+                        Regeneration
+                    </div>
+                </td>
+                <td>
+                    <input class='sheet-table-text' type='text' name='attr_tager_characteristics_regeneration' />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class='sheet-table-header'>
+                        Fear Factor
+                    </div>
+                </td>
+                <td>
+                    <input class='sheet-table-text' type='text' name='attr_tager_characteristics_fear_factor' />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class='sheet-table-header'>
+                        Description
+                    </div>
+                </td>
+                <td>
+                    <input class='sheet-table-text' type='text' name='attr_tager_characteristics_description' />
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class='sheet-group sheet-tager-attributes'>
+        <div class='sheet-title'>
+            Shifted Attribues
+        </div>
+        <table>
+            <tr>
+                <th>
+                    <div class='sheet-table-header'>
+                        Attribute
+                    </div>
+                </th>
+                <th>
+                    <div class='sheet-table-header'>
+                        Level
+                    </div>
+                </th>
+                <th>
+                    <div class='sheet-table-header'>
+                        Feat
+                    </div>
+                </th>
+                <th>
+                    <div class='sheet-table-header'>
+                        New Level
+                    </div>
+                </th>
+                <th>
+                    <div class='sheet-table-header'>
+                        New Feat
+                    </div>
+                </th>
+                <th>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <div class='sheet-table-header'>
+                        Agility
+                    </div>
+                </td>
+                <td>
+                    <input class='sheet-table-text' type='number' name='attr_tager_ability_agility' />
+                </td>
+                <td>
+                    <input class='sheet-table-text' type='number' name='attr_tager_ability_agility_feat' />
+                </td>
+                <td>
+                    <input class='sheet-table-text' type='number' name='attr_tager_ability_agility_calculated' value='[[@{tager_ability_agility}+@{attribute_agility}]]' disabled='true' />
+                </td>
+                <td>
+                    <input class='sheet-table-text' type='number' name='attr_tager_ability_agility_feat_calculated' value='[[@{tager_ability_agility_feat}+@{attribute_agility_feat}]]' disabled='true' />
+                </td>
+                <td>
+                    <button type="roll" name="roll_tager_agility" value="@{output_option} &{template:framewerk} {{name=@{character_name}}} {{attribute=Agility}} {{bonus=@{tager_ability_agility_calculated}}} {{dice=@{tager_ability_agility_feat_calculated}}} {{skill=Agility}} {{result=[[[[@{tager_ability_agility_feat_calculated}+?{Bonus Dice|0}]]d10]]}} {{bonusmod=?{Bonus Modifier|0}}} {{extradice=?{Bonus Dice|0}}} !calc"></button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class='sheet-table-header'>
+                        Perception
+                    </div>
+                </td>
+                <td>
+                    <input class='sheet-table-text' type='number' name='attr_tager_ability_perception' />
+                </td>
+                <td>
+                    <input class='sheet-table-text' type='number' name='attr_tager_ability_perception_feat' />
+                </td>
+                <td>
+                    <input class='sheet-table-text' type='number' name='attr_tager_ability_perception_calculated' value='[[@{tager_ability_perception}+@{attribute_perception}]]' disabled='true' />
+                </td>
+                <td>
+                    <input class='sheet-table-text' type='number' name='attr_tager_ability_perception_feat_calculated' value='[[@{tager_ability_perception_feat}+@{attribute_perception_feat}]]' disabled='true' />
+                </td>
+                <td>
+                    <button type="roll" name="roll_tager_perception" value="@{output_option} &{template:framewerk} {{name=@{character_name}}} {{attribute=Perception}} {{bonus=@{tager_ability_perception_calculated}}} {{dice=@{tager_ability_perception_feat_calculated}}} {{skill=Perception}} {{result=[[[[@{tager_ability_perception_feat_calculated}+?{Bonus Dice|0}]]d10]]}} {{bonusmod=?{Bonus Modifier|0}}} {{extradice=?{Bonus Dice|0}}} !calc"></button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class='sheet-table-header'>
+                        Strength
+                    </div>
+                </td>
+                <td>
+                    <input class='sheet-table-text' type='number' name='attr_tager_ability_strength' />
+                </td>
+                <td>
+                    <input class='sheet-table-text' type='number' name='attr_tager_ability_strength_feat' />
+                </td>
+                <td>
+                    <input class='sheet-table-text' type='number' name='attr_tager_ability_strength_calculated' value='[[@{tager_ability_strength}+@{attribute_strength}]]' disabled='true' />
+                </td>
+                <td>
+                    <input class='sheet-table-text' type='number' name='attr_tager_ability_strength_feat_calculated' value='[[@{tager_ability_strength_feat}+@{attribute_strength_feat}]]' disabled='true' />
+                </td>
+                <td>
+                    <button type="roll" name="roll_tager_strength" value="@{output_option} &{template:framewerk} {{name=@{character_name}}} {{attribute=Strength}} {{bonus=@{tager_ability_strength_calculated}}} {{dice=@{tager_ability_strength_feat_calculated}}} {{skill=Strength}} {{result=[[[[@{tager_ability_strength_feat_calculated}+?{Bonus Dice|0}]]d10]]}} {{bonusmod=?{Bonus Modifier|0}}} {{extradice=?{Bonus Dice|0}}} !calc"></button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class='sheet-table-header'>
+                        Tenacity
+                    </div>
+                </td>
+                <td>
+                    <input class='sheet-table-text' type='number' name='attr_tager_ability_tenacity' />
+                </td>
+                <td>
+                    <input class='sheet-table-text' type='number' name='attr_tager_ability_tenacity_feat' />
+                </td>
+                <td>
+                    <input class='sheet-table-text' type='number' name='attr_tager_ability_tenacity_calculated' value='[[@{tager_ability_tenacity}+@{attribute_tenacity}]]' disabled='true' />
+                </td>
+                <td>
+                    <input class='sheet-table-text' type='number' name='attr_tager_ability_tenacity_feat_calculated' value='[[@{tager_ability_tenacity_feat}+@{attribute_tenacity_feat}]]' disabled='true' />
+                </td>
+                <td>
+                    <button type="roll" name="roll_tager_tenacity" value="@{output_option} &{template:framewerk} {{name=@{character_name}}} {{attribute=Tenacity}} {{bonus=@{tager_ability_tenacity_calculated}}} {{dice=@{tager_ability_tenacity_feat_calculated}}} {{skill=Tenacity}} {{result=[[[[@{tager_ability_tenacity_feat_calculated}+?{Bonus Dice|0}]]d10]]}} {{bonusmod=?{Bonus Modifier|0}}} {{extradice=?{Bonus Dice|0}}} !calc"></button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class='sheet-group sheet-tager-secondary'>
+        <div class='sheet-title'>
+            Secondaries
+        </div>
+        <table>
+            <tr>
+                <th>
+                    <div class='sheet-table-header'>
+                        Attribute
+                    </div>
+                </th>
+                <th>
+                    <div class='sheet-table-header'>
+                        New Value
+                    </div>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <div class='sheet-table-header'>
+                        Actions
+                    </div>
+                </td>
+                <td>
+                    <input class='sheet-table-text' type='number' name='attr_tager_secondary_actions' />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class='sheet-table-header'>
+                        Movement
+                    </div>
+                </td>
+                <td>
+                    <input class='sheet-table-text' type='number' name='attr_tager_secondary_movement' />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class='sheet-table-header'>
+                        Reflex
+                    </div>
+                </td>
+                <td>
+                    <input class='sheet-table-text' type='number' name='attr_tager_secondary_reflex' />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class='sheet-table-header'>
+                        Vitality
+                    </div>
+                </td>
+                <td>
+                    <input class='sheet-table-text' type='number' name='attr_tager_secondary_vitality' />
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class='sheet-group sheet-wounds'>
+        <div class='sheet-title'>
+            Tager Wounds
+        </div>
+        <table>
+            <tr>
+                <th>
+                    <div class='sheet-table-header'>
+                        Level
+                    </div>
+                </th>
+                <th>
+                    <div class='sheet-table-header'>
+                        Vitality
+                    </div>
+                </th>
+                <th>
+                    <div class='sheet-table-header'>
+                        Current
+                    </div>
+                </th>
+                <th>
+                    <div class='sheet-table-header'>
+                        Effect
+                    </div>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <div class='sheet-table-header'>
+                        Flesh
+                    </div>
+                </td>
+                <td>
+                    <input class='sheet-table-text' type='number' name='attr_tager_wounds_flesh_vitality' value='[[@{tager_secondary_vitality}]]' disabled="true" />
+                </td>
+                <td>
+                    <input class='sheet-table-text' type='number' name='attr_tager_wounds_vitality_current' />
+                </td>
+                <td>
+                    <div class='sheet-table-header'>
+                        None
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class='sheet-table-header'>
+                        Light
+                    </div>
+                </td>
+                <td>
+                    <input class='sheet-table-text' type='number' name='attr_tager_wounds_light_vitality' value='[[@{tager_secondary_vitality}*2]]' disabled="true" />
+                </td>
+                <td>
+                    <input class='sheet-table-text' type='number' name='attr_tager_wounds_vitality_current' />
+                </td>
+                <td>
+                    <div class='sheet-table-header'>
+                        -1 Test Penalty
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class='sheet-table-header'>
+                        Moderate
+                    </div>
+                </td>
+                <td>
+                    <input class='sheet-table-text' type='number' name='attr_tager_wounds_moderate_vitality' value='[[@{tager_secondary_vitality}*3]]' disabled="true" />
+                </td>
+                <td>
+                    <input class='sheet-table-text' type='number' name='attr_tager_wounds_vitality_current' />
+                </td>
+                <td>
+                    <div class='sheet-table-header'>
+                        -3 Test Penalty/Half Move<br />
+                        Max. 2 Actions/Armor Half
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class='sheet-table-header'>
+                        Serious
+                    </div>
+                </td>
+                <td>
+                    <input class='sheet-table-text' type='number' name='attr_tager_wounds_serious_vitality' value='[[@{tager_secondary_vitality}*4]]' disabled="true" />
+                </td>
+                <td>
+                    <input class='sheet-table-text' type='number' name='attr_tager_wounds_vitality_current' />
+                </td>
+                <td>
+                    <div class='sheet-table-header'>
+                        -6 Test Penalty/Crawl<br />
+                        Max. 1 Action/Armor Gone
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class='sheet-table-header'>
+                        Death's Door
+                    </div>
+                </td>
+                <td>
+                    <input class='sheet-table-text' type='number' name='attr_tager_wounds_deaths_door_vitality' value='[[@{tager_secondary_vitality}*5]]' disabled="true" />
+                </td>
+                <td>
+                    <input class='sheet-table-text' type='number' name='attr_tager_wounds_vitality_current' />
+                </td>
+                <td>
+                    <div class='sheet-table-header'>
+                        Unconscious & Dying
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
 </span>
 <span class='sheet-page-7'>
     <div class='sheet-group sheet-mecha-characteristics'>
@@ -6014,6 +6408,20 @@
                     </div>
                 </td>
             </tr>
+            {{#risky}}
+            <tr class='sheet-table-danger-row'>
+                <td>
+                    <div class='sheet-table-header'>
+                        Risky
+                    </div>
+                </td>
+                <td>
+                    <div class='sheet-table-header'>
+                        {{risky}}
+                    </div>
+                </td>
+            </tr>
+            {{/risky}}
         </table>
         <div class='sheet-result'>
             {{result}}

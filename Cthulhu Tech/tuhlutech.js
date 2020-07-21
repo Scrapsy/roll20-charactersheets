@@ -10,8 +10,12 @@ function get_safely(str, attr, def) {
 on("chat:message", function(msg) {
     if((msg.type == "general" || msg.type == "whisper") && msg.content.indexOf("!calc") !== -1) {
         var bonus = get_safely(msg.content, 'bonus', 0);
+        if(bonus.includes('$[[')) {
+            bonus = bonus.replace('$[[', '').replace(']]', '');
+        }
         var bonusmod = get_safely(msg.content, 'bonusmod', 0);
         var origin=[];
+        var ones = 0;
         for(let i=0; i<msg.inlinerolls.length;i++) {
             rolls=msg.inlinerolls[i];
             for(let j=0; j<rolls.results.rolls.length;j++) {
@@ -19,12 +23,17 @@ on("chat:message", function(msg) {
                 if(dice.results!=undefined){
                     for(let k=0; k<dice.results.length;k++) {
                         die=dice.results[k];
-                        origin.push(die.v);
+                        if ('v' in die) {
+                            origin.push(die.v);
+                            if(die.v == 1) {
+                                ones = ones + 1;
+                            }
+                        }
                     }
                 }
             }
         }
-        values=[...origin];
+        var values=[...origin];
         values.sort(function(a, b){return b-a});
         highest_value=0;
         if (0 < values.length) {
@@ -71,7 +80,16 @@ on("chat:message", function(msg) {
         if (msg.type == "whisper") {
             prepend = "/w GM ";
         }
-        reply = prepend+"&{template:framewerkresult} {{roll="+origin+"}} {{best="+highest_value+"}} {{result="+(parseInt(highest_value)+parseInt(bonus)+parseInt(bonusmod))+"}}";
+
+        var template = "&{template:framewerkresult} ";
+        var roll = "{{roll="+origin+"}} ";
+        var best = "{{best="+highest_value+"}} ";
+        var result = "{{result="+(parseInt(highest_value)+parseInt(bonus)+parseInt(bonusmod))+"}} ";
+        var risky = "";
+        if ((values.length/2) <= ones) {
+            risky = "{{risky=True}} ";
+        }
+        var reply = prepend + template + roll + best + result + risky;
         sendChat(msg.who, reply);
     }
 });

@@ -10,6 +10,10 @@ The Chronicles of Darkness charactersheet is a modified version of the [Official
 
 Created for Cthulhu Tech (2007) heavily inspired by the second iteration of the [official sheets](https://www.yumpu.com/en/document/view/11616736/cthulhutech-player-sheets). This sheet also has support for the framewerk calculations.
 
+#### Mutant - Undergångens Arvtagare
+
+Created for Mutant - Undergångens Arvtagare (2001). Based on the official sheets.
+
 #### Unknown Armies
 
 Created for Unknown Armies (3rd edition). Has support for the flipflop mechanic.

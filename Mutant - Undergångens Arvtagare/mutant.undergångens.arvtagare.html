@@ -1,0 +1,1486 @@
+<input type='checkbox' name='attr_show_gm_tools' class='sheet-show-gm-tools' />
+
+<div class='sheet-gm-only'>
+    <div>
+        Output option
+        <select class='sheet-expertise-select' name='attr_output_option'>
+            <option value=" " selected="selected">Player</option>
+            <option value="/w GM ">NPC</option>
+        </select>
+    </div>
+    <div class='sheet-separator'></div>
+</div>
+
+<div class='sheet-group sheet-attributes'>
+    <div class='sheet-title'>
+        Grundegenskaper
+    </div>
+    <table>
+        <tr>
+            <td>
+                <div class='sheet-table-header'>
+                    Styrka - STY
+                </div>
+            </td>
+            <td>
+                <input class='sheet-table-text' type='number' name='attr_attribute_strength' />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class='sheet-table-header'>
+                    Fysik - FYS
+                </div>
+            </td>
+            <td>
+                <input class='sheet-table-text' type='number' name='attr_attribute_physics' />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class='sheet-table-header'>
+                    Storlek - STO
+                </div>
+            </td>
+            <td>
+                <input class='sheet-table-text' type='number' name='attr_attribute_size' />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class='sheet-table-header'>
+                    Smidighet - SMI
+                </div>
+            </td>
+            <td>
+                <input class='sheet-table-text' type='number' name='attr_attribute_dexterity' />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class='sheet-table-header'>
+                    Intelligens - INT
+                </div>
+            </td>
+            <td>
+                <input class='sheet-table-text' type='number' name='attr_attribute_intelligence' />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class='sheet-table-header'>
+                    Vilja - VIL
+                </div>
+            </td>
+            <td>
+                <input class='sheet-table-text' type='number' name='attr_attribute_will' />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class='sheet-table-header'>
+                    Personlighet - PER
+                </div>
+            </td>
+            <td>
+                <input class='sheet-table-text' type='number' name='attr_attribute_personality' />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class='sheet-table-header'>
+                    Initiativbonus - INB
+                </div>
+            </td>
+            <td>
+                <input class='sheet-table-text' type='number' name='attr_attribute_initiative' />
+            </td>
+        </tr>
+    </table>
+</div>
+
+<div class='sheet-group sheet-concept'>
+    <table>
+        <tr>
+            <td>
+                <div class='sheet-table-header'>
+                    Spelare
+                </div>
+            </td>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_concept_player' />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class='sheet-table-header'>
+                    Spelledare
+                </div>
+            </td>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_concept_gamemaster' />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class='sheet-table-header'>
+                    Namn
+                </div>
+            </td>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_character_name' />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class='sheet-table-header'>
+                    Klass
+                </div>
+            </td>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_concept_class' />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class='sheet-table-header'>
+                    Tidigare Yrke
+                </div>
+            </td>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_concept_former_occupation' />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class='sheet-table-header'>
+                    Hemort
+                </div>
+            </td>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_concept_home' />
+            </td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <td>
+                <div class='sheet-table-header'>
+                    Ålder
+                </div>
+            </td>
+            <td>
+                <input class='sheet-table-text' type='number' name='attr_concept_age' />
+            </td>
+            <td>
+                <div class='sheet-table-header'>
+                    Kön
+                </div>
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_concept_gender' />
+            </td>
+            <td>
+                <div class='sheet-table-header'>
+                    Längd
+                </div>
+            </td>
+            <td>
+                <input class='sheet-table-text' type='number' step="0.1" name='attr_concept_height' />
+            </td>
+            <td>
+                <div class='sheet-table-header'>
+                    Vikt
+                </div>
+            </td>
+            <td>
+                <input class='sheet-table-text' type='number' step="0.1" name='attr_concept_weight' />
+            </td>
+        </tr>
+    </table>
+</div>
+
+<div class='sheet-group sheet-concept'>
+    <div class='sheet-title'>
+        Utseende
+    </div>
+    <textarea class='sheet-table-text sheet-tall' type='text' name='attr_concept_description'></textarea>
+</div>
+
+<div class='sheet-group sheet-statistics'>
+    <table>
+        <tr>
+            <td>
+                <div class='sheet-table-header'>
+                    Traumatröskel
+                </div>
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_statistics_trauma' />
+            </td>
+            <td>
+                <div class='sheet-table-header'>
+                    Reaktionsvärde
+                </div>
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_statistics_reaction' />
+            </td>
+            <td>
+                <div class='sheet-table-header'>
+                    Förfly. Strid
+                </div>
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_statistics_movement_fight' />
+            </td>
+            <td>
+                <div class='sheet-table-header'>
+                    Kroppspoäng
+                </div>
+            </td>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class='sheet-table-header'>
+                    Skadebonus
+                </div>
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_statistics_damage_bonus' />
+            </td>
+            <td>
+                <div class='sheet-table-header'>
+                    Rykte
+                </div>
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_statistics_rumor' />
+            </td>
+            <td>
+                <div class='sheet-table-header'>
+                    Förfly. Springa
+                </div>
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_statistics_movement_run' />
+            </td>
+            <td>
+                <div class='sheet-table-header'>
+                    Max
+                </div>
+            </td>
+            <td>
+                <input class='sheet-table-text' type='number' name='attr_statistics_max_hp' />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class='sheet-table-header'>
+                    Bärförmåga
+                </div>
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_statistics_carry_capacity' />
+            </td>
+            <td>
+                <div class='sheet-table-header'>
+                    Status
+                </div>
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_statistics_status' />
+            </td>
+            <td>
+                <div class='sheet-table-header'>
+                    Förfly. Sprint
+                </div>
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_statistics_movement_sprint' />
+            </td>
+            <td>
+                <div class='sheet-table-header'>
+                    Nuvarande
+                </div>
+            </td>
+            <td>
+                <input class='sheet-table-text' type='number' name='attr_statistics_current_hp' />
+            </td>
+        </tr>
+    </table>
+</div>
+
+<div class='sheet-separator'></div>
+
+<div class='sheet-group sheet-natural-abilities'>
+    <div class='sheet-title'>
+        Naturliga Färdigheter
+    </div>
+    <table>
+        <tr>
+            <th>
+                <div class='sheet-table-header'>
+                    Namn
+                </div>
+            </th>
+            <th>
+                <div class='sheet-table-header'>
+                    Värde
+                </div>
+            </th>
+            <th></th>
+        </tr>
+        <tr>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_natural_ability_0' />
+            </td>
+            <td>
+                <input class='sheet-table-text' type='number' name='attr_natural_ability_0_value' />
+            </td>
+            <td>
+                <button type="roll" name="roll_natural_ability_0" value="@{output_option} &{template:standardroll} {{name=@{character_name}}} {{ability=@{natural_ability_0}}} {{value=@{natural_ability_0_value}}} {{roll=[[1d100]] }}"></button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_natural_ability_1' />
+            </td>
+            <td>
+                <input class='sheet-table-text' type='number' name='attr_natural_ability_1_value' />
+            </td>
+            <td>
+                <button type="roll" name="roll_natural_ability_1" value="@{output_option} &{template:standardroll} {{name=@{character_name}}} {{ability=@{natural_ability_1}}} {{value=@{natural_ability_1_value}}} {{roll=[[1d100]] }}"></button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_natural_ability_2' />
+            </td>
+            <td>
+                <input class='sheet-table-text' type='number' name='attr_natural_ability_2_value' />
+            </td>
+            <td>
+                <button type="roll" name="roll_natural_ability_2" value="@{output_option} &{template:standardroll} {{name=@{character_name}}} {{ability=@{natural_ability_2}}} {{value=@{natural_ability_2_value}}} {{roll=[[1d100]] }}"></button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_natural_ability_3' />
+            </td>
+            <td>
+                <input class='sheet-table-text' type='number' name='attr_natural_ability_3_value' />
+            </td>
+            <td>
+                <button type="roll" name="roll_natural_ability_3" value="@{output_option} &{template:standardroll} {{name=@{character_name}}} {{ability=@{natural_ability_3}}} {{value=@{natural_ability_3_value}}} {{roll=[[1d100]] }}"></button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_natural_ability_4' />
+            </td>
+            <td>
+                <input class='sheet-table-text' type='number' name='attr_natural_ability_4_value' />
+            </td>
+            <td>
+                <button type="roll" name="roll_natural_ability_4" value="@{output_option} &{template:standardroll} {{name=@{character_name}}} {{ability=@{natural_ability_4}}} {{value=@{natural_ability_4_value}}} {{roll=[[1d100]] }}"></button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_natural_ability_5' />
+            </td>
+            <td>
+                <input class='sheet-table-text' type='number' name='attr_natural_ability_5_value' />
+            </td>
+            <td>
+                <button type="roll" name="roll_natural_ability_5" value="@{output_option} &{template:standardroll} {{name=@{character_name}}} {{ability=@{natural_ability_5}}} {{value=@{natural_ability_5_value}}} {{roll=[[1d100]] }}"></button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_natural_ability_6' />
+            </td>
+            <td>
+                <input class='sheet-table-text' type='number' name='attr_natural_ability_6_value' />
+            </td>
+            <td>
+                <button type="roll" name="roll_natural_ability_6" value="@{output_option} &{template:standardroll} {{name=@{character_name}}} {{ability=@{natural_ability_6}}} {{value=@{natural_ability_6_value}}} {{roll=[[1d100]] }}"></button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_natural_ability_7' />
+            </td>
+            <td>
+                <input class='sheet-table-text' type='number' name='attr_natural_ability_7_value' />
+            </td>
+            <td>
+                <button type="roll" name="roll_natural_ability_7" value="@{output_option} &{template:standardroll} {{name=@{character_name}}} {{ability=@{natural_ability_7}}} {{value=@{natural_ability_7_value}}} {{roll=[[1d100]] }}"></button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_natural_ability_8' />
+            </td>
+            <td>
+                <input class='sheet-table-text' type='number' name='attr_natural_ability_8_value' />
+            </td>
+            <td>
+                <button type="roll" name="roll_natural_ability_8" value="@{output_option} &{template:standardroll} {{name=@{character_name}}} {{ability=@{natural_ability_8}}} {{value=@{natural_ability_8_value}}} {{roll=[[1d100]] }}"></button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_natural_ability_9' />
+            </td>
+            <td>
+                <input class='sheet-table-text' type='number' name='attr_natural_ability_9_value' />
+            </td>
+            <td>
+                <button type="roll" name="roll_natural_ability_9" value="@{output_option} &{template:standardroll} {{name=@{character_name}}} {{ability=@{natural_ability_9}}} {{value=@{natural_ability_9_value}}} {{roll=[[1d100]] }}"></button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_natural_ability_10' />
+            </td>
+            <td>
+                <input class='sheet-table-text' type='number' name='attr_natural_ability_10_value' />
+            </td>
+            <td>
+                <button type="roll" name="roll_natural_ability_10" value="@{output_option} &{template:standardroll} {{name=@{character_name}}} {{ability=@{natural_ability_10}}} {{value=@{natural_ability_10_value}}} {{roll=[[1d100]] }}"></button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_natural_ability_11' />
+            </td>
+            <td>
+                <input class='sheet-table-text' type='number' name='attr_natural_ability_11_value' />
+            </td>
+            <td>
+                <button type="roll" name="roll_natural_ability_11" value="@{output_option} &{template:standardroll} {{name=@{character_name}}} {{ability=@{natural_ability_11}}} {{value=@{natural_ability_11_value}}} {{roll=[[1d100]] }}"></button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_natural_ability_12' />
+            </td>
+            <td>
+                <input class='sheet-table-text' type='number' name='attr_natural_ability_12_value' />
+            </td>
+            <td>
+                <button type="roll" name="roll_natural_ability_12" value="@{output_option} &{template:standardroll} {{name=@{character_name}}} {{ability=@{natural_ability_12}}} {{value=@{natural_ability_12_value}}} {{roll=[[1d100]] }}"></button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_natural_ability_13' />
+            </td>
+            <td>
+                <input class='sheet-table-text' type='number' name='attr_natural_ability_13_value' />
+            </td>
+            <td>
+                <button type="roll" name="roll_natural_ability_13" value="@{output_option} &{template:standardroll} {{name=@{character_name}}} {{ability=@{natural_ability_13}}} {{value=@{natural_ability_13_value}}} {{roll=[[1d100]] }}"></button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_natural_ability_14' />
+            </td>
+            <td>
+                <input class='sheet-table-text' type='number' name='attr_natural_ability_14_value' />
+            </td>
+            <td>
+                <button type="roll" name="roll_natural_ability_14" value="@{output_option} &{template:standardroll} {{name=@{character_name}}} {{ability=@{natural_ability_14}}} {{value=@{natural_ability_14_value}}} {{roll=[[1d100]] }}"></button>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<div class='sheet-group sheet-practiced-abilities'>
+    <div class='sheet-title'>
+        Tränade Färdigheter
+    </div>
+    <table>
+        <tr>
+            <th>
+                <div class='sheet-table-header'>
+                    Namn
+                </div>
+            </th>
+            <th>
+                <div class='sheet-table-header'>
+                    Värde
+                </div>
+            </th>
+            <th></th>
+        </tr>
+        <tr>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_practiced_ability_0' />
+            </td>
+            <td>
+                <input class='sheet-table-text' type='number' name='attr_practiced_ability_0_value' />
+            </td>
+            <td>
+                <button type="roll" name="roll_practiced_ability_0" value="@{output_option} &{template:standardroll} {{name=@{character_name}}} {{ability=@{practiced_ability_0}}} {{value=@{practiced_ability_0_value}}} {{roll=[[1d100]] }}"></button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_practiced_ability_1' />
+            </td>
+            <td>
+                <input class='sheet-table-text' type='number' name='attr_practiced_ability_1_value' />
+            </td>
+            <td>
+                <button type="roll" name="roll_practiced_ability_1" value="@{output_option} &{template:standardroll} {{name=@{character_name}}} {{ability=@{practiced_ability_1}}} {{value=@{practiced_ability_1_value}}} {{roll=[[1d100]] }}"></button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_practiced_ability_2' />
+            </td>
+            <td>
+                <input class='sheet-table-text' type='number' name='attr_practiced_ability_2_value' />
+            </td>
+            <td>
+                <button type="roll" name="roll_practiced_ability_2" value="@{output_option} &{template:standardroll} {{name=@{character_name}}} {{ability=@{practiced_ability_2}}} {{value=@{practiced_ability_2_value}}} {{roll=[[1d100]] }}"></button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_practiced_ability_3' />
+            </td>
+            <td>
+                <input class='sheet-table-text' type='number' name='attr_practiced_ability_3_value' />
+            </td>
+            <td>
+                <button type="roll" name="roll_practiced_ability_3" value="@{output_option} &{template:standardroll} {{name=@{character_name}}} {{ability=@{practiced_ability_3}}} {{value=@{practiced_ability_3_value}}} {{roll=[[1d100]] }}"></button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_practiced_ability_4' />
+            </td>
+            <td>
+                <input class='sheet-table-text' type='number' name='attr_practiced_ability_4_value' />
+            </td>
+            <td>
+                <button type="roll" name="roll_practiced_ability_4" value="@{output_option} &{template:standardroll} {{name=@{character_name}}} {{ability=@{practiced_ability_4}}} {{value=@{practiced_ability_4_value}}} {{roll=[[1d100]] }}"></button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_practiced_ability_5' />
+            </td>
+            <td>
+                <input class='sheet-table-text' type='number' name='attr_practiced_ability_5_value' />
+            </td>
+            <td>
+                <button type="roll" name="roll_practiced_ability_5" value="@{output_option} &{template:standardroll} {{name=@{character_name}}} {{ability=@{practiced_ability_5}}} {{value=@{practiced_ability_5_value}}} {{roll=[[1d100]] }}"></button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_practiced_ability_6' />
+            </td>
+            <td>
+                <input class='sheet-table-text' type='number' name='attr_practiced_ability_6_value' />
+            </td>
+            <td>
+                <button type="roll" name="roll_practiced_ability_6" value="@{output_option} &{template:standardroll} {{name=@{character_name}}} {{ability=@{practiced_ability_6}}} {{value=@{practiced_ability_6_value}}} {{roll=[[1d100]] }}"></button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_practiced_ability_7' />
+            </td>
+            <td>
+                <input class='sheet-table-text' type='number' name='attr_practiced_ability_7_value' />
+            </td>
+            <td>
+                <button type="roll" name="roll_practiced_ability_7" value="@{output_option} &{template:standardroll} {{name=@{character_name}}} {{ability=@{practiced_ability_7}}} {{value=@{practiced_ability_7_value}}} {{roll=[[1d100]] }}"></button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_practiced_ability_8' />
+            </td>
+            <td>
+                <input class='sheet-table-text' type='number' name='attr_practiced_ability_8_value' />
+            </td>
+            <td>
+                <button type="roll" name="roll_practiced_ability_8" value="@{output_option} &{template:standardroll} {{name=@{character_name}}} {{ability=@{practiced_ability_8}}} {{value=@{practiced_ability_8_value}}} {{roll=[[1d100]] }}"></button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_practiced_ability_9' />
+            </td>
+            <td>
+                <input class='sheet-table-text' type='number' name='attr_practiced_ability_9_value' />
+            </td>
+            <td>
+                <button type="roll" name="roll_practiced_ability_9" value="@{output_option} &{template:standardroll} {{name=@{character_name}}} {{ability=@{practiced_ability_9}}} {{value=@{practiced_ability_9_value}}} {{roll=[[1d100]] }}"></button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_practiced_ability_10' />
+            </td>
+            <td>
+                <input class='sheet-table-text' type='number' name='attr_practiced_ability_10_value' />
+            </td>
+            <td>
+                <button type="roll" name="roll_practiced_ability_10" value="@{output_option} &{template:standardroll} {{name=@{character_name}}} {{ability=@{practiced_ability_10}}} {{value=@{practiced_ability_10_value}}} {{roll=[[1d100]] }}"></button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_practiced_ability_11' />
+            </td>
+            <td>
+                <input class='sheet-table-text' type='number' name='attr_practiced_ability_11_value' />
+            </td>
+            <td>
+                <button type="roll" name="roll_practiced_ability_11" value="@{output_option} &{template:standardroll} {{name=@{character_name}}} {{ability=@{practiced_ability_11}}} {{value=@{practiced_ability_11_value}}} {{roll=[[1d100]] }}"></button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_practiced_ability_12' />
+            </td>
+            <td>
+                <input class='sheet-table-text' type='number' name='attr_practiced_ability_12_value' />
+            </td>
+            <td>
+                <button type="roll" name="roll_practiced_ability_12" value="@{output_option} &{template:standardroll} {{name=@{character_name}}} {{ability=@{practiced_ability_12}}} {{value=@{practiced_ability_12_value}}} {{roll=[[1d100]] }}"></button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_practiced_ability_13' />
+            </td>
+            <td>
+                <input class='sheet-table-text' type='number' name='attr_practiced_ability_13_value' />
+            </td>
+            <td>
+                <button type="roll" name="roll_practiced_ability_13" value="@{output_option} &{template:standardroll} {{name=@{character_name}}} {{ability=@{practiced_ability_13}}} {{value=@{practiced_ability_13_value}}} {{roll=[[1d100]] }}"></button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_practiced_ability_14' />
+            </td>
+            <td>
+                <input class='sheet-table-text' type='number' name='attr_practiced_ability_14_value' />
+            </td>
+            <td>
+                <button type="roll" name="roll_practiced_ability_14" value="@{output_option} &{template:standardroll} {{name=@{character_name}}} {{ability=@{practiced_ability_14}}} {{value=@{practiced_ability_14_value}}} {{roll=[[1d100]] }}"></button>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<div class='sheet-separator'></div>
+
+<div class='sheet-group sheet-weapons'>
+    <table>
+        <tr>
+            <th>
+                <div class='sheet-table-header'>
+                    Vapen
+                </div>
+            </th>
+            <th>
+                <div class='sheet-table-header'>
+                    Fattn
+                </div>
+            </th>
+            <th>
+                <div class='sheet-table-header'>
+                    Init
+                </div>
+            </th>
+            <th>
+                <div class='sheet-table-header'>
+                    Skada
+                </div>
+            </th>
+            <th>
+                <div class='sheet-table-header'>
+                    Pen
+                </div>
+            </th>
+            <th>
+                <div class='sheet-table-header'>
+                    Räckvidd
+                </div>
+            </th>
+            <th>
+                <div class='sheet-table-header'>
+                    Tål
+                </div>
+            </th>
+            <th>
+                <div class='sheet-table-header'>
+                    Pål / Max
+                </div>
+            </th>
+            <th>
+                <div class='sheet-table-header'>
+                    Vikt
+                </div>
+            </th>
+            <th>
+                <div class='sheet-table-header'>
+                    Ammo / Max
+                </div>
+            </th>
+        </tr>
+        <tr>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_weapon_name_0' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_weapon_grip_0' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_weapon_initiative_0' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_weapon_damage_0' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_weapon_penalty_0' />
+            </td>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_weapon_reach_0' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_weapon_durability_0' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-medium-text' type='text' name='attr_weapon_trust_0' placeholder="0 / 0" />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_weapon_weight_0' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-medium-text' type='text' name='attr_weapon_ammo_0' placeholder="0 / 0" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_weapon_name_1' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_weapon_grip_1' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_weapon_initiative_1' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_weapon_damage_1' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_weapon_penalty_1' />
+            </td>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_weapon_reach_1' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_weapon_durability_1' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-medium-text' type='text' name='attr_weapon_trust_1' placeholder="0 / 0" />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_weapon_weight_1' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-medium-text' type='text' name='attr_weapon_ammo_1' placeholder="0 / 0" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_weapon_name_2' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_weapon_grip_2' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_weapon_initiative_2' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_weapon_damage_2' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_weapon_penalty_2' />
+            </td>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_weapon_reach_2' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_weapon_durability_2' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-medium-text' type='text' name='attr_weapon_trust_2' placeholder="0 / 0" />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_weapon_weight_2' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-medium-text' type='text' name='attr_weapon_ammo_2' placeholder="0 / 0" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_weapon_name_3' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_weapon_grip_3' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_weapon_initiative_3' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_weapon_damage_3' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_weapon_penalty_3' />
+            </td>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_weapon_reach_3' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_weapon_durability_3' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-medium-text' type='text' name='attr_weapon_trust_3' placeholder="0 / 0" />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_weapon_weight_3' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-medium-text' type='text' name='attr_weapon_ammo_3' placeholder="0 / 0" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_weapon_name_4' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_weapon_grip_4' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_weapon_initiative_4' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_weapon_damage_4' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_weapon_penalty_4' />
+            </td>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_weapon_reach_4' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_weapon_durability_4' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-medium-text' type='text' name='attr_weapon_trust_4' placeholder="0 / 0" />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_weapon_weight_4' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-medium-text' type='text' name='attr_weapon_ammo_4' placeholder="0 / 0" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_weapon_name_5' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_weapon_grip_5' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_weapon_initiative_5' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_weapon_damage_5' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_weapon_penalty_5' />
+            </td>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_weapon_reach_5' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_weapon_durability_5' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-medium-text' type='text' name='attr_weapon_trust_5' placeholder="0 / 0" />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_weapon_weight_5' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-medium-text' type='text' name='attr_weapon_ammo_5' placeholder="0 / 0" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_weapon_name_6' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_weapon_grip_6' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_weapon_initiative_6' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_weapon_damage_6' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_weapon_penalty_6' />
+            </td>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_weapon_reach_6' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_weapon_durability_6' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-medium-text' type='text' name='attr_weapon_trust_6' placeholder="0 / 0" />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_weapon_weight_6' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-medium-text' type='text' name='attr_weapon_ammo_6' placeholder="0 / 0" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_weapon_name_7' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_weapon_grip_7' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_weapon_initiative_7' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_weapon_damage_7' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_weapon_penalty_7' />
+            </td>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_weapon_reach_7' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_weapon_durability_7' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-medium-text' type='text' name='attr_weapon_trust_7' placeholder="0 / 0" />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_weapon_weight_7' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-medium-text' type='text' name='attr_weapon_ammo_7' placeholder="0 / 0" />
+            </td>
+        </tr>
+    </table>
+</div>
+
+<div class='sheet-group sheet-powers'>
+    <table>
+        <tr>
+            <th>
+                <div class='sheet-table-header'>
+                    Förmåga
+                </div>
+            </th>
+            <th>
+                <div class='sheet-table-header'>
+                    Beskrivning
+                </div>
+            </th>
+        </tr>
+        <tr>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_power_name_0' />
+            </td>
+            <td>
+                <textarea class='sheet-table-text sheet-wide' type='text' name='attr_power_description_0'></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_power_name_1' />
+            </td>
+            <td>
+                <textarea class='sheet-table-text sheet-wide' type='text' name='attr_power_description_1'></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_power_name_2' />
+            </td>
+            <td>
+                <textarea class='sheet-table-text sheet-wide' type='text' name='attr_power_description_2'></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_power_name_3' />
+            </td>
+            <td>
+                <textarea class='sheet-table-text sheet-wide' type='text' name='attr_power_description_3'></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_power_name_4' />
+            </td>
+            <td>
+                <textarea class='sheet-table-text sheet-wide' type='text' name='attr_power_description_4'></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_power_name_5' />
+            </td>
+            <td>
+                <textarea class='sheet-table-text sheet-wide' type='text' name='attr_power_description_5'></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_power_name_6' />
+            </td>
+            <td>
+                <textarea class='sheet-table-text sheet-wide' type='text' name='attr_power_description_6'></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_power_name_7' />
+            </td>
+            <td>
+                <textarea class='sheet-table-text sheet-wide' type='text' name='attr_power_description_7'></textarea>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<div class='sheet-separator'></div>
+
+<div class='sheet-group sheet-equipment'>
+    <table>
+        <tr>
+            <th>
+                <div class='sheet-table-header'>
+                    Utrustning
+                </div>
+            </th>
+            <th>
+                <div class='sheet-table-header'>
+                    Vikt
+                </div>
+            </th>
+        </tr>
+        <tr>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_equipment_name_0' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_equipment_weight_0' />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_equipment_name_1' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_equipment_weight_1' />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_equipment_name_2' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_equipment_weight_2' />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_equipment_name_3' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_equipment_weight_3' />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_equipment_name_4' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_equipment_weight_4' />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_equipment_name_5' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_equipment_weight_5' />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_equipment_name_6' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_equipment_weight_6' />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_equipment_name_7' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_equipment_weight_7' />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_equipment_name_8' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_equipment_weight_8' />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_equipment_name_9' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_equipment_weight_9' />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_equipment_name_10' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_equipment_weight_10' />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_equipment_name_11' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_equipment_weight_11' />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_equipment_name_12' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_equipment_weight_12' />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_equipment_name_13' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_equipment_weight_13' />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_equipment_name_14' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_equipment_weight_14' />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_equipment_name_15' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_equipment_weight_15' />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_equipment_name_16' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_equipment_weight_16' />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_equipment_name_17' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_equipment_weight_17' />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_equipment_name_18' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_equipment_weight_18' />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_equipment_name_19' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_equipment_weight_19' />
+            </td>
+        </tr>
+    </table>
+</div>
+
+<div class='sheet-group sheet-armor'>
+    <table>
+        <tr>
+            <th>
+                <div class='sheet-table-header'>
+                    Rustning
+                </div>
+            </th>
+            <th>
+                <div class='sheet-table-header'>
+                    Abs
+                </div>
+            </th>
+            <th>
+                <div class='sheet-table-header'>
+                    Beg
+                </div>
+            </th>
+            <th>
+                <div class='sheet-table-header'>
+                    Vikt
+                </div>
+            </th>
+        </tr>
+        <tr>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_armor_name_0' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_armor_absorbtion_0' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_armor_beg_0' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_armor_weight_0' />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_armor_name_1' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_armor_absorbtion_1' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_armor_beg_1' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_armor_weight_1' />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_armor_name_2' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_armor_absorbtion_2' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_armor_beg_2' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_armor_weight_2' />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_armor_name_3' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_armor_absorbtion_3' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_armor_beg_3' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_armor_weight_3' />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_armor_name_4' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_armor_absorbtion_4' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_armor_beg_4' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_armor_weight_4' />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_armor_name_5' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_armor_absorbtion_5' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_armor_beg_5' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-short-text' type='text' name='attr_armor_weight_5' />
+            </td>
+        </tr>
+    </table>
+</div>
+
+<div class='sheet-group sheet-money'>
+    <table>
+        <tr>
+            <th>
+                <div class='sheet-table-header'>
+                    Pengar
+                </div>
+            </th>
+            <th>
+                <div class='sheet-table-header'>
+                    Buret
+                </div>
+            </th>
+            <th>
+                <div class='sheet-table-header'>
+                    Förvar
+                </div>
+            </th>
+        </tr>
+        <tr>
+            <td>
+                <div class='sheet-table-header'>
+                    Kronkredit
+                </div>
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-medium-text' type='text' name='attr_money_crown_carried' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-medium-text' type='text' name='attr_money_crown_stored' />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class='sheet-table-header'>
+                    Kredit
+                </div>
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-medium-text' type='text' name='attr_money_credit_carried' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-medium-text' type='text' name='attr_money_credit_stored' />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class='sheet-table-header'>
+                    Jycke
+                </div>
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-medium-text' type='text' name='attr_money_doggo_carried' />
+            </td>
+            <td>
+                <input class='sheet-table-text sheet-medium-text' type='text' name='attr_money_doggo_stored' />
+            </td>
+        </tr>
+    </table>
+</div>
+
+<div class='sheet-group sheet-extra'>
+    <div class='sheet-title'>
+        Övrigt
+    </div>
+    <textarea class='sheet-table-text sheet-tall sheet-wide' type='text' name='attr_extra_description'></textarea>
+</div>
+
+<rolltemplate class="sheet-rolltemplate-standardroll">
+    <div class='sheet-title'>
+        {{name}} slog
+    </div>
+    <table>
+        <tr>
+            <th>
+                <div class='sheet-table-header'>
+                    Färdighet
+                </div>
+            </th>
+            <th>
+                <div class='sheet-table-header'>
+                    Värde
+                </div>
+            </th>
+        </tr>
+        <tr>
+            <td>
+                <div class='sheet-table-header'>
+                    {{ability}}
+                </div>
+            </td>
+            <td>
+                <div class='sheet-table-header'>
+                    {{value}}
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class='sheet-table-header'>
+                    Resultat
+                </div>
+            </td>
+            <td>
+                <div class='sheet-table-header'>
+                    {{roll}}
+                </div>
+            </td>
+        </tr>
+    </table>
+</rolltemplate>

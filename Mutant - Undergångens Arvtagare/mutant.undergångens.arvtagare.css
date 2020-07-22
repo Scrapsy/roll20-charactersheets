@@ -1,0 +1,112 @@
+.sheet-show-gm-tools {
+    display: block;
+    position: absolute;
+    top: 52px;
+    right: 43px;
+}
+
+.sheet-show-gm-tools ~ .sheet-gm-only {
+    display: none;
+}
+
+.sheet-show-gm-tools:checked ~ .sheet-gm-only {
+    display: inherit;
+}
+
+div.sheet-separator {
+    border-top: 1px solid black;
+    display: grid;
+    margin-top: -1px;
+    padding-bottom: 10px;
+    width: 100%;
+}
+
+.sheet-title {
+    font-variant-caps: small-caps;
+    font-size: 14px;
+}
+
+.sheet-medium-text {
+    width: 80px;
+}
+
+.sheet-short-text {
+    width: 40px;
+}
+
+.sheet-group {
+    display: inline-block;
+    font-size: 11px;
+    float: left;
+    padding: 0px 0px 4px 4px;
+}
+
+.sheet-group td {
+    border: solid 1px #333;
+}
+
+.sheet-group th {
+    background: #333;
+    color: #e3e3e3;
+    font-variant-caps: small-caps;
+    padding: 5px;
+}
+
+.sheet-group textarea {
+    width: 100%;
+    width: -moz-available;
+    width: -webkit-fill-available;
+    width: stretch;
+    height: 50px;
+    margin: 0;
+}
+
+.sheet-group textarea.sheet-tall {
+    height: 170px;
+}
+
+.sheet-group textarea.sheet-wide {
+    width: 350px;
+}
+
+.sheet-attributes td:nth-child(1),
+.sheet-concept td:nth-child(odd),
+.sheet-money td:nth-child(1),
+.sheet-statistics td:nth-child(odd) {
+    background: #333;
+    color: #e3e3e3;
+    font-weight: bold;
+    padding: 5px;
+}
+
+.sheet-natural-abilities tr:nth-child(odd),
+.sheet-practiced-abilities tr:nth-child(odd) {
+    background: #ccc;
+}
+
+.sheet-rolltemplate-standardroll .sheet-title {
+    font-variant-caps: small-caps;
+    font-size: 14px;
+}
+
+.sheet-rolltemplate-standardroll td:nth-child(odd) {
+    background: #333;
+    color: #e3e3e3;
+    font-weight: bold;
+    padding: 5px;
+}
+
+.sheet-rolltemplate-standardroll td:nth-child(even) {
+    background: #e3e3e3;
+    color: #333;
+    font-weight: bold;
+    padding: 5px;
+    text-align: right;
+}
+
+.sheet-rolltemplate-standardroll th {
+    background: #333;
+    color: #e3e3e3;
+    font-variant-caps: small-caps;
+    padding: 5px;
+}

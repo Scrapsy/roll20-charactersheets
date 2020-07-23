@@ -285,7 +285,7 @@
 <input type="radio" class="sheet-options sheet-page3" name="attr_pagenumber" value="3" />
 <span class="sheet-attr" >Combat</span>
 <input type="radio" class="sheet-options sheet-page4" name="attr_pagenumber" value="4" />
-<span class="sheet-attr" >Notes</span>
+<span class="sheet-attr" >Beastiary</span>
 <input type="radio" class="sheet-options sheet-page5" name="attr_pagenumber" value="5" />
 <span class="sheet-attr" >Magic</span>
 <input type="radio" class="sheet-options sheet-page6" name="attr_pagenumber" value="6" />
@@ -3574,9 +3574,9 @@
     </div>
 </span>
 <span class='sheet-page-4'>
-    <div class='sheet-group sheet-friends-family'>
+    <div class='sheet-group sheet-beastiary'>
         <div class='sheet-title'>
-            Friends and Family
+            Horror
         </div>
         <table>
             <tr>
@@ -3585,129 +3585,675 @@
                         Name
                     </div>
                 </th>
+                <td>
+                    <input class='sheet-table-text' type='text' name='attr_beastiary_0_name' />
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tr>
                 <th>
                     <div class='sheet-table-header'>
-                        Description
+                        Saved
                     </div>
                 </th>
+                <td>
+                    <input class='sheet-table-text' type='number' name='attr_beastiary_0_saved' />
+                </td>
                 <th>
                     <div class='sheet-table-header'>
-                        Personality
+                        Failed
                     </div>
                 </th>
+                <td>
+                    <input class='sheet-table-text' type='number' name='attr_beastiary_0_failed' />
+                </td>
                 <th>
                     <div class='sheet-table-header'>
-                        Relationship
+                        Total
                     </div>
                 </th>
-            </tr>
-            <tr>
                 <td>
-                    <input class='sheet-table-text' type='text' name='attr_friend_family_1_name' />
-                </td>
-                <td>
-                    <input class='sheet-table-text' type='text' name='attr_friend_family_1_description' />
-                </td>
-                <td>
-                    <input class='sheet-table-text' type='text' name='attr_friend_family_1_personality' />
-                </td>
-                <td>
-                    <input class='sheet-table-text' type='text' name='attr_friend_family_1_relationship' />
+                    <input class='sheet-table-text' type='number' name='attr_beastiary_0_total' disabled="true" value='[[@{beastiary_0_saved} + @{beastiary_0_failed}]]' />
                 </td>
             </tr>
+        </table>
+        <table>
             <tr>
+                <th>
+                    <div class='sheet-table-header'>
+                        Notes
+                    </div>
+                </th>
                 <td>
-                    <input class='sheet-table-text' type='text' name='attr_friend_family_2_name' />
-                </td>
-                <td>
-                    <input class='sheet-table-text' type='text' name='attr_friend_family_2_description' />
-                </td>
-                <td>
-                    <input class='sheet-table-text' type='text' name='attr_friend_family_2_personality' />
-                </td>
-                <td>
-                    <input class='sheet-table-text' type='text' name='attr_friend_family_2_relationship' />
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <input class='sheet-table-text' type='text' name='attr_friend_family_3_name' />
-                </td>
-                <td>
-                    <input class='sheet-table-text' type='text' name='attr_friend_family_3_description' />
-                </td>
-                <td>
-                    <input class='sheet-table-text' type='text' name='attr_friend_family_3_personality' />
-                </td>
-                <td>
-                    <input class='sheet-table-text' type='text' name='attr_friend_family_3_relationship' />
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <input class='sheet-table-text' type='text' name='attr_friend_family_4_name' />
-                </td>
-                <td>
-                    <input class='sheet-table-text' type='text' name='attr_friend_family_4_description' />
-                </td>
-                <td>
-                    <input class='sheet-table-text' type='text' name='attr_friend_family_4_personality' />
-                </td>
-                <td>
-                    <input class='sheet-table-text' type='text' name='attr_friend_family_4_relationship' />
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <input class='sheet-table-text' type='text' name='attr_friend_family_5_name' />
-                </td>
-                <td>
-                    <input class='sheet-table-text' type='text' name='attr_friend_family_5_description' />
-                </td>
-                <td>
-                    <input class='sheet-table-text' type='text' name='attr_friend_family_5_personality' />
-                </td>
-                <td>
-                    <input class='sheet-table-text' type='text' name='attr_friend_family_5_relationship' />
+                    <textarea class='sheet-table-text' type='text' name='attr_beastiary_0_notes'></textarea>
                 </td>
             </tr>
         </table>
     </div>
-    <div class='sheet-group sheet-gear'>
+    <div class='sheet-group sheet-beastiary'>
         <div class='sheet-title'>
-            Gear
+            Horror
         </div>
         <table>
             <tr>
                 <th>
                     <div class='sheet-table-header'>
-                        Carried
+                        Name
                     </div>
                 </th>
+                <td>
+                    <input class='sheet-table-text' type='text' name='attr_beastiary_1_name' />
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tr>
                 <th>
                     <div class='sheet-table-header'>
-                        Owned
+                        Saved
                     </div>
                 </th>
-            </tr>
-            <tr>
                 <td>
-                    <textarea class='sheet-table-text' type='text' name='attr_gear_carried'></textarea>
+                    <input class='sheet-table-text' type='number' name='attr_beastiary_1_saved' />
                 </td>
+                <th>
+                    <div class='sheet-table-header'>
+                        Failed
+                    </div>
+                </th>
                 <td>
-                    <textarea class='sheet-table-text' type='text' name='attr_gear_owned'></textarea>
+                    <input class='sheet-table-text' type='number' name='attr_beastiary_1_failed' />
+                </td>
+                <th>
+                    <div class='sheet-table-header'>
+                        Total
+                    </div>
+                </th>
+                <td>
+                    <input class='sheet-table-text' type='number' name='attr_beastiary_1_total' disabled="true" value='[[@{beastiary_1_saved} + @{beastiary_1_failed}]]' />
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <th>
+                    <div class='sheet-table-header'>
+                        Notes
+                    </div>
+                </th>
+                <td>
+                    <textarea class='sheet-table-text' type='text' name='attr_beastiary_1_notes'></textarea>
                 </td>
             </tr>
         </table>
     </div>
-    <div class='sheet-group sheet-general-notes'>
+    <div class='sheet-group sheet-beastiary'>
         <div class='sheet-title'>
-            General Notes
+            Horror
         </div>
         <table>
             <tr>
+                <th>
+                    <div class='sheet-table-header'>
+                        Name
+                    </div>
+                </th>
                 <td>
-                    <textarea class='sheet-table-text' type='text' name='attr_general_notes'></textarea>
+                    <input class='sheet-table-text' type='text' name='attr_beastiary_2_name' />
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <th>
+                    <div class='sheet-table-header'>
+                        Saved
+                    </div>
+                </th>
+                <td>
+                    <input class='sheet-table-text' type='number' name='attr_beastiary_2_saved' />
+                </td>
+                <th>
+                    <div class='sheet-table-header'>
+                        Failed
+                    </div>
+                </th>
+                <td>
+                    <input class='sheet-table-text' type='number' name='attr_beastiary_2_failed' />
+                </td>
+                <th>
+                    <div class='sheet-table-header'>
+                        Total
+                    </div>
+                </th>
+                <td>
+                    <input class='sheet-table-text' type='number' name='attr_beastiary_2_total' disabled="true" value='[[@{beastiary_2_saved} + @{beastiary_2_failed}]]' />
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <th>
+                    <div class='sheet-table-header'>
+                        Notes
+                    </div>
+                </th>
+                <td>
+                    <textarea class='sheet-table-text' type='text' name='attr_beastiary_2_notes'></textarea>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class='sheet-group sheet-beastiary'>
+        <div class='sheet-title'>
+            Horror
+        </div>
+        <table>
+            <tr>
+                <th>
+                    <div class='sheet-table-header'>
+                        Name
+                    </div>
+                </th>
+                <td>
+                    <input class='sheet-table-text' type='text' name='attr_beastiary_3_name' />
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <th>
+                    <div class='sheet-table-header'>
+                        Saved
+                    </div>
+                </th>
+                <td>
+                    <input class='sheet-table-text' type='number' name='attr_beastiary_3_saved' />
+                </td>
+                <th>
+                    <div class='sheet-table-header'>
+                        Failed
+                    </div>
+                </th>
+                <td>
+                    <input class='sheet-table-text' type='number' name='attr_beastiary_3_failed' />
+                </td>
+                <th>
+                    <div class='sheet-table-header'>
+                        Total
+                    </div>
+                </th>
+                <td>
+                    <input class='sheet-table-text' type='number' name='attr_beastiary_3_total' disabled="true" value='[[@{beastiary_3_saved} + @{beastiary_3_failed}]]' />
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <th>
+                    <div class='sheet-table-header'>
+                        Notes
+                    </div>
+                </th>
+                <td>
+                    <textarea class='sheet-table-text' type='text' name='attr_beastiary_3_notes'></textarea>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class='sheet-group sheet-beastiary'>
+        <div class='sheet-title'>
+            Horror
+        </div>
+        <table>
+            <tr>
+                <th>
+                    <div class='sheet-table-header'>
+                        Name
+                    </div>
+                </th>
+                <td>
+                    <input class='sheet-table-text' type='text' name='attr_beastiary_4_name' />
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <th>
+                    <div class='sheet-table-header'>
+                        Saved
+                    </div>
+                </th>
+                <td>
+                    <input class='sheet-table-text' type='number' name='attr_beastiary_4_saved' />
+                </td>
+                <th>
+                    <div class='sheet-table-header'>
+                        Failed
+                    </div>
+                </th>
+                <td>
+                    <input class='sheet-table-text' type='number' name='attr_beastiary_4_failed' />
+                </td>
+                <th>
+                    <div class='sheet-table-header'>
+                        Total
+                    </div>
+                </th>
+                <td>
+                    <input class='sheet-table-text' type='number' name='attr_beastiary_4_total' disabled="true" value='[[@{beastiary_4_saved} + @{beastiary_4_failed}]]' />
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <th>
+                    <div class='sheet-table-header'>
+                        Notes
+                    </div>
+                </th>
+                <td>
+                    <textarea class='sheet-table-text' type='text' name='attr_beastiary_4_notes'></textarea>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class='sheet-group sheet-beastiary'>
+        <div class='sheet-title'>
+            Horror
+        </div>
+        <table>
+            <tr>
+                <th>
+                    <div class='sheet-table-header'>
+                        Name
+                    </div>
+                </th>
+                <td>
+                    <input class='sheet-table-text' type='text' name='attr_beastiary_5_name' />
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <th>
+                    <div class='sheet-table-header'>
+                        Saved
+                    </div>
+                </th>
+                <td>
+                    <input class='sheet-table-text' type='number' name='attr_beastiary_5_saved' />
+                </td>
+                <th>
+                    <div class='sheet-table-header'>
+                        Failed
+                    </div>
+                </th>
+                <td>
+                    <input class='sheet-table-text' type='number' name='attr_beastiary_5_failed' />
+                </td>
+                <th>
+                    <div class='sheet-table-header'>
+                        Total
+                    </div>
+                </th>
+                <td>
+                    <input class='sheet-table-text' type='number' name='attr_beastiary_5_total' disabled="true" value='[[@{beastiary_5_saved} + @{beastiary_5_failed}]]' />
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <th>
+                    <div class='sheet-table-header'>
+                        Notes
+                    </div>
+                </th>
+                <td>
+                    <textarea class='sheet-table-text' type='text' name='attr_beastiary_5_notes'></textarea>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class='sheet-group sheet-beastiary'>
+        <div class='sheet-title'>
+            Horror
+        </div>
+        <table>
+            <tr>
+                <th>
+                    <div class='sheet-table-header'>
+                        Name
+                    </div>
+                </th>
+                <td>
+                    <input class='sheet-table-text' type='text' name='attr_beastiary_6_name' />
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <th>
+                    <div class='sheet-table-header'>
+                        Saved
+                    </div>
+                </th>
+                <td>
+                    <input class='sheet-table-text' type='number' name='attr_beastiary_6_saved' />
+                </td>
+                <th>
+                    <div class='sheet-table-header'>
+                        Failed
+                    </div>
+                </th>
+                <td>
+                    <input class='sheet-table-text' type='number' name='attr_beastiary_6_failed' />
+                </td>
+                <th>
+                    <div class='sheet-table-header'>
+                        Total
+                    </div>
+                </th>
+                <td>
+                    <input class='sheet-table-text' type='number' name='attr_beastiary_6_total' disabled="true" value='[[@{beastiary_6_saved} + @{beastiary_6_failed}]]' />
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <th>
+                    <div class='sheet-table-header'>
+                        Notes
+                    </div>
+                </th>
+                <td>
+                    <textarea class='sheet-table-text' type='text' name='attr_beastiary_6_notes'></textarea>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class='sheet-group sheet-beastiary'>
+        <div class='sheet-title'>
+            Horror
+        </div>
+        <table>
+            <tr>
+                <th>
+                    <div class='sheet-table-header'>
+                        Name
+                    </div>
+                </th>
+                <td>
+                    <input class='sheet-table-text' type='text' name='attr_beastiary_7_name' />
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <th>
+                    <div class='sheet-table-header'>
+                        Saved
+                    </div>
+                </th>
+                <td>
+                    <input class='sheet-table-text' type='number' name='attr_beastiary_7_saved' />
+                </td>
+                <th>
+                    <div class='sheet-table-header'>
+                        Failed
+                    </div>
+                </th>
+                <td>
+                    <input class='sheet-table-text' type='number' name='attr_beastiary_7_failed' />
+                </td>
+                <th>
+                    <div class='sheet-table-header'>
+                        Total
+                    </div>
+                </th>
+                <td>
+                    <input class='sheet-table-text' type='number' name='attr_beastiary_7_total' disabled="true" value='[[@{beastiary_7_saved} + @{beastiary_7_failed}]]' />
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <th>
+                    <div class='sheet-table-header'>
+                        Notes
+                    </div>
+                </th>
+                <td>
+                    <textarea class='sheet-table-text' type='text' name='attr_beastiary_7_notes'></textarea>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class='sheet-group sheet-beastiary'>
+        <div class='sheet-title'>
+            Horror
+        </div>
+        <table>
+            <tr>
+                <th>
+                    <div class='sheet-table-header'>
+                        Name
+                    </div>
+                </th>
+                <td>
+                    <input class='sheet-table-text' type='text' name='attr_beastiary_8_name' />
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <th>
+                    <div class='sheet-table-header'>
+                        Saved
+                    </div>
+                </th>
+                <td>
+                    <input class='sheet-table-text' type='number' name='attr_beastiary_8_saved' />
+                </td>
+                <th>
+                    <div class='sheet-table-header'>
+                        Failed
+                    </div>
+                </th>
+                <td>
+                    <input class='sheet-table-text' type='number' name='attr_beastiary_8_failed' />
+                </td>
+                <th>
+                    <div class='sheet-table-header'>
+                        Total
+                    </div>
+                </th>
+                <td>
+                    <input class='sheet-table-text' type='number' name='attr_beastiary_8_total' disabled="true" value='[[@{beastiary_8_saved} + @{beastiary_8_failed}]]' />
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <th>
+                    <div class='sheet-table-header'>
+                        Notes
+                    </div>
+                </th>
+                <td>
+                    <textarea class='sheet-table-text' type='text' name='attr_beastiary_8_notes'></textarea>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class='sheet-group sheet-beastiary'>
+        <div class='sheet-title'>
+            Horror
+        </div>
+        <table>
+            <tr>
+                <th>
+                    <div class='sheet-table-header'>
+                        Name
+                    </div>
+                </th>
+                <td>
+                    <input class='sheet-table-text' type='text' name='attr_beastiary_9_name' />
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <th>
+                    <div class='sheet-table-header'>
+                        Saved
+                    </div>
+                </th>
+                <td>
+                    <input class='sheet-table-text' type='number' name='attr_beastiary_9_saved' />
+                </td>
+                <th>
+                    <div class='sheet-table-header'>
+                        Failed
+                    </div>
+                </th>
+                <td>
+                    <input class='sheet-table-text' type='number' name='attr_beastiary_9_failed' />
+                </td>
+                <th>
+                    <div class='sheet-table-header'>
+                        Total
+                    </div>
+                </th>
+                <td>
+                    <input class='sheet-table-text' type='number' name='attr_beastiary_9_total' disabled="true" value='[[@{beastiary_9_saved} + @{beastiary_9_failed}]]' />
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <th>
+                    <div class='sheet-table-header'>
+                        Notes
+                    </div>
+                </th>
+                <td>
+                    <textarea class='sheet-table-text' type='text' name='attr_beastiary_9_notes'></textarea>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class='sheet-group sheet-beastiary'>
+        <div class='sheet-title'>
+            Horror
+        </div>
+        <table>
+            <tr>
+                <th>
+                    <div class='sheet-table-header'>
+                        Name
+                    </div>
+                </th>
+                <td>
+                    <input class='sheet-table-text' type='text' name='attr_beastiary_10_name' />
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <th>
+                    <div class='sheet-table-header'>
+                        Saved
+                    </div>
+                </th>
+                <td>
+                    <input class='sheet-table-text' type='number' name='attr_beastiary_10_saved' />
+                </td>
+                <th>
+                    <div class='sheet-table-header'>
+                        Failed
+                    </div>
+                </th>
+                <td>
+                    <input class='sheet-table-text' type='number' name='attr_beastiary_10_failed' />
+                </td>
+                <th>
+                    <div class='sheet-table-header'>
+                        Total
+                    </div>
+                </th>
+                <td>
+                    <input class='sheet-table-text' type='number' name='attr_beastiary_10_total' disabled="true" value='[[@{beastiary_10_saved} + @{beastiary_10_failed}]]' />
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <th>
+                    <div class='sheet-table-header'>
+                        Notes
+                    </div>
+                </th>
+                <td>
+                    <textarea class='sheet-table-text' type='text' name='attr_beastiary_10_notes'></textarea>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class='sheet-group sheet-beastiary'>
+        <div class='sheet-title'>
+            Horror
+        </div>
+        <table>
+            <tr>
+                <th>
+                    <div class='sheet-table-header'>
+                        Name
+                    </div>
+                </th>
+                <td>
+                    <input class='sheet-table-text' type='text' name='attr_beastiary_11_name' />
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <th>
+                    <div class='sheet-table-header'>
+                        Saved
+                    </div>
+                </th>
+                <td>
+                    <input class='sheet-table-text' type='number' name='attr_beastiary_11_saved' />
+                </td>
+                <th>
+                    <div class='sheet-table-header'>
+                        Failed
+                    </div>
+                </th>
+                <td>
+                    <input class='sheet-table-text' type='number' name='attr_beastiary_11_failed' />
+                </td>
+                <th>
+                    <div class='sheet-table-header'>
+                        Total
+                    </div>
+                </th>
+                <td>
+                    <input class='sheet-table-text' type='number' name='attr_beastiary_11_total' disabled="true" value='[[@{beastiary_11_saved} + @{beastiary_11_failed}]]' />
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <th>
+                    <div class='sheet-table-header'>
+                        Notes
+                    </div>
+                </th>
+                <td>
+                    <textarea class='sheet-table-text' type='text' name='attr_beastiary_11_notes'></textarea>
                 </td>
             </tr>
         </table>
@@ -5960,6 +6506,144 @@
     </div>
 </span>
 <span class='sheet-page-8'>
+    <div class='sheet-group sheet-friends-family'>
+        <div class='sheet-title'>
+            Friends and Family
+        </div>
+        <table>
+            <tr>
+                <th>
+                    <div class='sheet-table-header'>
+                        Name
+                    </div>
+                </th>
+                <th>
+                    <div class='sheet-table-header'>
+                        Description
+                    </div>
+                </th>
+                <th>
+                    <div class='sheet-table-header'>
+                        Personality
+                    </div>
+                </th>
+                <th>
+                    <div class='sheet-table-header'>
+                        Relationship
+                    </div>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <input class='sheet-table-text' type='text' name='attr_friend_family_1_name' />
+                </td>
+                <td>
+                    <input class='sheet-table-text' type='text' name='attr_friend_family_1_description' />
+                </td>
+                <td>
+                    <input class='sheet-table-text' type='text' name='attr_friend_family_1_personality' />
+                </td>
+                <td>
+                    <input class='sheet-table-text' type='text' name='attr_friend_family_1_relationship' />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input class='sheet-table-text' type='text' name='attr_friend_family_2_name' />
+                </td>
+                <td>
+                    <input class='sheet-table-text' type='text' name='attr_friend_family_2_description' />
+                </td>
+                <td>
+                    <input class='sheet-table-text' type='text' name='attr_friend_family_2_personality' />
+                </td>
+                <td>
+                    <input class='sheet-table-text' type='text' name='attr_friend_family_2_relationship' />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input class='sheet-table-text' type='text' name='attr_friend_family_3_name' />
+                </td>
+                <td>
+                    <input class='sheet-table-text' type='text' name='attr_friend_family_3_description' />
+                </td>
+                <td>
+                    <input class='sheet-table-text' type='text' name='attr_friend_family_3_personality' />
+                </td>
+                <td>
+                    <input class='sheet-table-text' type='text' name='attr_friend_family_3_relationship' />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input class='sheet-table-text' type='text' name='attr_friend_family_4_name' />
+                </td>
+                <td>
+                    <input class='sheet-table-text' type='text' name='attr_friend_family_4_description' />
+                </td>
+                <td>
+                    <input class='sheet-table-text' type='text' name='attr_friend_family_4_personality' />
+                </td>
+                <td>
+                    <input class='sheet-table-text' type='text' name='attr_friend_family_4_relationship' />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input class='sheet-table-text' type='text' name='attr_friend_family_5_name' />
+                </td>
+                <td>
+                    <input class='sheet-table-text' type='text' name='attr_friend_family_5_description' />
+                </td>
+                <td>
+                    <input class='sheet-table-text' type='text' name='attr_friend_family_5_personality' />
+                </td>
+                <td>
+                    <input class='sheet-table-text' type='text' name='attr_friend_family_5_relationship' />
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class='sheet-group sheet-gear'>
+        <div class='sheet-title'>
+            Gear
+        </div>
+        <table>
+            <tr>
+                <th>
+                    <div class='sheet-table-header'>
+                        Carried
+                    </div>
+                </th>
+                <th>
+                    <div class='sheet-table-header'>
+                        Owned
+                    </div>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <textarea class='sheet-table-text' type='text' name='attr_gear_carried'></textarea>
+                </td>
+                <td>
+                    <textarea class='sheet-table-text' type='text' name='attr_gear_owned'></textarea>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class='sheet-group sheet-general-notes'>
+        <div class='sheet-title'>
+            General Notes
+        </div>
+        <table>
+            <tr>
+                <td>
+                    <textarea class='sheet-table-text' type='text' name='attr_general_notes'></textarea>
+                </td>
+            </tr>
+        </table>
+    </div>
     <div class='sheet-group sheet-personal'>
         <div class='sheet-title'>
             Questionnaire

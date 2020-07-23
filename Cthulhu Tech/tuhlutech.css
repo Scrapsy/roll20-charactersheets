@@ -163,6 +163,10 @@ div.sheet-group {
     height: 250px;
 }
 
+.sheet-beastiary table {
+    width: 265px;
+}
+
 .sheet-rolltemplate-framewerk,
 .sheet-rolltemplate-framewerkresult,
 .sheet-rolltemplate-framewerkspecial,

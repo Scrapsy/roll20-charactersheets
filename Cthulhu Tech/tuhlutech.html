@@ -401,13 +401,33 @@
         </div>
         <table>
             <tr>
+                <th>
+                    <div class='sheet-table-header'>
+                        Attribute
+                    </div>
+                </th>
+                <th>
+                    <div class='sheet-table-header'>
+                        Base
+                    </div>
+                </th>
+                <th>
+                    <div class='sheet-table-header'>
+                        Alt
+                    </div>
+                </th>
+            </tr>
+            <tr>
                 <td>
                     <div class='sheet-table-header'>
                         Actions
                     </div>
                 </td>
                 <td>
-                    <input class='sheet-table-text' type='number' name='attr_secondary_attribute_actions' placeholder='1' />
+                    <input class='sheet-table-text' type='number' name='attr_secondary_attribute_actions_auto_calc' disabled="true" value='[[ floor( (@{attribute_agility} + @{attribute_perception} - 8) / 2) + @{secondary_attribute_actions_alt} ]]' />
+                </td>
+                <td>
+                    <input class='sheet-table-text' type='number' name='attr_secondary_attribute_actions_alt' value='0' />
                 </td>
             </tr>
             <tr>
@@ -417,7 +437,10 @@
                     </div>
                 </td>
                 <td>
-                    <input class='sheet-table-text' type='number' name='attr_secondary_attribute_movement' placeholder='5' />
+                    <input class='sheet-table-text sheet-short-text' type='text' name='attr_secondary_attribute_movement_result' value='' readonly="true" />
+                </td>
+                <td>
+                    <input class='sheet-table-text' type='number' name='attr_secondary_attribute_movement_alt' value='0' />
                 </td>
             </tr>
             <tr>
@@ -427,7 +450,10 @@
                     </div>
                 </td>
                 <td>
-                    <input class='sheet-table-text' type='number' name='attr_secondary_attribute_orgone' placeholder='10' />
+                    <input class='sheet-table-text' type='number' name='attr_secondary_attribute_orgone_result' value='[[ floor( ( @{attribute_intellect}+@{attribute_tenacity} )/2 )+5 +@{secondary_attribute_orgone_alt}]]' disabled="true" />
+                </td>
+                <td>
+                    <input class='sheet-table-text' type='number' name='attr_secondary_attribute_orgone_alt' value='0' />
                 </td>
             </tr>
             <tr>
@@ -437,7 +463,10 @@
                     </div>
                 </td>
                 <td>
-                    <input class='sheet-table-text' type='number' name='attr_secondary_attribute_reflex' placeholder='5' />
+                    <input class='sheet-table-text' type='number' name='attr_secondary_attribute_reflex_result' value='[[ floor( (@{attribute_agility}+@{attribute_intellect}+@{attribute_perception})/3 ) +@{secondary_attribute_reflex_alt} ]]' disabled="true" />
+                </td>
+                <td>
+                    <input class='sheet-table-text' type='number' name='attr_secondary_attribute_reflex_alt' value='0' />
                 </td>
             </tr>
             <tr>
@@ -447,7 +476,10 @@
                     </div>
                 </td>
                 <td>
-                    <input class='sheet-table-text' type='number' name='attr_secondary_attribute_vitality' placeholder='10' />
+                    <input class='sheet-table-text' type='number' name='attr_secondary_attribute_vitality_result' value='[[ floor( ( @{attribute_strength}+@{attribute_tenacity} )/2 )+5 +@{secondary_attribute_vitality_alt}]]' disabled="true" />
+                </td>
+                <td>
+                    <input class='sheet-table-text' type='number' name='attr_secondary_attribute_vitality_alt' value='0' />
                 </td>
             </tr>
             <tr>
@@ -457,34 +489,10 @@
                     </div>
                 </td>
                 <td>
-                    <input class='sheet-table-text' type='number' name='attr_secondary_attribute_drama_points' placeholder='10' />
-                </td>
-            </tr>
-        </table>
-    </div>
-    <div class='sheet-group sheet-experience'>
-        <div class='sheet-title'>
-            Experience
-        </div>
-        <table>
-            <tr>
-                <th>
-                    <div class='sheet-table-header'>
-                        Total
-                    </div>
-                </th>
-                <th>
-                    <div class='sheet-table-header'>
-                        Unspent
-                    </div>
-                </th>
-            </tr>
-            <tr>
-                <td>
-                    <input class='sheet-table-text' type='number' name='attr_experience_total' placeholder='0' />
+                    <input class='sheet-table-text' type='number' name='attr_secondary_attribute_drama_points' value='10' />
                 </td>
                 <td>
-                    <input class='sheet-table-text' type='number' name='attr_experience_unspent' placeholder='0' />
+                    <input class='sheet-table-text' type='number' name='attr_secondary_attribute_drama_points_current' value='10' />
                 </td>
             </tr>
         </table>
@@ -619,6 +627,33 @@
                 </td>
                 <td>
                     <textarea class='sheet-table-text' type='text' name='attr_quality_special_5_description'></textarea>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class='sheet-group sheet-experience'>
+        <div class='sheet-title'>
+            Experience
+        </div>
+        <table>
+            <tr>
+                <th>
+                    <div class='sheet-table-header'>
+                        Total
+                    </div>
+                </th>
+                <th>
+                    <div class='sheet-table-header'>
+                        Unspent
+                    </div>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <input class='sheet-table-text' type='number' name='attr_experience_total' placeholder='0' />
+                </td>
+                <td>
+                    <input class='sheet-table-text' type='number' name='attr_experience_unspent' placeholder='0' />
                 </td>
             </tr>
         </table>
@@ -6506,105 +6541,6 @@
     </div>
 </span>
 <span class='sheet-page-8'>
-    <div class='sheet-group sheet-friends-family'>
-        <div class='sheet-title'>
-            Friends and Family
-        </div>
-        <table>
-            <tr>
-                <th>
-                    <div class='sheet-table-header'>
-                        Name
-                    </div>
-                </th>
-                <th>
-                    <div class='sheet-table-header'>
-                        Description
-                    </div>
-                </th>
-                <th>
-                    <div class='sheet-table-header'>
-                        Personality
-                    </div>
-                </th>
-                <th>
-                    <div class='sheet-table-header'>
-                        Relationship
-                    </div>
-                </th>
-            </tr>
-            <tr>
-                <td>
-                    <input class='sheet-table-text' type='text' name='attr_friend_family_1_name' />
-                </td>
-                <td>
-                    <input class='sheet-table-text' type='text' name='attr_friend_family_1_description' />
-                </td>
-                <td>
-                    <input class='sheet-table-text' type='text' name='attr_friend_family_1_personality' />
-                </td>
-                <td>
-                    <input class='sheet-table-text' type='text' name='attr_friend_family_1_relationship' />
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <input class='sheet-table-text' type='text' name='attr_friend_family_2_name' />
-                </td>
-                <td>
-                    <input class='sheet-table-text' type='text' name='attr_friend_family_2_description' />
-                </td>
-                <td>
-                    <input class='sheet-table-text' type='text' name='attr_friend_family_2_personality' />
-                </td>
-                <td>
-                    <input class='sheet-table-text' type='text' name='attr_friend_family_2_relationship' />
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <input class='sheet-table-text' type='text' name='attr_friend_family_3_name' />
-                </td>
-                <td>
-                    <input class='sheet-table-text' type='text' name='attr_friend_family_3_description' />
-                </td>
-                <td>
-                    <input class='sheet-table-text' type='text' name='attr_friend_family_3_personality' />
-                </td>
-                <td>
-                    <input class='sheet-table-text' type='text' name='attr_friend_family_3_relationship' />
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <input class='sheet-table-text' type='text' name='attr_friend_family_4_name' />
-                </td>
-                <td>
-                    <input class='sheet-table-text' type='text' name='attr_friend_family_4_description' />
-                </td>
-                <td>
-                    <input class='sheet-table-text' type='text' name='attr_friend_family_4_personality' />
-                </td>
-                <td>
-                    <input class='sheet-table-text' type='text' name='attr_friend_family_4_relationship' />
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <input class='sheet-table-text' type='text' name='attr_friend_family_5_name' />
-                </td>
-                <td>
-                    <input class='sheet-table-text' type='text' name='attr_friend_family_5_description' />
-                </td>
-                <td>
-                    <input class='sheet-table-text' type='text' name='attr_friend_family_5_personality' />
-                </td>
-                <td>
-                    <input class='sheet-table-text' type='text' name='attr_friend_family_5_relationship' />
-                </td>
-            </tr>
-        </table>
-    </div>
     <div class='sheet-group sheet-gear'>
         <div class='sheet-title'>
             Gear
@@ -6640,6 +6576,195 @@
             <tr>
                 <td>
                     <textarea class='sheet-table-text' type='text' name='attr_general_notes'></textarea>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class='sheet-separator'></div>
+    <div class='sheet-group sheet-friends-family'>
+        <div class='sheet-title'>
+            Person of Import
+        </div>
+        <table>
+            <tr>
+                <th>
+                    <div class='sheet-table-header'>
+                        Name
+                    </div>
+                </th>
+                <td>
+                    <input class='sheet-table-text' type='text' name='attr_friend_family_1_name' />
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <div class='sheet-table-header'>
+                        Relationship
+                    </div>
+                </th>
+                <td>
+                    <input class='sheet-table-text' type='text' name='attr_friend_family_1_relationship' />
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <div class='sheet-table-header'>
+                        Description
+                    </div>
+                </th>
+                <td>
+                    <textarea class='sheet-table-text' type='text' name='attr_friend_family_1_description'></textarea>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <div class='sheet-table-header'>
+                        Personality
+                    </div>
+                </th>
+                <td>
+                    <textarea class='sheet-table-text' type='text' name='attr_friend_family_1_personality'></textarea>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class='sheet-group sheet-friends-family'>
+        <div class='sheet-title'>
+            Person of Import
+        </div>
+        <table>
+            <tr>
+                <th>
+                    <div class='sheet-table-header'>
+                        Name
+                    </div>
+                </th>
+                <td>
+                    <input class='sheet-table-text' type='text' name='attr_friend_family_2_name' />
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <div class='sheet-table-header'>
+                        Relationship
+                    </div>
+                </th>
+                <td>
+                    <input class='sheet-table-text' type='text' name='attr_friend_family_2_relationship' />
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <div class='sheet-table-header'>
+                        Description
+                    </div>
+                </th>
+                <td>
+                    <textarea class='sheet-table-text' type='text' name='attr_friend_family_2_description'></textarea>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <div class='sheet-table-header'>
+                        Personality
+                    </div>
+                </th>
+                <td>
+                    <textarea class='sheet-table-text' type='text' name='attr_friend_family_2_personality'></textarea>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class='sheet-group sheet-friends-family'>
+        <div class='sheet-title'>
+            Person of Import
+        </div>
+        <table>
+            <tr>
+                <th>
+                    <div class='sheet-table-header'>
+                        Name
+                    </div>
+                </th>
+                <td>
+                    <input class='sheet-table-text' type='text' name='attr_friend_family_3_name' />
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <div class='sheet-table-header'>
+                        Relationship
+                    </div>
+                </th>
+                <td>
+                    <input class='sheet-table-text' type='text' name='attr_friend_family_3_relationship' />
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <div class='sheet-table-header'>
+                        Description
+                    </div>
+                </th>
+                <td>
+                    <textarea class='sheet-table-text' type='text' name='attr_friend_family_3_description'></textarea>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <div class='sheet-table-header'>
+                        Personality
+                    </div>
+                </th>
+                <td>
+                    <textarea class='sheet-table-text' type='text' name='attr_friend_family_3_personality'></textarea>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class='sheet-group sheet-friends-family'>
+        <div class='sheet-title'>
+            Person of Import
+        </div>
+        <table>
+            <tr>
+                <th>
+                    <div class='sheet-table-header'>
+                        Name
+                    </div>
+                </th>
+                <td>
+                    <input class='sheet-table-text' type='text' name='attr_friend_family_4_name' />
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <div class='sheet-table-header'>
+                        Relationship
+                    </div>
+                </th>
+                <td>
+                    <input class='sheet-table-text' type='text' name='attr_friend_family_4_relationship' />
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <div class='sheet-table-header'>
+                        Description
+                    </div>
+                </th>
+                <td>
+                    <textarea class='sheet-table-text' type='text' name='attr_friend_family_4_description'></textarea>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <div class='sheet-table-header'>
+                        Personality
+                    </div>
+                </th>
+                <td>
+                    <textarea class='sheet-table-text' type='text' name='attr_friend_family_4_personality'></textarea>
                 </td>
             </tr>
         </table>
@@ -7114,6 +7239,39 @@
 </rolltemplate>
 
 <script type="text/worker">
+    var movement_speed = [
+        0,
+        3,
+        5
+    ];
+    var turn_speed = {
+        3: '7/1',
+        4: '10/2',
+        5: '13/3',
+        6: '15/3',
+        7: '17/4',
+        8: '19/4',
+        9: '22/5',
+        10: '24/5',
+        11: '27/6',
+        12: '29/7',
+        13: '32/8',
+        14: '34/8',
+        15: '37/9',
+        16: '39/9',
+        17: '42/10',
+        18: '44/10',
+        19: '47/11',
+        20: '49/11',
+        21: '52/12',
+        22: '54/12',
+        23: '57/13',
+        24: '59/13',
+        25: '62/14',
+        26: '64/14',
+        27: '67/15'
+    };
+
     on("clicked:register", function(eventInfo){
         getAttrs(['character_name', 'concept_callsign', 'attribute_agility', 'attribute_perception', 'secondary_attribute_reflex', 'secondary_attribute_actions'], function(values){
             registered_pilot = {
@@ -7129,5 +7287,23 @@
 
     on("clicked:load", function(eventInfo){
         setAttrs(registered_pilot);
+    });
+
+    on("change:secondary_attribute_movement_alt change:attribute_agility change:attribute_strength", function(eventInfo) {
+        getAttrs(["secondary_attribute_movement_alt", "attribute_agility", "attribute_strength"], function(values) {
+            let check = parseInt(values.attribute_agility) + parseInt(values.attribute_strength);
+            check = Math.floor(check / 2);
+            let speed = 0;
+            if (check < 3) {
+                speed = movement_speed[check];
+            } else {
+                speed = check + check - 1;
+            }
+            speed = speed + parseInt(values.secondary_attribute_movement_alt);
+            result = speed + "(" + turn_speed[speed] + ")";
+            setAttrs({
+                secondary_attribute_movement_result: result
+            });
+        });
     });
 </script>

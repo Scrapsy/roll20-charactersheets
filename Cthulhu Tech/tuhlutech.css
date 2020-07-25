@@ -64,6 +64,10 @@ input.sheet-page8:checked ~ span.sheet-page-8 {
     display: inline-block;
 }
 
+input.sheet-short-text {
+    width: 60px;
+}
+
 div.sheet-separator {
     border-top: 1px solid black;
     display: grid;

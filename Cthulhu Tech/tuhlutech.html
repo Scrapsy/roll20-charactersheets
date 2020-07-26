@@ -1957,6 +1957,34 @@
             </tr>
             <tr>
                 <td>
+                    <input type='checkbox' name='attr_skill_stealth_trained' />
+                </td>
+                <td>
+                    <div class='sheet-table-header'>
+                        Stealth
+                    </div>
+                </td>
+                <td>
+                    <div class='sheet-table-header'>
+                        AGI
+                    </div>
+                </td>
+                <td>
+                    <select class='sheet-expertise-select' name='attr_skill_stealth_level'>
+                        <option value="0" selected="selected">(0) Unskilled</option>
+                        <option value="1">(1) Student</option>
+                        <option value="2">(2) Novice</option>
+                        <option value="3">(3) Adept</option>
+                        <option value="4">(4) Expert</option>
+                        <option value="5">(5) Master</option>
+                    </select>
+                </td>
+                <td>
+                    <button type="roll" name="roll_check" value="@{output_option} &{template:framewerk} {{name=@{character_name}}} {{attribute=Agility}} {{bonus=@{attribute_agility}}} {{dice=@{skill_stealth_level}}} {{skill=Stealth}} {{result=[[[[@{skill_stealth_level}+?{Bonus Dice|0}]]d10]]}} {{bonusmod=?{Bonus Modifier|0}}} {{extradice=?{Bonus Dice|0}}} !calc"></button>
+                </td>
+            </tr>
+            <tr>
+                <td>
                     <input type='checkbox' name='attr_skill_surveillance_trained' />
                 </td>
                 <td>
@@ -2081,7 +2109,7 @@
                     </div>
                 </th>
                 <td>
-                    <input class='sheet-table-text' type='number' name='attr_skill_total' value='[[ [[@{skill_armed_fighting_level}]]+[[@{skill_appraisal_level}]]+[[@{skill_archanotechnician_level}]]+[[@{skill_archanotechengineering_level}]]+[[@{skill_armorer_level}]]+[[@{skill_artist_1_level}]]+[[@{skill_artist_2_level}]]+[[@{skill_athletics_level}]]+[[@{skill_bureaucracy_level}]]+[[@{skill_business_level}]]+[[@{skill_communications_level}]]+[[@{skill_computers_level}]]+[[@{skill_criminal_level}]]+[[@{skill_culture_level}]]+[[@{skill_demolitions_level}]]+[[@{skill_dodge_level}]]+[[@{skill_education_level}]]+[[@{skill_engineering_level}]]+[[@{skill_fighting_level}]]+[[@{skill_history_level}]]+[[@{skill_hobby_1_level}]]+[[@{skill_intimidate_level}]]+[[@{skill_language_1_level}]]+[[@{skill_language_2_level}]]+[[@{skill_language_3_level}]]+[[@{skill_language_4_level}]]+[[@{skill_larceny_level}]]+[[@{skill_law_enforcement_level}]]+[[@{skill_literacy_level}]]+[[@{skill_marksman_level}]]+[[@{skill_medicine_level}]]+[[@{skill_misdirect_level}]]+[[@{skill_munitions_level}]]+[[@{skill_observation_level}]]+[[@{skill_occult_level}]]+[[@{skill_performance_1_level}]]+[[@{skill_performance_2_level}]]+[[@{skill_persuade_level}]]+[[@{skill_pilot_1_level}]]+[[@{skill_regional_knowledge_1_level}]]+[[@{skill_research_level}]]+[[@{skill_savoir_faire_level}]]+[[@{skill_science:_earth_level}]]+[[@{skill_science:_life_level}]]+[[@{skill_science:_physical_level}]]+[[@{skill_security_level}]]+[[@{skill_seduction_level}]]+[[@{skill_support_weapons_level}]]+[[@{skill_surveillance_level}]]+[[@{skill_survival_level}]]+[[@{skill_technician_level}]]+[[@{skill_thrown_weapons_level}]]+[[@{skill_trivia_1_level}]] ]]' disabled="true" />
+                    <input class='sheet-table-text' type='number' name='attr_skill_total' value='[[ [[@{skill_armed_fighting_level}]]+[[@{skill_appraisal_level}]]+[[@{skill_archanotechnician_level}]]+[[@{skill_archanotechengineering_level}]]+[[@{skill_armorer_level}]]+[[@{skill_artist_1_level}]]+[[@{skill_artist_2_level}]]+[[@{skill_athletics_level}]]+[[@{skill_bureaucracy_level}]]+[[@{skill_business_level}]]+[[@{skill_communications_level}]]+[[@{skill_computers_level}]]+[[@{skill_criminal_level}]]+[[@{skill_culture_level}]]+[[@{skill_demolitions_level}]]+[[@{skill_dodge_level}]]+[[@{skill_education_level}]]+[[@{skill_engineering_level}]]+[[@{skill_fighting_level}]]+[[@{skill_history_level}]]+[[@{skill_hobby_1_level}]]+[[@{skill_intimidate_level}]]+[[@{skill_language_1_level}]]+[[@{skill_language_2_level}]]+[[@{skill_language_3_level}]]+[[@{skill_language_4_level}]]+[[@{skill_larceny_level}]]+[[@{skill_law_enforcement_level}]]+[[@{skill_literacy_level}]]+[[@{skill_marksman_level}]]+[[@{skill_medicine_level}]]+[[@{skill_misdirect_level}]]+[[@{skill_munitions_level}]]+[[@{skill_observation_level}]]+[[@{skill_occult_level}]]+[[@{skill_performance_1_level}]]+[[@{skill_performance_2_level}]]+[[@{skill_persuade_level}]]+[[@{skill_pilot_1_level}]]+[[@{skill_regional_knowledge_1_level}]]+[[@{skill_research_level}]]+[[@{skill_savoir_faire_level}]]+[[@{skill_science:_earth_level}]]+[[@{skill_science:_life_level}]]+[[@{skill_science:_physical_level}]]+[[@{skill_security_level}]]+[[@{skill_seduction_level}]]+[[@{skill_stealth_level}]]+[[@{skill_support_weapons_level}]]+[[@{skill_surveillance_level}]]+[[@{skill_survival_level}]]+[[@{skill_technician_level}]]+[[@{skill_thrown_weapons_level}]]+[[@{skill_trivia_1_level}]] ]]' disabled="true" />
                 </td>
             </tr>
         </table>
@@ -2368,6 +2396,7 @@
                         <option value="{{attribute=Intellect}} {{bonus=@{attribute_intellect}}} {{dice=@{skill_science:_physical_level}}} {{skill=Science: Physical}} {{result=[[[[@{skill_science:_physical_level}+@{skill_specialization_0_expertise}]]d10]]}}">Science: Physical</option>
                         <option value="{{attribute=Intellect}} {{bonus=@{attribute_intellect}}} {{dice=@{skill_security_level}}} {{skill=Security}} {{result=[[[[@{skill_security_level}+@{skill_specialization_0_expertise}]]d10]]}}">Security</option>
                         <option value="{{attribute=Presence}} {{bonus=@{attribute_presence}}} {{dice=@{skill_seduction_level}}} {{skill=Seduction}} {{result=[[[[@{skill_seduction_level}+@{skill_specialization_0_expertise}]]d10]]}}">Seduction</option>
+                        <option value="{{attribute=Agility}} {{bonus=@{attribute_agility}}} {{dice=@{skill_stealth_level}}} {{skill=Stealth}} {{result=[[[[@{skill_stealth_level}+@{skill_specialization_0_expertise}]]d10]]}}">Stealth</option>
                         <option value="{{attribute=Perception}} {{bonus=@{attribute_perception}}} {{dice=@{skill_support_weapons_level}}} {{skill=Support Weapons}} {{result=[[[[@{skill_support_weapons_level}+@{skill_specialization_0_expertise}]]d10]]}}">Support Weapons</option>
                         <option value="{{attribute=Intellect}} {{bonus=@{attribute_intellect}}} {{dice=@{skill_surveillance_level}}} {{skill=Surveillance}} {{result=[[[[@{skill_surveillance_level}+@{skill_specialization_0_expertise}]]d10]]}}">Surveillance</option>
                         <option value="{{attribute=Tenacity}} {{bonus=@{attribute_tenacity}}} {{dice=@{skill_survival_level}}} {{skill=Survival}} {{result=[[[[@{skill_survival_level}+@{skill_specialization_0_expertise}]]d10]]}}">Survival</option>
@@ -2444,6 +2473,7 @@
                         <option value="{{attribute=Intellect}} {{bonus=@{attribute_intellect}}} {{dice=@{skill_science:_physical_level}}} {{skill=Science: Physical}} {{result=[[[[@{skill_science:_physical_level}+@{skill_specialization_1_expertise}]]d10]]}}">Science: Physical</option>
                         <option value="{{attribute=Intellect}} {{bonus=@{attribute_intellect}}} {{dice=@{skill_security_level}}} {{skill=Security}} {{result=[[[[@{skill_security_level}+@{skill_specialization_1_expertise}]]d10]]}}">Security</option>
                         <option value="{{attribute=Presence}} {{bonus=@{attribute_presence}}} {{dice=@{skill_seduction_level}}} {{skill=Seduction}} {{result=[[[[@{skill_seduction_level}+@{skill_specialization_1_expertise}]]d10]]}}">Seduction</option>
+                        <option value="{{attribute=Agility}} {{bonus=@{attribute_agility}}} {{dice=@{skill_stealth_level}}} {{skill=Stealth}} {{result=[[[[@{skill_stealth_level}+@{skill_specialization_0_expertise}]]d10]]}}">Stealth</option>
                         <option value="{{attribute=Perception}} {{bonus=@{attribute_perception}}} {{dice=@{skill_support_weapons_level}}} {{skill=Support Weapons}} {{result=[[[[@{skill_support_weapons_level}+@{skill_specialization_1_expertise}]]d10]]}}">Support Weapons</option>
                         <option value="{{attribute=Intellect}} {{bonus=@{attribute_intellect}}} {{dice=@{skill_surveillance_level}}} {{skill=Surveillance}} {{result=[[[[@{skill_surveillance_level}+@{skill_specialization_1_expertise}]]d10]]}}">Surveillance</option>
                         <option value="{{attribute=Tenacity}} {{bonus=@{attribute_tenacity}}} {{dice=@{skill_survival_level}}} {{skill=Survival}} {{result=[[[[@{skill_survival_level}+@{skill_specialization_1_expertise}]]d10]]}}">Survival</option>
@@ -2521,6 +2551,7 @@
                         <option value="{{attribute=Intellect}} {{bonus=@{attribute_intellect}}} {{dice=@{skill_science:_physical_level}}} {{skill=Science: Physical}} {{result=[[[[@{skill_science:_physical_level}+@{skill_specialization_2_expertise}]]d10]]}}">Science: Physical</option>
                         <option value="{{attribute=Intellect}} {{bonus=@{attribute_intellect}}} {{dice=@{skill_security_level}}} {{skill=Security}} {{result=[[[[@{skill_security_level}+@{skill_specialization_2_expertise}]]d10]]}}">Security</option>
                         <option value="{{attribute=Presence}} {{bonus=@{attribute_presence}}} {{dice=@{skill_seduction_level}}} {{skill=Seduction}} {{result=[[[[@{skill_seduction_level}+@{skill_specialization_2_expertise}]]d10]]}}">Seduction</option>
+                        <option value="{{attribute=Agility}} {{bonus=@{attribute_agility}}} {{dice=@{skill_stealth_level}}} {{skill=Stealth}} {{result=[[[[@{skill_stealth_level}+@{skill_specialization_0_expertise}]]d10]]}}">Stealth</option>
                         <option value="{{attribute=Perception}} {{bonus=@{attribute_perception}}} {{dice=@{skill_support_weapons_level}}} {{skill=Support Weapons}} {{result=[[[[@{skill_support_weapons_level}+@{skill_specialization_2_expertise}]]d10]]}}">Support Weapons</option>
                         <option value="{{attribute=Intellect}} {{bonus=@{attribute_intellect}}} {{dice=@{skill_surveillance_level}}} {{skill=Surveillance}} {{result=[[[[@{skill_surveillance_level}+@{skill_specialization_2_expertise}]]d10]]}}">Surveillance</option>
                         <option value="{{attribute=Tenacity}} {{bonus=@{attribute_tenacity}}} {{dice=@{skill_survival_level}}} {{skill=Survival}} {{result=[[[[@{skill_survival_level}+@{skill_specialization_2_expertise}]]d10]]}}">Survival</option>
@@ -2598,6 +2629,7 @@
                         <option value="{{attribute=Intellect}} {{bonus=@{attribute_intellect}}} {{dice=@{skill_science:_physical_level}}} {{skill=Science: Physical}} {{result=[[[[@{skill_science:_physical_level}+@{skill_specialization_3_expertise}]]d10]]}}">Science: Physical</option>
                         <option value="{{attribute=Intellect}} {{bonus=@{attribute_intellect}}} {{dice=@{skill_security_level}}} {{skill=Security}} {{result=[[[[@{skill_security_level}+@{skill_specialization_3_expertise}]]d10]]}}">Security</option>
                         <option value="{{attribute=Presence}} {{bonus=@{attribute_presence}}} {{dice=@{skill_seduction_level}}} {{skill=Seduction}} {{result=[[[[@{skill_seduction_level}+@{skill_specialization_3_expertise}]]d10]]}}">Seduction</option>
+                        <option value="{{attribute=Agility}} {{bonus=@{attribute_agility}}} {{dice=@{skill_stealth_level}}} {{skill=Stealth}} {{result=[[[[@{skill_stealth_level}+@{skill_specialization_0_expertise}]]d10]]}}">Stealth</option>
                         <option value="{{attribute=Perception}} {{bonus=@{attribute_perception}}} {{dice=@{skill_support_weapons_level}}} {{skill=Support Weapons}} {{result=[[[[@{skill_support_weapons_level}+@{skill_specialization_3_expertise}]]d10]]}}">Support Weapons</option>
                         <option value="{{attribute=Intellect}} {{bonus=@{attribute_intellect}}} {{dice=@{skill_surveillance_level}}} {{skill=Surveillance}} {{result=[[[[@{skill_surveillance_level}+@{skill_specialization_3_expertise}]]d10]]}}">Surveillance</option>
                         <option value="{{attribute=Tenacity}} {{bonus=@{attribute_tenacity}}} {{dice=@{skill_survival_level}}} {{skill=Survival}} {{result=[[[[@{skill_survival_level}+@{skill_specialization_3_expertise}]]d10]]}}">Survival</option>
@@ -2675,6 +2707,7 @@
                         <option value="{{attribute=Intellect}} {{bonus=@{attribute_intellect}}} {{dice=@{skill_science:_physical_level}}} {{skill=Science: Physical}} {{result=[[[[@{skill_science:_physical_level}+@{skill_specialization_4_expertise}]]d10]]}}">Science: Physical</option>
                         <option value="{{attribute=Intellect}} {{bonus=@{attribute_intellect}}} {{dice=@{skill_security_level}}} {{skill=Security}} {{result=[[[[@{skill_security_level}+@{skill_specialization_4_expertise}]]d10]]}}">Security</option>
                         <option value="{{attribute=Presence}} {{bonus=@{attribute_presence}}} {{dice=@{skill_seduction_level}}} {{skill=Seduction}} {{result=[[[[@{skill_seduction_level}+@{skill_specialization_4_expertise}]]d10]]}}">Seduction</option>
+                        <option value="{{attribute=Agility}} {{bonus=@{attribute_agility}}} {{dice=@{skill_stealth_level}}} {{skill=Stealth}} {{result=[[[[@{skill_stealth_level}+@{skill_specialization_0_expertise}]]d10]]}}">Stealth</option>
                         <option value="{{attribute=Perception}} {{bonus=@{attribute_perception}}} {{dice=@{skill_support_weapons_level}}} {{skill=Support Weapons}} {{result=[[[[@{skill_support_weapons_level}+@{skill_specialization_4_expertise}]]d10]]}}">Support Weapons</option>
                         <option value="{{attribute=Intellect}} {{bonus=@{attribute_intellect}}} {{dice=@{skill_surveillance_level}}} {{skill=Surveillance}} {{result=[[[[@{skill_surveillance_level}+@{skill_specialization_4_expertise}]]d10]]}}">Surveillance</option>
                         <option value="{{attribute=Tenacity}} {{bonus=@{attribute_tenacity}}} {{dice=@{skill_survival_level}}} {{skill=Survival}} {{result=[[[[@{skill_survival_level}+@{skill_specialization_4_expertise}]]d10]]}}">Survival</option>
@@ -2752,6 +2785,7 @@
                         <option value="{{attribute=Intellect}} {{bonus=@{attribute_intellect}}} {{dice=@{skill_science:_physical_level}}} {{skill=Science: Physical}} {{result=[[[[@{skill_science:_physical_level}+@{skill_specialization_5_expertise}]]d10]]}}">Science: Physical</option>
                         <option value="{{attribute=Intellect}} {{bonus=@{attribute_intellect}}} {{dice=@{skill_security_level}}} {{skill=Security}} {{result=[[[[@{skill_security_level}+@{skill_specialization_5_expertise}]]d10]]}}">Security</option>
                         <option value="{{attribute=Presence}} {{bonus=@{attribute_presence}}} {{dice=@{skill_seduction_level}}} {{skill=Seduction}} {{result=[[[[@{skill_seduction_level}+@{skill_specialization_5_expertise}]]d10]]}}">Seduction</option>
+                        <option value="{{attribute=Agility}} {{bonus=@{attribute_agility}}} {{dice=@{skill_stealth_level}}} {{skill=Stealth}} {{result=[[[[@{skill_stealth_level}+@{skill_specialization_0_expertise}]]d10]]}}">Stealth</option>
                         <option value="{{attribute=Perception}} {{bonus=@{attribute_perception}}} {{dice=@{skill_support_weapons_level}}} {{skill=Support Weapons}} {{result=[[[[@{skill_support_weapons_level}+@{skill_specialization_5_expertise}]]d10]]}}">Support Weapons</option>
                         <option value="{{attribute=Intellect}} {{bonus=@{attribute_intellect}}} {{dice=@{skill_surveillance_level}}} {{skill=Surveillance}} {{result=[[[[@{skill_surveillance_level}+@{skill_specialization_5_expertise}]]d10]]}}">Surveillance</option>
                         <option value="{{attribute=Tenacity}} {{bonus=@{attribute_tenacity}}} {{dice=@{skill_survival_level}}} {{skill=Survival}} {{result=[[[[@{skill_survival_level}+@{skill_specialization_5_expertise}]]d10]]}}">Survival</option>
@@ -2829,6 +2863,7 @@
                         <option value="{{attribute=Intellect}} {{bonus=@{attribute_intellect}}} {{dice=@{skill_science:_physical_level}}} {{skill=Science: Physical}} {{result=[[[[@{skill_science:_physical_level}+@{skill_specialization_6_expertise}]]d10]]}}">Science: Physical</option>
                         <option value="{{attribute=Intellect}} {{bonus=@{attribute_intellect}}} {{dice=@{skill_security_level}}} {{skill=Security}} {{result=[[[[@{skill_security_level}+@{skill_specialization_6_expertise}]]d10]]}}">Security</option>
                         <option value="{{attribute=Presence}} {{bonus=@{attribute_presence}}} {{dice=@{skill_seduction_level}}} {{skill=Seduction}} {{result=[[[[@{skill_seduction_level}+@{skill_specialization_6_expertise}]]d10]]}}">Seduction</option>
+                        <option value="{{attribute=Agility}} {{bonus=@{attribute_agility}}} {{dice=@{skill_stealth_level}}} {{skill=Stealth}} {{result=[[[[@{skill_stealth_level}+@{skill_specialization_0_expertise}]]d10]]}}">Stealth</option>
                         <option value="{{attribute=Perception}} {{bonus=@{attribute_perception}}} {{dice=@{skill_support_weapons_level}}} {{skill=Support Weapons}} {{result=[[[[@{skill_support_weapons_level}+@{skill_specialization_6_expertise}]]d10]]}}">Support Weapons</option>
                         <option value="{{attribute=Intellect}} {{bonus=@{attribute_intellect}}} {{dice=@{skill_surveillance_level}}} {{skill=Surveillance}} {{result=[[[[@{skill_surveillance_level}+@{skill_specialization_6_expertise}]]d10]]}}">Surveillance</option>
                         <option value="{{attribute=Tenacity}} {{bonus=@{attribute_tenacity}}} {{dice=@{skill_survival_level}}} {{skill=Survival}} {{result=[[[[@{skill_survival_level}+@{skill_specialization_6_expertise}]]d10]]}}">Survival</option>
@@ -2906,6 +2941,7 @@
                         <option value="{{attribute=Intellect}} {{bonus=@{attribute_intellect}}} {{dice=@{skill_science:_physical_level}}} {{skill=Science: Physical}} {{result=[[[[@{skill_science:_physical_level}+@{skill_specialization_7_expertise}]]d10]]}}">Science: Physical</option>
                         <option value="{{attribute=Intellect}} {{bonus=@{attribute_intellect}}} {{dice=@{skill_security_level}}} {{skill=Security}} {{result=[[[[@{skill_security_level}+@{skill_specialization_7_expertise}]]d10]]}}">Security</option>
                         <option value="{{attribute=Presence}} {{bonus=@{attribute_presence}}} {{dice=@{skill_seduction_level}}} {{skill=Seduction}} {{result=[[[[@{skill_seduction_level}+@{skill_specialization_7_expertise}]]d10]]}}">Seduction</option>
+                        <option value="{{attribute=Agility}} {{bonus=@{attribute_agility}}} {{dice=@{skill_stealth_level}}} {{skill=Stealth}} {{result=[[[[@{skill_stealth_level}+@{skill_specialization_0_expertise}]]d10]]}}">Stealth</option>
                         <option value="{{attribute=Perception}} {{bonus=@{attribute_perception}}} {{dice=@{skill_support_weapons_level}}} {{skill=Support Weapons}} {{result=[[[[@{skill_support_weapons_level}+@{skill_specialization_7_expertise}]]d10]]}}">Support Weapons</option>
                         <option value="{{attribute=Intellect}} {{bonus=@{attribute_intellect}}} {{dice=@{skill_surveillance_level}}} {{skill=Surveillance}} {{result=[[[[@{skill_surveillance_level}+@{skill_specialization_7_expertise}]]d10]]}}">Surveillance</option>
                         <option value="{{attribute=Tenacity}} {{bonus=@{attribute_tenacity}}} {{dice=@{skill_survival_level}}} {{skill=Survival}} {{result=[[[[@{skill_survival_level}+@{skill_specialization_7_expertise}]]d10]]}}">Survival</option>
@@ -2983,6 +3019,7 @@
                         <option value="{{attribute=Intellect}} {{bonus=@{attribute_intellect}}} {{dice=@{skill_science:_physical_level}}} {{skill=Science: Physical}} {{result=[[[[@{skill_science:_physical_level}+@{skill_specialization_8_expertise}]]d10]]}}">Science: Physical</option>
                         <option value="{{attribute=Intellect}} {{bonus=@{attribute_intellect}}} {{dice=@{skill_security_level}}} {{skill=Security}} {{result=[[[[@{skill_security_level}+@{skill_specialization_8_expertise}]]d10]]}}">Security</option>
                         <option value="{{attribute=Presence}} {{bonus=@{attribute_presence}}} {{dice=@{skill_seduction_level}}} {{skill=Seduction}} {{result=[[[[@{skill_seduction_level}+@{skill_specialization_8_expertise}]]d10]]}}">Seduction</option>
+                        <option value="{{attribute=Agility}} {{bonus=@{attribute_agility}}} {{dice=@{skill_stealth_level}}} {{skill=Stealth}} {{result=[[[[@{skill_stealth_level}+@{skill_specialization_0_expertise}]]d10]]}}">Stealth</option>
                         <option value="{{attribute=Perception}} {{bonus=@{attribute_perception}}} {{dice=@{skill_support_weapons_level}}} {{skill=Support Weapons}} {{result=[[[[@{skill_support_weapons_level}+@{skill_specialization_8_expertise}]]d10]]}}">Support Weapons</option>
                         <option value="{{attribute=Intellect}} {{bonus=@{attribute_intellect}}} {{dice=@{skill_surveillance_level}}} {{skill=Surveillance}} {{result=[[[[@{skill_surveillance_level}+@{skill_specialization_8_expertise}]]d10]]}}">Surveillance</option>
                         <option value="{{attribute=Tenacity}} {{bonus=@{attribute_tenacity}}} {{dice=@{skill_survival_level}}} {{skill=Survival}} {{result=[[[[@{skill_survival_level}+@{skill_specialization_8_expertise}]]d10]]}}">Survival</option>

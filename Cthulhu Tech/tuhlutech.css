@@ -76,6 +76,13 @@ div.sheet-separator {
     width: 100%;
 }
 
+div.sheet-clean-separator {
+    display: grid;
+    margin-top: -1px;
+    padding-bottom: 10px;
+    width: 100%;
+}
+
 div.sheet-group {
     display: inline-block;
     float: left;
@@ -175,7 +182,9 @@ div.sheet-group {
 .sheet-rolltemplate-framewerkresult,
 .sheet-rolltemplate-framewerkspecial,
 .sheet-rolltemplate-framewerkinitiative,
-.sheet-rolltemplate-framewerksimple {
+.sheet-rolltemplate-framewerksimple,
+.sheet-rolltemplate-damage,
+.sheet-rolltemplate-d10dice {
     font: 11px;
 }
 
@@ -190,7 +199,9 @@ div.sheet-group {
 .sheet-rolltemplate-framewerkresult td,
 .sheet-rolltemplate-framewerkspecial td,
 .sheet-rolltemplate-framewerkinitiative td,
-.sheet-rolltemplate-framewerksimple td {
+.sheet-rolltemplate-framewerksimple td,
+.sheet-rolltemplate-damage td,
+.sheet-rolltemplate-d10dice td {
     background: #fff;
     border: 1px solid black;
     padding: 0px 4px;
@@ -200,7 +211,9 @@ div.sheet-group {
 .sheet-rolltemplate-framewerkresult td:nth-child(1),
 .sheet-rolltemplate-framewerkspecial td:nth-child(1),
 .sheet-rolltemplate-framewerkinitiative td:nth-child(1),
-.sheet-rolltemplate-framewerksimple td:nth-child(1) {
+.sheet-rolltemplate-framewerksimple td:nth-child(1),
+.sheet-rolltemplate-damage td:nth-child(1),
+.sheet-rolltemplate-d10dice td:nth-child(1) {
     background: #e3e3e3;
 }
 
@@ -208,7 +221,9 @@ div.sheet-group {
 .sheet-rolltemplate-framewerkresult th,
 .sheet-rolltemplate-framewerkspecial th,
 .sheet-rolltemplate-framewerkinitiative th,
-.sheet-rolltemplate-framewerksimple th {
+.sheet-rolltemplate-framewerksimple th,
+.sheet-rolltemplate-damage th,
+.sheet-rolltemplate-d10dice th {
     background: #dcc;
     border: 1px solid black;
     padding: 0px 4px;
@@ -218,7 +233,9 @@ div.sheet-group {
 .sheet-rolltemplate-framewerkresult .sheet-title,
 .sheet-rolltemplate-framewerkspecial .sheet-title,
 .sheet-rolltemplate-framewerkinitiative .sheet-title,
-.sheet-rolltemplate-framewerksimple .sheet-title {
+.sheet-rolltemplate-framewerksimple .sheet-title,
+.sheet-rolltemplate-damage .sheet-title,
+.sheet-rolltemplate-d10dice .sheet-title {
     background: #666;
     border-radius: 8px 8px 0px 0px;
     color: white;
@@ -231,7 +248,9 @@ div.sheet-group {
 .sheet-rolltemplate-framewerk .sheet-result,
 .sheet-rolltemplate-framewerkresult .sheet-result,
 .sheet-rolltemplate-framewerkspecial .sheet-result,
-.sheet-rolltemplate-framewerkinitiative .sheet-result {
+.sheet-rolltemplate-framewerkinitiative .sheet-result,
+.sheet-rolltemplate-damage .sheet-result,
+.sheet-rolltemplate-d10dice .sheet-result {
     background: #666;
     border-radius: 0px 0px 8px 8px;
     color: white;
@@ -245,14 +264,18 @@ div.sheet-group {
 .sheet-rolltemplate-framewerkresult > div,
 .sheet-rolltemplate-framewerkspecial > div,
 .sheet-rolltemplate-framewerkinitiative > div,
-.sheet-rolltemplate-framewerksimple > div {
+.sheet-rolltemplate-framewerksimple > div,
+.sheet-rolltemplate-damage > div,
+.sheet-rolltemplate-d10dice > div {
     margin: auto;
     width: max-content;
 }
 
 .sheet-rolltemplate-framewerk .inlinerollresult,
 .sheet-rolltemplate-framewerksimple .inlinerollresult,
-.sheet-rolltemplate-framewerkinitiative .inlinerollresult {
+.sheet-rolltemplate-framewerkinitiative .inlinerollresult,
+.sheet-rolltemplate-damage .inlinerollresult,
+.sheet-rolltemplate-d10dice .inlinerollresult {
     background: none;
     border: none !important;
 }

@@ -9,11 +9,11 @@ function get_safely(str, attr, def) {
 
 on("chat:message", function(msg) {
     if((msg.type == "general" || msg.type == "whisper") && msg.content.indexOf("!calc") !== -1) {
-        var bonus = get_safely(msg.content, 'bonus', 0);
+        var bonus = get_safely(msg.content, 'bonus', '0');
         if(bonus.includes('$[[')) {
             bonus = bonus.replace('$[[', '').replace(']]', '');
         }
-        var bonusmod = get_safely(msg.content, 'bonusmod', 0);
+        var bonusmod = get_safely(msg.content, 'bonusmod', '0');
         var origin=[];
         var ones = 0;
         for(let i=0; i<msg.inlinerolls.length;i++) {

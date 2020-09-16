@@ -82,7 +82,7 @@ on("chat:message", function(msg) {
         }
 
         var template = "&{template:framewerkresult} ";
-        var roll = "{{roll="+origin+"}} ";
+        var roll = "{{roll="+values+"}} ";
         var best = "{{best="+highest_value+"}} ";
         var result = "{{result="+(parseInt(highest_value)+parseInt(bonus)+parseInt(bonusmod))+"}} ";
         var risky = "";

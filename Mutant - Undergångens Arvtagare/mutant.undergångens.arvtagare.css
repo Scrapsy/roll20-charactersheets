@@ -45,6 +45,10 @@ div.sheet-separator {
     border: solid 1px #333;
 }
 
+.sheet-attributes td:nth-child(3) {
+    text-align: center;
+}
+
 .sheet-group th {
     background: #333;
     color: #e3e3e3;
@@ -71,6 +75,7 @@ div.sheet-separator {
 
 .sheet-attributes td:nth-child(1),
 .sheet-concept td:nth-child(odd),
+.sheet-dice td:nth-child(1),
 .sheet-money td:nth-child(1),
 .sheet-statistics td:nth-child(odd) {
     background: #333;
@@ -84,12 +89,14 @@ div.sheet-separator {
     background: #ccc;
 }
 
+.sheet-rolltemplate-attributeroll .sheet-title,
 .sheet-rolltemplate-weaponroll .sheet-title,
 .sheet-rolltemplate-standardroll .sheet-title {
     font-variant-caps: small-caps;
     font-size: 14px;
 }
 
+.sheet-rolltemplate-attributeroll td:nth-child(odd),
 .sheet-rolltemplate-weaponroll td:nth-child(odd),
 .sheet-rolltemplate-standardroll td:nth-child(odd) {
     background: #333;
@@ -98,6 +105,7 @@ div.sheet-separator {
     padding: 5px;
 }
 
+.sheet-rolltemplate-attributeroll td:nth-child(even),
 .sheet-rolltemplate-weaponroll td:nth-child(even),
 .sheet-rolltemplate-standardroll td:nth-child(even) {
     background: #e3e3e3;
@@ -107,10 +115,18 @@ div.sheet-separator {
     text-align: right;
 }
 
+.sheet-rolltemplate-attributeroll th,
 .sheet-rolltemplate-weaponroll th,
 .sheet-rolltemplate-standardroll th {
     background: #333;
     color: #e3e3e3;
     font-variant-caps: small-caps;
     padding: 5px;
+}
+
+.sheet-rolltemplate-attributeroll .inlinerollresult,
+.sheet-rolltemplate-weaponroll .inlinerollresult,
+.sheet-rolltemplate-standardroll .inlinerollresult {
+    background: none;
+    border: none;
 }

@@ -27,7 +27,7 @@ div.sheet-separator {
 }
 
 .sheet-medium-text {
-    width: 60px;
+    width: 80px;
 }
 
 .sheet-short-text {
@@ -51,6 +51,7 @@ div.sheet-separator {
 
 .sheet-group th {
     background: #333;
+    border: 1px solid #333;
     color: #e3e3e3;
     font-variant-caps: small-caps;
     padding: 5px;
@@ -73,6 +74,10 @@ div.sheet-separator {
     width: 350px;
 }
 
+.sheet-full {
+    width: 100%;
+}
+
 .sheet-attributes td:nth-child(1),
 .sheet-concept td:nth-child(odd),
 .sheet-dice td:nth-child(1),
@@ -89,6 +94,7 @@ div.sheet-separator {
     background: #ccc;
 }
 
+.sheet-rolltemplate-powerroll .sheet-title,
 .sheet-rolltemplate-attributeroll .sheet-title,
 .sheet-rolltemplate-weaponroll .sheet-title,
 .sheet-rolltemplate-standardroll .sheet-title {
@@ -96,6 +102,7 @@ div.sheet-separator {
     font-size: 14px;
 }
 
+.sheet-rolltemplate-powerroll td:nth-child(odd),
 .sheet-rolltemplate-attributeroll td:nth-child(odd),
 .sheet-rolltemplate-weaponroll td:nth-child(odd),
 .sheet-rolltemplate-standardroll td:nth-child(odd) {
@@ -105,6 +112,12 @@ div.sheet-separator {
     padding: 5px;
 }
 
+.sheet-rolltemplate-powerroll td.sheet-table-grey {
+    background: #e3e3e3;
+    color: #333;
+}
+
+.sheet-rolltemplate-powerroll td:nth-child(even),
 .sheet-rolltemplate-attributeroll td:nth-child(even),
 .sheet-rolltemplate-weaponroll td:nth-child(even),
 .sheet-rolltemplate-standardroll td:nth-child(even) {
@@ -115,18 +128,28 @@ div.sheet-separator {
     text-align: right;
 }
 
+.sheet-rolltemplate-powerroll td,
+.sheet-rolltemplate-attributeroll td,
+.sheet-rolltemplate-weaponroll td,
+.sheet-rolltemplate-standardroll td {
+    border: 1px solid #333;
+}
+
+.sheet-rolltemplate-powerroll th,
 .sheet-rolltemplate-attributeroll th,
 .sheet-rolltemplate-weaponroll th,
 .sheet-rolltemplate-standardroll th {
     background: #333;
+    border: 1px solid #333;
     color: #e3e3e3;
     font-variant-caps: small-caps;
     padding: 5px;
 }
 
+.sheet-rolltemplate-powerroll .inlinerollresult,
 .sheet-rolltemplate-attributeroll .inlinerollresult,
 .sheet-rolltemplate-weaponroll .inlinerollresult,
 .sheet-rolltemplate-standardroll .inlinerollresult {
     background: none;
-    border: none;
+    border: 2px solid #B18EFE;
 }

@@ -276,8 +276,6 @@
                     Kroppspoäng
                 </div>
             </td>
-            <td>
-            </td>
         </tr>
         <tr>
             <td>
@@ -1208,84 +1206,606 @@
 </div>
 
 <div class='sheet-group sheet-powers'>
-    <table>
-        <tr>
-            <th>
-                <div class='sheet-table-header'>
-                    Förmåga
-                </div>
-            </th>
-            <th>
-                <div class='sheet-table-header'>
-                    Beskrivning
-                </div>
-            </th>
-        </tr>
-        <tr>
-            <td>
-                <input class='sheet-table-text' type='text' name='attr_power_name_0' />
-            </td>
-            <td>
-                <textarea class='sheet-table-text sheet-wide' type='text' name='attr_power_description_0'></textarea>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <input class='sheet-table-text' type='text' name='attr_power_name_1' />
-            </td>
-            <td>
-                <textarea class='sheet-table-text sheet-wide' type='text' name='attr_power_description_1'></textarea>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <input class='sheet-table-text' type='text' name='attr_power_name_2' />
-            </td>
-            <td>
-                <textarea class='sheet-table-text sheet-wide' type='text' name='attr_power_description_2'></textarea>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <input class='sheet-table-text' type='text' name='attr_power_name_3' />
-            </td>
-            <td>
-                <textarea class='sheet-table-text sheet-wide' type='text' name='attr_power_description_3'></textarea>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <input class='sheet-table-text' type='text' name='attr_power_name_4' />
-            </td>
-            <td>
-                <textarea class='sheet-table-text sheet-wide' type='text' name='attr_power_description_4'></textarea>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <input class='sheet-table-text' type='text' name='attr_power_name_5' />
-            </td>
-            <td>
-                <textarea class='sheet-table-text sheet-wide' type='text' name='attr_power_description_5'></textarea>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <input class='sheet-table-text' type='text' name='attr_power_name_6' />
-            </td>
-            <td>
-                <textarea class='sheet-table-text sheet-wide' type='text' name='attr_power_description_6'></textarea>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <input class='sheet-table-text' type='text' name='attr_power_name_7' />
-            </td>
-            <td>
-                <textarea class='sheet-table-text sheet-wide' type='text' name='attr_power_description_7'></textarea>
-            </td>
-        </tr>
-    </table>
+    <div class='sheet-power'>
+        <table>
+            <tr>
+                <th>
+                    <div class='sheet-table-header'>
+                        Förmåga
+                    </div>
+                </th>
+                <th>
+                    <div class='sheet-table-header'>
+                        Kostnad
+                    </div>
+                </th>
+                <th>
+                    <div class='sheet-table-header'>
+                        Aktivering
+                    </div>
+                </th>
+                <th>
+                    <div class='sheet-table-header'>
+                        Räckvidd
+                    </div>
+                </th>
+                <th>
+                    <div class='sheet-table-header'>
+                        Effekt
+                    </div>
+                </th>
+                <th>
+                    <div class='sheet-table-header'>
+                        Varaktighet
+                    </div>
+                </th>
+                <th>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <input class='sheet-table-text' type='text' name='attr_power_name_0' />
+                </td>
+                <td>
+                    <input class='sheet-table-text' type='number' name='attr_power_cost_0' />
+                </td>
+                <td>
+                    <input class='sheet-table-text sheet-medium-text' type='text' name='attr_power_activation_0' />
+                </td>
+                <td>
+                    <input class='sheet-table-text sheet-medium-text' type='text' name='attr_power_reach_0' />
+                </td>
+                <td>
+                    <input class='sheet-table-text sheet-medium-text' type='text' name='attr_power_effect_0' />
+                </td>
+                <td>
+                    <input class='sheet-table-text sheet-medium-text' type='text' name='attr_power_duration_0' />
+                </td>
+                <td>
+                    <button type="roll" name="roll_power_0" value="@{output_option} &{template:powerroll} {{name=@{character_name}}} {{power=@{power_name_0}}} {{cost=@{power_cost_0}}} {{activation=@{power_activation_0}}} {{reach=@{power_reach_0}}} {{effect=@{power_effect_0}}} {{duration=@{power_duration_0}}} {{power_description=@{power_description_0}}}"></button>
+                </td>
+            </tr>
+        </table>
+        <table class='sheet-full'>
+            <tr>
+                <th>
+                    <div class='sheet-table-header'>
+                        Beskrivning
+                    </div>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <textarea class='sheet-table-text sheet-full' type='text' name='attr_power_description_0'></textarea>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class='sheet-power'>
+        <table>
+            <tr>
+                <th>
+                    <div class='sheet-table-header'>
+                        Förmåga
+                    </div>
+                </th>
+                <th>
+                    <div class='sheet-table-header'>
+                        Kostnad
+                    </div>
+                </th>
+                <th>
+                    <div class='sheet-table-header'>
+                        Aktivering
+                    </div>
+                </th>
+                <th>
+                    <div class='sheet-table-header'>
+                        Räckvidd
+                    </div>
+                </th>
+                <th>
+                    <div class='sheet-table-header'>
+                        Effekt
+                    </div>
+                </th>
+                <th>
+                    <div class='sheet-table-header'>
+                        Varaktighet
+                    </div>
+                </th>
+                <th>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <input class='sheet-table-text' type='text' name='attr_power_name_1' />
+                </td>
+                <td>
+                    <input class='sheet-table-text' type='number' name='attr_power_cost_1' />
+                </td>
+                <td>
+                    <input class='sheet-table-text sheet-medium-text' type='text' name='attr_power_activation_1' />
+                </td>
+                <td>
+                    <input class='sheet-table-text sheet-medium-text' type='text' name='attr_power_reach_1' />
+                </td>
+                <td>
+                    <input class='sheet-table-text sheet-medium-text' type='text' name='attr_power_effect_1' />
+                </td>
+                <td>
+                    <input class='sheet-table-text sheet-medium-text' type='text' name='attr_power_duration_1' />
+                </td>
+                <td>
+                    <button type="roll" name="roll_power_1" value="@{output_option} &{template:powerroll} {{name=@{character_name}}} {{power=@{power_name_1}}} {{cost=@{power_cost_1}}} {{activation=@{power_activation_1}}} {{reach=@{power_reach_1}}} {{effect=@{power_effect_1}}} {{duration=@{power_duration_1}}} {{power_description=@{power_description_1}}}"></button>
+                </td>
+            </tr>
+        </table>
+        <table class='sheet-full'>
+            <tr>
+                <th>
+                    <div class='sheet-table-header'>
+                        Beskrivning
+                    </div>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <textarea class='sheet-table-text sheet-full' type='text' name='attr_power_description_1'></textarea>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class='sheet-power'>
+        <table>
+            <tr>
+                <th>
+                    <div class='sheet-table-header'>
+                        Förmåga
+                    </div>
+                </th>
+                <th>
+                    <div class='sheet-table-header'>
+                        Kostnad
+                    </div>
+                </th>
+                <th>
+                    <div class='sheet-table-header'>
+                        Aktivering
+                    </div>
+                </th>
+                <th>
+                    <div class='sheet-table-header'>
+                        Räckvidd
+                    </div>
+                </th>
+                <th>
+                    <div class='sheet-table-header'>
+                        Effekt
+                    </div>
+                </th>
+                <th>
+                    <div class='sheet-table-header'>
+                        Varaktighet
+                    </div>
+                </th>
+                <th>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <input class='sheet-table-text' type='text' name='attr_power_name_2' />
+                </td>
+                <td>
+                    <input class='sheet-table-text' type='number' name='attr_power_cost_2' />
+                </td>
+                <td>
+                    <input class='sheet-table-text sheet-medium-text' type='text' name='attr_power_activation_2' />
+                </td>
+                <td>
+                    <input class='sheet-table-text sheet-medium-text' type='text' name='attr_power_reach_2' />
+                </td>
+                <td>
+                    <input class='sheet-table-text sheet-medium-text' type='text' name='attr_power_effect_2' />
+                </td>
+                <td>
+                    <input class='sheet-table-text sheet-medium-text' type='text' name='attr_power_duration_2' />
+                </td>
+                <td>
+                    <button type="roll" name="roll_power_2" value="@{output_option} &{template:powerroll} {{name=@{character_name}}} {{power=@{power_name_2}}} {{cost=@{power_cost_2}}} {{activation=@{power_activation_2}}} {{reach=@{power_reach_2}}} {{effect=@{power_effect_2}}} {{duration=@{power_duration_2}}} {{power_description=@{power_description_2}}}"></button>
+                </td>
+            </tr>
+        </table>
+        <table class='sheet-full'>
+            <tr>
+                <th>
+                    <div class='sheet-table-header'>
+                        Beskrivning
+                    </div>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <textarea class='sheet-table-text sheet-full' type='text' name='attr_power_description_2'></textarea>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class='sheet-power'>
+        <table>
+            <tr>
+                <th>
+                    <div class='sheet-table-header'>
+                        Förmåga
+                    </div>
+                </th>
+                <th>
+                    <div class='sheet-table-header'>
+                        Kostnad
+                    </div>
+                </th>
+                <th>
+                    <div class='sheet-table-header'>
+                        Aktivering
+                    </div>
+                </th>
+                <th>
+                    <div class='sheet-table-header'>
+                        Räckvidd
+                    </div>
+                </th>
+                <th>
+                    <div class='sheet-table-header'>
+                        Effekt
+                    </div>
+                </th>
+                <th>
+                    <div class='sheet-table-header'>
+                        Varaktighet
+                    </div>
+                </th>
+                <th>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <input class='sheet-table-text' type='text' name='attr_power_name_3' />
+                </td>
+                <td>
+                    <input class='sheet-table-text' type='number' name='attr_power_cost_3' />
+                </td>
+                <td>
+                    <input class='sheet-table-text sheet-medium-text' type='text' name='attr_power_activation_3' />
+                </td>
+                <td>
+                    <input class='sheet-table-text sheet-medium-text' type='text' name='attr_power_reach_3' />
+                </td>
+                <td>
+                    <input class='sheet-table-text sheet-medium-text' type='text' name='attr_power_effect_3' />
+                </td>
+                <td>
+                    <input class='sheet-table-text sheet-medium-text' type='text' name='attr_power_duration_3' />
+                </td>
+                <td>
+                    <button type="roll" name="roll_power_3" value="@{output_option} &{template:powerroll} {{name=@{character_name}}} {{power=@{power_name_3}}} {{cost=@{power_cost_3}}} {{activation=@{power_activation_3}}} {{reach=@{power_reach_3}}} {{effect=@{power_effect_3}}} {{duration=@{power_duration_3}}} {{power_description=@{power_description_3}}}"></button>
+                </td>
+            </tr>
+        </table>
+        <table class='sheet-full'>
+            <tr>
+                <th>
+                    <div class='sheet-table-header'>
+                        Beskrivning
+                    </div>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <textarea class='sheet-table-text sheet-full' type='text' name='attr_power_description_3'></textarea>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class='sheet-power'>
+        <table>
+            <tr>
+                <th>
+                    <div class='sheet-table-header'>
+                        Förmåga
+                    </div>
+                </th>
+                <th>
+                    <div class='sheet-table-header'>
+                        Kostnad
+                    </div>
+                </th>
+                <th>
+                    <div class='sheet-table-header'>
+                        Aktivering
+                    </div>
+                </th>
+                <th>
+                    <div class='sheet-table-header'>
+                        Räckvidd
+                    </div>
+                </th>
+                <th>
+                    <div class='sheet-table-header'>
+                        Effekt
+                    </div>
+                </th>
+                <th>
+                    <div class='sheet-table-header'>
+                        Varaktighet
+                    </div>
+                </th>
+                <th>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <input class='sheet-table-text' type='text' name='attr_power_name_4' />
+                </td>
+                <td>
+                    <input class='sheet-table-text' type='number' name='attr_power_cost_4' />
+                </td>
+                <td>
+                    <input class='sheet-table-text sheet-medium-text' type='text' name='attr_power_activation_4' />
+                </td>
+                <td>
+                    <input class='sheet-table-text sheet-medium-text' type='text' name='attr_power_reach_4' />
+                </td>
+                <td>
+                    <input class='sheet-table-text sheet-medium-text' type='text' name='attr_power_effect_4' />
+                </td>
+                <td>
+                    <input class='sheet-table-text sheet-medium-text' type='text' name='attr_power_duration_4' />
+                </td>
+                <td>
+                    <button type="roll" name="roll_power_4" value="@{output_option} &{template:powerroll} {{name=@{character_name}}} {{power=@{power_name_4}}} {{cost=@{power_cost_4}}} {{activation=@{power_activation_4}}} {{reach=@{power_reach_4}}} {{effect=@{power_effect_4}}} {{duration=@{power_duration_4}}} {{power_description=@{power_description_4}}}"></button>
+                </td>
+            </tr>
+        </table>
+        <table class='sheet-full'>
+            <tr>
+                <th>
+                    <div class='sheet-table-header'>
+                        Beskrivning
+                    </div>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <textarea class='sheet-table-text sheet-full' type='text' name='attr_power_description_4'></textarea>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class='sheet-power'>
+        <table>
+            <tr>
+                <th>
+                    <div class='sheet-table-header'>
+                        Förmåga
+                    </div>
+                </th>
+                <th>
+                    <div class='sheet-table-header'>
+                        Kostnad
+                    </div>
+                </th>
+                <th>
+                    <div class='sheet-table-header'>
+                        Aktivering
+                    </div>
+                </th>
+                <th>
+                    <div class='sheet-table-header'>
+                        Räckvidd
+                    </div>
+                </th>
+                <th>
+                    <div class='sheet-table-header'>
+                        Effekt
+                    </div>
+                </th>
+                <th>
+                    <div class='sheet-table-header'>
+                        Varaktighet
+                    </div>
+                </th>
+                <th>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <input class='sheet-table-text' type='text' name='attr_power_name_5' />
+                </td>
+                <td>
+                    <input class='sheet-table-text' type='number' name='attr_power_cost_5' />
+                </td>
+                <td>
+                    <input class='sheet-table-text sheet-medium-text' type='text' name='attr_power_activation_5' />
+                </td>
+                <td>
+                    <input class='sheet-table-text sheet-medium-text' type='text' name='attr_power_reach_5' />
+                </td>
+                <td>
+                    <input class='sheet-table-text sheet-medium-text' type='text' name='attr_power_effect_5' />
+                </td>
+                <td>
+                    <input class='sheet-table-text sheet-medium-text' type='text' name='attr_power_duration_5' />
+                </td>
+                <td>
+                    <button type="roll" name="roll_power_5" value="@{output_option} &{template:powerroll} {{name=@{character_name}}} {{power=@{power_name_5}}} {{cost=@{power_cost_5}}} {{activation=@{power_activation_5}}} {{reach=@{power_reach_5}}} {{effect=@{power_effect_5}}} {{duration=@{power_duration_5}}} {{power_description=@{power_description_5}}}"></button>
+                </td>
+            </tr>
+        </table>
+        <table class='sheet-full'>
+            <tr>
+                <th>
+                    <div class='sheet-table-header'>
+                        Beskrivning
+                    </div>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <textarea class='sheet-table-text sheet-full' type='text' name='attr_power_description_5'></textarea>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class='sheet-power'>
+        <table>
+            <tr>
+                <th>
+                    <div class='sheet-table-header'>
+                        Förmåga
+                    </div>
+                </th>
+                <th>
+                    <div class='sheet-table-header'>
+                        Kostnad
+                    </div>
+                </th>
+                <th>
+                    <div class='sheet-table-header'>
+                        Aktivering
+                    </div>
+                </th>
+                <th>
+                    <div class='sheet-table-header'>
+                        Räckvidd
+                    </div>
+                </th>
+                <th>
+                    <div class='sheet-table-header'>
+                        Effekt
+                    </div>
+                </th>
+                <th>
+                    <div class='sheet-table-header'>
+                        Varaktighet
+                    </div>
+                </th>
+                <th>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <input class='sheet-table-text' type='text' name='attr_power_name_6' />
+                </td>
+                <td>
+                    <input class='sheet-table-text' type='number' name='attr_power_cost_6' />
+                </td>
+                <td>
+                    <input class='sheet-table-text sheet-medium-text' type='text' name='attr_power_activation_6' />
+                </td>
+                <td>
+                    <input class='sheet-table-text sheet-medium-text' type='text' name='attr_power_reach_6' />
+                </td>
+                <td>
+                    <input class='sheet-table-text sheet-medium-text' type='text' name='attr_power_effect_6' />
+                </td>
+                <td>
+                    <input class='sheet-table-text sheet-medium-text' type='text' name='attr_power_duration_6' />
+                </td>
+                <td>
+                    <button type="roll" name="roll_power_6" value="@{output_option} &{template:powerroll} {{name=@{character_name}}} {{power=@{power_name_6}}} {{cost=@{power_cost_6}}} {{activation=@{power_activation_6}}} {{reach=@{power_reach_6}}} {{effect=@{power_effect_6}}} {{duration=@{power_duration_6}}} {{power_description=@{power_description_6}}}"></button>
+                </td>
+            </tr>
+        </table>
+        <table class='sheet-full'>
+            <tr>
+                <th>
+                    <div class='sheet-table-header'>
+                        Beskrivning
+                    </div>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <textarea class='sheet-table-text sheet-full' type='text' name='attr_power_description_6'></textarea>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class='sheet-power'>
+        <table>
+            <tr>
+                <th>
+                    <div class='sheet-table-header'>
+                        Förmåga
+                    </div>
+                </th>
+                <th>
+                    <div class='sheet-table-header'>
+                        Kostnad
+                    </div>
+                </th>
+                <th>
+                    <div class='sheet-table-header'>
+                        Aktivering
+                    </div>
+                </th>
+                <th>
+                    <div class='sheet-table-header'>
+                        Räckvidd
+                    </div>
+                </th>
+                <th>
+                    <div class='sheet-table-header'>
+                        Effekt
+                    </div>
+                </th>
+                <th>
+                    <div class='sheet-table-header'>
+                        Varaktighet
+                    </div>
+                </th>
+                <th>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <input class='sheet-table-text' type='text' name='attr_power_name_7' />
+                </td>
+                <td>
+                    <input class='sheet-table-text' type='number' name='attr_power_cost_7' />
+                </td>
+                <td>
+                    <input class='sheet-table-text sheet-medium-text' type='text' name='attr_power_activation_7' />
+                </td>
+                <td>
+                    <input class='sheet-table-text sheet-medium-text' type='text' name='attr_power_reach_7' />
+                </td>
+                <td>
+                    <input class='sheet-table-text sheet-medium-text' type='text' name='attr_power_effect_7' />
+                </td>
+                <td>
+                    <input class='sheet-table-text sheet-medium-text' type='text' name='attr_power_duration_7' />
+                </td>
+                <td>
+                    <button type="roll" name="roll_power_7" value="@{output_option} &{template:powerroll} {{name=@{character_name}}} {{power=@{power_name_7}}} {{cost=@{power_cost_7}}} {{activation=@{power_activation_7}}} {{reach=@{power_reach_7}}} {{effect=@{power_effect_7}}} {{duration=@{power_duration_7}}} {{power_description=@{power_description_7}}}"></button>
+                </td>
+            </tr>
+        </table>
+        <table class='sheet-full'>
+            <tr>
+                <th>
+                    <div class='sheet-table-header'>
+                        Beskrivning
+                    </div>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <textarea class='sheet-table-text sheet-full' type='text' name='attr_power_description_7'></textarea>
+                </td>
+            </tr>
+        </table>
+    </div>
 </div>
 
 <div class='sheet-separator'></div>
@@ -1748,6 +2268,102 @@
             <td>
                 <div class='sheet-table-header'>
                     {{roll}}
+                </div>
+            </td>
+        </tr>
+    </table>
+</rolltemplate>
+
+<rolltemplate class="sheet-rolltemplate-powerroll">
+    <div class='sheet-title'>
+        {{name}} aktiverade
+    </div>
+    <table>
+        <tr>
+            <th>
+                <div class='sheet-table-header'>
+                    Förmåga
+                </div>
+            </th>
+            <td>
+                <div class='sheet-table-header'>
+                    {{power}}
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <div class='sheet-table-header'>
+                    Kostnad
+                </div>
+            </th>
+            <td>
+                <div class='sheet-table-header'>
+                    {{cost}}
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <div class='sheet-table-header'>
+                    Aktivering
+                </div>
+            </th>
+            <td>
+                <div class='sheet-table-header'>
+                    {{activation}}
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <div class='sheet-table-header'>
+                    Räckvidd
+                </div>
+            </th>
+            <td>
+                <div class='sheet-table-header'>
+                    {{reach}}
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <div class='sheet-table-header'>
+                    Effekt
+                </div>
+            </th>
+            <td>
+                <div class='sheet-table-header'>
+                    {{effect}}
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <div class='sheet-table-header'>
+                    Varaktighet
+                </div>
+            </th>
+            <td>
+                <div class='sheet-table-header'>
+                    {{duration}}
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <div class='sheet-table-header'>
+                    Beskrivning
+                </div>
+            </th>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <td class='sheet-table-grey'>
+                <div class='sheet-table-header'>
+                    {{power_description}}
                 </div>
             </td>
         </tr>

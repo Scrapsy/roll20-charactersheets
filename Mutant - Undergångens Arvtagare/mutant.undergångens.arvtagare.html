@@ -1808,6 +1808,28 @@
     </div>
 </div>
 
+<div class='sheet-group sheet-resonance'>
+    <table>
+        <tr>
+            <th>
+                <div class='sheet-table-header'>
+                    Resonans
+                </div>
+            </th>
+            <th>
+            </th>
+        </tr>
+        <tr>
+            <td>
+                <input class='sheet-table-text' type='number' name='attr_resonance' />
+            </td>
+            <td>
+                <button type="roll" name="roll_size" value="@{output_option} &{template:attributeroll} {{name=@{character_name}}} {{ability=Resonans}} {{value=[[@{resonance}]]}} {{roll=[[2d6+@{resonance}-@{attribute_will}]] }}"></button>
+            </td>
+        </tr>
+    </table>
+</div>
+
 <div class='sheet-separator'></div>
 
 <div class='sheet-group sheet-equipment'>

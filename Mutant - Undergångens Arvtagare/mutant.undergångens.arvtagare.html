@@ -878,6 +878,11 @@
                     </div>
                 </th>
                 <th>
+                    <div class='sheet-table-header'>
+                        För
+                    </div>
+                </th>
+                <th>
                 </th>
             </tr>
             <tr>
@@ -918,7 +923,10 @@
                     <input class='sheet-table-text sheet-short-text' type='text' name='attr_weapon_ammo_0' />
                 </td>
                 <td>
-                    <button type="roll" name="roll_weapon_0" value="@{output_option} &{template:weaponroll} {{name=@{character_name}}} {{weapon=@{weapon_name_0}}} {{weapon_dam=[[@{weapon_damage_0}]]}}"></button>
+                    <input class='sheet-table-text sheet-short-text' type='text' name='attr_weapon_ability_0' />
+                </td>
+                <td>
+                    <button type="roll" name="roll_weapon_0" value="@{output_option} &{template:weaponroll} {{name=@{character_name}}} {{weapon=@{weapon_name_0}}} {{weapon_dam=[[@{weapon_damage_0}]]}} {{ability=@{weapon_ability_0}}} {{roll=[[1d100]]}}"></button>
                 </td>
             </tr>
             <tr>
@@ -959,7 +967,10 @@
                     <input class='sheet-table-text sheet-short-text' type='text' name='attr_weapon_ammo_1' />
                 </td>
                 <td>
-                    <button type="roll" name="roll_weapon_1" value="@{output_option} &{template:weaponroll} {{name=@{character_name}}} {{weapon=@{weapon_name_1}}} {{weapon_dam=[[@{weapon_damage_1}]]}}"></button>
+                    <input class='sheet-table-text sheet-short-text' type='text' name='attr_weapon_ability_1' />
+                </td>
+                <td>
+                    <button type="roll" name="roll_weapon_1" value="@{output_option} &{template:weaponroll} {{name=@{character_name}}} {{weapon=@{weapon_name_1}}} {{weapon_dam=[[@{weapon_damage_1}]]}} {{ability=@{weapon_ability_1}}} {{roll=[[1d100]]}}"></button>
                 </td>
             </tr>
             <tr>
@@ -1000,7 +1011,10 @@
                     <input class='sheet-table-text sheet-short-text' type='text' name='attr_weapon_ammo_2' />
                 </td>
                 <td>
-                    <button type="roll" name="roll_weapon_2" value="@{output_option} &{template:weaponroll} {{name=@{character_name}}} {{weapon=@{weapon_name_2}}} {{weapon_dam=[[@{weapon_damage_2}]]}}"></button>
+                    <input class='sheet-table-text sheet-short-text' type='text' name='attr_weapon_ability_2' />
+                </td>
+                <td>
+                    <button type="roll" name="roll_weapon_2" value="@{output_option} &{template:weaponroll} {{name=@{character_name}}} {{weapon=@{weapon_name_2}}} {{weapon_dam=[[@{weapon_damage_2}]]}} {{ability=@{weapon_ability_2}}} {{roll=[[1d100]]}}"></button>
                 </td>
             </tr>
             <tr>
@@ -1041,7 +1055,10 @@
                     <input class='sheet-table-text sheet-short-text' type='text' name='attr_weapon_ammo_3' />
                 </td>
                 <td>
-                    <button type="roll" name="roll_weapon_3" value="@{output_option} &{template:weaponroll} {{name=@{character_name}}} {{weapon=@{weapon_name_3}}} {{weapon_dam=[[@{weapon_damage_3}]]}}"></button>
+                    <input class='sheet-table-text sheet-short-text' type='text' name='attr_weapon_ability_3' />
+                </td>
+                <td>
+                    <button type="roll" name="roll_weapon_3" value="@{output_option} &{template:weaponroll} {{name=@{character_name}}} {{weapon=@{weapon_name_3}}} {{weapon_dam=[[@{weapon_damage_3}]]}} {{ability=@{weapon_ability_3}}} {{roll=[[1d100]]}}"></button>
                 </td>
             </tr>
             <tr>
@@ -1082,7 +1099,10 @@
                     <input class='sheet-table-text sheet-short-text' type='text' name='attr_weapon_ammo_4' />
                 </td>
                 <td>
-                    <button type="roll" name="roll_weapon_4" value="@{output_option} &{template:weaponroll} {{name=@{character_name}}} {{weapon=@{weapon_name_4}}} {{weapon_dam=[[@{weapon_damage_4}]]}}"></button>
+                    <input class='sheet-table-text sheet-short-text' type='text' name='attr_weapon_ability_4' />
+                </td>
+                <td>
+                    <button type="roll" name="roll_weapon_4" value="@{output_option} &{template:weaponroll} {{name=@{character_name}}} {{weapon=@{weapon_name_4}}} {{weapon_dam=[[@{weapon_damage_4}]]}} {{ability=@{weapon_ability_4}}} {{roll=[[1d100]]}}"></button>
                 </td>
             </tr>
             <tr>
@@ -1123,7 +1143,10 @@
                     <input class='sheet-table-text sheet-short-text' type='text' name='attr_weapon_ammo_5' />
                 </td>
                 <td>
-                    <button type="roll" name="roll_weapon_5" value="@{output_option} &{template:weaponroll} {{name=@{character_name}}} {{weapon=@{weapon_name_5}}} {{weapon_dam=[[@{weapon_damage_5}]]}}"></button>
+                    <input class='sheet-table-text sheet-short-text' type='text' name='attr_weapon_ability_5' />
+                </td>
+                <td>
+                    <button type="roll" name="roll_weapon_5" value="@{output_option} &{template:weaponroll} {{name=@{character_name}}} {{weapon=@{weapon_name_5}}} {{weapon_dam=[[@{weapon_damage_5}]]}} {{ability=@{weapon_ability_5}}} {{roll=[[1d100]]}}"></button>
                 </td>
             </tr>
             <tr>
@@ -1164,7 +1187,10 @@
                     <input class='sheet-table-text sheet-short-text' type='text' name='attr_weapon_ammo_6' />
                 </td>
                 <td>
-                    <button type="roll" name="roll_weapon_6" value="@{output_option} &{template:weaponroll} {{name=@{character_name}}} {{weapon=@{weapon_name_6}}} {{weapon_dam=[[@{weapon_damage_6}]]}}"></button>
+                    <input class='sheet-table-text sheet-short-text' type='text' name='attr_weapon_ability_6' />
+                </td>
+                <td>
+                    <button type="roll" name="roll_weapon_6" value="@{output_option} &{template:weaponroll} {{name=@{character_name}}} {{weapon=@{weapon_name_6}}} {{weapon_dam=[[@{weapon_damage_6}]]}} {{ability=@{weapon_ability_6}}} {{roll=[[1d100]]}}"></button>
                 </td>
             </tr>
             <tr>
@@ -1205,7 +1231,10 @@
                     <input class='sheet-table-text sheet-short-text' type='text' name='attr_weapon_ammo_7' />
                 </td>
                 <td>
-                    <button type="roll" name="roll_weapon_7" value="@{output_option} &{template:weaponroll} {{name=@{character_name}}} {{weapon=@{weapon_name_7}}} {{weapon_dam=[[@{weapon_damage_7}]]}}"></button>
+                    <input class='sheet-table-text sheet-short-text' type='text' name='attr_weapon_ability_7' />
+                </td>
+                <td>
+                    <button type="roll" name="roll_weapon_7" value="@{output_option} &{template:weaponroll} {{name=@{character_name}}} {{weapon=@{weapon_name_7}}} {{weapon_dam=[[@{weapon_damage_7}]]}} {{ability=@{weapon_ability_7}}} {{roll=[[1d100]]}}"></button>
                 </td>
             </tr>
         </table>
@@ -1902,6 +1931,11 @@
                     </div>
                 </th>
                 <th>
+                    <div class='sheet-table-header'>
+                        För
+                    </div>
+                </th>
+                <th>
                 </th>
             </tr>
             <tr>
@@ -1942,7 +1976,10 @@
                     <input class='sheet-table-text sheet-short-text' type='text' name='attr_weapon_ammo_0' />
                 </td>
                 <td>
-                    <button type="roll" name="roll_weapon_0" value="@{output_option} &{template:weaponroll} {{name=@{character_name}}} {{weapon=@{weapon_name_0}}} {{weapon_dam=[[@{weapon_damage_0}]]}}"></button>
+                    <input class='sheet-table-text sheet-short-text' type='text' name='attr_weapon_ability_0' />
+                </td>
+                <td>
+                    <button type="roll" name="roll_weapon_0" value="@{output_option} &{template:weaponroll} {{name=@{character_name}}} {{weapon=@{weapon_name_0}}} {{weapon_dam=[[@{weapon_damage_0}]]}} {{ability=@{weapon_ability_0}}} {{roll=[[1d100]]}}"></button>
                 </td>
             </tr>
             <tr>
@@ -1983,7 +2020,10 @@
                     <input class='sheet-table-text sheet-short-text' type='text' name='attr_weapon_ammo_1' />
                 </td>
                 <td>
-                    <button type="roll" name="roll_weapon_1" value="@{output_option} &{template:weaponroll} {{name=@{character_name}}} {{weapon=@{weapon_name_1}}} {{weapon_dam=[[@{weapon_damage_1}]]}}"></button>
+                    <input class='sheet-table-text sheet-short-text' type='text' name='attr_weapon_ability_1' />
+                </td>
+                <td>
+                    <button type="roll" name="roll_weapon_1" value="@{output_option} &{template:weaponroll} {{name=@{character_name}}} {{weapon=@{weapon_name_1}}} {{weapon_dam=[[@{weapon_damage_1}]]}} {{ability=@{weapon_ability_1}}} {{roll=[[1d100]]}}"></button>
                 </td>
             </tr>
             <tr>
@@ -2024,7 +2064,10 @@
                     <input class='sheet-table-text sheet-short-text' type='text' name='attr_weapon_ammo_2' />
                 </td>
                 <td>
-                    <button type="roll" name="roll_weapon_2" value="@{output_option} &{template:weaponroll} {{name=@{character_name}}} {{weapon=@{weapon_name_2}}} {{weapon_dam=[[@{weapon_damage_2}]]}}"></button>
+                    <input class='sheet-table-text sheet-short-text' type='text' name='attr_weapon_ability_2' />
+                </td>
+                <td>
+                    <button type="roll" name="roll_weapon_2" value="@{output_option} &{template:weaponroll} {{name=@{character_name}}} {{weapon=@{weapon_name_2}}} {{weapon_dam=[[@{weapon_damage_2}]]}} {{ability=@{weapon_ability_2}}} {{roll=[[1d100]]}}"></button>
                 </td>
             </tr>
             <tr>
@@ -2065,7 +2108,10 @@
                     <input class='sheet-table-text sheet-short-text' type='text' name='attr_weapon_ammo_3' />
                 </td>
                 <td>
-                    <button type="roll" name="roll_weapon_3" value="@{output_option} &{template:weaponroll} {{name=@{character_name}}} {{weapon=@{weapon_name_3}}} {{weapon_dam=[[@{weapon_damage_3}]]}}"></button>
+                    <input class='sheet-table-text sheet-short-text' type='text' name='attr_weapon_ability_3' />
+                </td>
+                <td>
+                    <button type="roll" name="roll_weapon_3" value="@{output_option} &{template:weaponroll} {{name=@{character_name}}} {{weapon=@{weapon_name_3}}} {{weapon_dam=[[@{weapon_damage_3}]]}} {{ability=@{weapon_ability_3}}} {{roll=[[1d100]]}}"></button>
                 </td>
             </tr>
             <tr>
@@ -2106,7 +2152,10 @@
                     <input class='sheet-table-text sheet-short-text' type='text' name='attr_weapon_ammo_4' />
                 </td>
                 <td>
-                    <button type="roll" name="roll_weapon_4" value="@{output_option} &{template:weaponroll} {{name=@{character_name}}} {{weapon=@{weapon_name_4}}} {{weapon_dam=[[@{weapon_damage_4}]]}}"></button>
+                    <input class='sheet-table-text sheet-short-text' type='text' name='attr_weapon_ability_4' />
+                </td>
+                <td>
+                    <button type="roll" name="roll_weapon_4" value="@{output_option} &{template:weaponroll} {{name=@{character_name}}} {{weapon=@{weapon_name_4}}} {{weapon_dam=[[@{weapon_damage_4}]]}} {{ability=@{weapon_ability_4}}} {{roll=[[1d100]]}}"></button>
                 </td>
             </tr>
             <tr>
@@ -2147,7 +2196,10 @@
                     <input class='sheet-table-text sheet-short-text' type='text' name='attr_weapon_ammo_5' />
                 </td>
                 <td>
-                    <button type="roll" name="roll_weapon_5" value="@{output_option} &{template:weaponroll} {{name=@{character_name}}} {{weapon=@{weapon_name_5}}} {{weapon_dam=[[@{weapon_damage_5}]]}}"></button>
+                    <input class='sheet-table-text sheet-short-text' type='text' name='attr_weapon_ability_5' />
+                </td>
+                <td>
+                    <button type="roll" name="roll_weapon_5" value="@{output_option} &{template:weaponroll} {{name=@{character_name}}} {{weapon=@{weapon_name_5}}} {{weapon_dam=[[@{weapon_damage_5}]]}} {{ability=@{weapon_ability_5}}} {{roll=[[1d100]]}}"></button>
                 </td>
             </tr>
             <tr>
@@ -2188,7 +2240,10 @@
                     <input class='sheet-table-text sheet-short-text' type='text' name='attr_weapon_ammo_6' />
                 </td>
                 <td>
-                    <button type="roll" name="roll_weapon_6" value="@{output_option} &{template:weaponroll} {{name=@{character_name}}} {{weapon=@{weapon_name_6}}} {{weapon_dam=[[@{weapon_damage_6}]]}}"></button>
+                    <input class='sheet-table-text sheet-short-text' type='text' name='attr_weapon_ability_6' />
+                </td>
+                <td>
+                    <button type="roll" name="roll_weapon_6" value="@{output_option} &{template:weaponroll} {{name=@{character_name}}} {{weapon=@{weapon_name_6}}} {{weapon_dam=[[@{weapon_damage_6}]]}} {{ability=@{weapon_ability_6}}} {{roll=[[1d100]]}}"></button>
                 </td>
             </tr>
             <tr>
@@ -2229,7 +2284,10 @@
                     <input class='sheet-table-text sheet-short-text' type='text' name='attr_weapon_ammo_7' />
                 </td>
                 <td>
-                    <button type="roll" name="roll_weapon_7" value="@{output_option} &{template:weaponroll} {{name=@{character_name}}} {{weapon=@{weapon_name_7}}} {{weapon_dam=[[@{weapon_damage_7}]]}}"></button>
+                    <input class='sheet-table-text sheet-short-text' type='text' name='attr_weapon_ability_7' />
+                </td>
+                <td>
+                    <button type="roll" name="roll_weapon_7" value="@{output_option} &{template:weaponroll} {{name=@{character_name}}} {{weapon=@{weapon_name_7}}} {{weapon_dam=[[@{weapon_damage_7}]]}} {{ability=@{weapon_ability_7}}} {{roll=[[1d100]]}}"></button>
                 </td>
             </tr>
         </table>
@@ -2662,6 +2720,18 @@
             <td>
                 <div class='sheet-table-header'>
                     {{weapon_dam}}
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class='sheet-table-header'>
+                    {{ability}}
+                </div>
+            </td>
+            <td>
+                <div class='sheet-table-header'>
+                    {{roll}}
                 </div>
             </td>
         </tr>

@@ -279,7 +279,7 @@
                 </div>
             </td>
             <td>
-                <input class='sheet-table-text' type='number' name='attr_secondary_attribute_actions_auto_calc' disabled="true" value='[[ floor( ( (@{attribute_agility}) + (@{attribute_perception}) - 8) / 4) + @{secondary_attribute_actions_alt} ]]' />
+                <input class='sheet-table-text' type='number' name='attr_secondary_attribute_actions_auto_calc' readonly="true" value='' />
             </td>
             <td>
                 <input class='sheet-table-text' type='number' name='attr_secondary_attribute_actions_alt' value='0' />
@@ -3300,7 +3300,7 @@
                     <input class='sheet-table-text' type='text' name='attr_weapon_1_range' placeholder="15/30/45" />
                 </td>
                 <td>
-                    <button type="roll" name="roll_weapon_1" value="@{output_option} &{template:damage} {{name=@{character_name}}} {{basedamage=@{weapon_1_damage}}} {{bonus=?{Bonus Damage|0}}} {{special=@{weapon_1_special}}} {{weapon=@{weapon_1_name}}} {{result=[[[[@{weapon_1_damage}+?{Bonus Damage|0}]]d10]]}}"></button>
+                    <button type="roll" name="roll_weapon_1" value="@{output_option} &{template:damage} {{name=@{character_name}}} {{basedamage=@{weapon_1_damage}}} {{bonus=?{Bonus Dice|0}}} {{special=@{weapon_1_special}}} {{weapon=@{weapon_1_name}}} {{result=[[[[@{weapon_1_damage}+?{Bonus Dice|0}]]d10]]}}"></button>
                 </td>
             </tr>
             <tr>
@@ -3320,7 +3320,7 @@
                     <input class='sheet-table-text' type='text' name='attr_weapon_2_range' />
                 </td>
                 <td>
-                    <button type="roll" name="roll_weapon_2" value="@{output_option} &{template:damage} {{name=@{character_name}}} {{basedamage=@{weapon_2_damage}}} {{bonus=?{Bonus Damage|0}}} {{special=@{weapon_2_special}}} {{weapon=@{weapon_2_name}}} {{result=[[[[@{weapon_2_damage}+?{Bonus Damage|0}]]d10]]}}"></button>
+                    <button type="roll" name="roll_weapon_2" value="@{output_option} &{template:damage} {{name=@{character_name}}} {{basedamage=@{weapon_2_damage}}} {{bonus=?{Bonus Dice|0}}} {{special=@{weapon_2_special}}} {{weapon=@{weapon_2_name}}} {{result=[[[[@{weapon_2_damage}+?{Bonus Dice|0}]]d10]]}}"></button>
                 </td>
             </tr>
             <tr>
@@ -3340,7 +3340,7 @@
                     <input class='sheet-table-text' type='text' name='attr_weapon_3_range' />
                 </td>
                 <td>
-                    <button type="roll" name="roll_weapon_3" value="@{output_option} &{template:damage} {{name=@{character_name}}} {{basedamage=@{weapon_3_damage}}} {{bonus=?{Bonus Damage|0}}} {{special=@{weapon_3_special}}} {{weapon=@{weapon_3_name}}} {{result=[[[[@{weapon_3_damage}+?{Bonus Damage|0}]]d10]]}}"></button>
+                    <button type="roll" name="roll_weapon_3" value="@{output_option} &{template:damage} {{name=@{character_name}}} {{basedamage=@{weapon_3_damage}}} {{bonus=?{Bonus Dice|0}}} {{special=@{weapon_3_special}}} {{weapon=@{weapon_3_name}}} {{result=[[[[@{weapon_3_damage}+?{Bonus Dice|0}]]d10]]}}"></button>
                 </td>
             </tr>
             <tr>
@@ -3360,7 +3360,7 @@
                     <input class='sheet-table-text' type='text' name='attr_weapon_4_range' />
                 </td>
                 <td>
-                    <button type="roll" name="roll_weapon_4" value="@{output_option} &{template:damage} {{name=@{character_name}}} {{basedamage=@{weapon_4_damage}}} {{bonus=?{Bonus Damage|0}}} {{special=@{weapon_4_special}}} {{weapon=@{weapon_4_name}}} {{result=[[[[@{weapon_4_damage}+?{Bonus Damage|0}]]d10]]}}"></button>
+                    <button type="roll" name="roll_weapon_4" value="@{output_option} &{template:damage} {{name=@{character_name}}} {{basedamage=@{weapon_4_damage}}} {{bonus=?{Bonus Dice|0}}} {{special=@{weapon_4_special}}} {{weapon=@{weapon_4_name}}} {{result=[[[[@{weapon_4_damage}+?{Bonus Dice|0}]]d10]]}}"></button>
                 </td>
             </tr>
             <tr>
@@ -3380,7 +3380,7 @@
                     <input class='sheet-table-text' type='text' name='attr_weapon_5_range' />
                 </td>
                 <td>
-                    <button type="roll" name="roll_weapon_5" value="@{output_option} &{template:damage} {{name=@{character_name}}} {{basedamage=@{weapon_5_damage}}} {{bonus=?{Bonus Damage|0}}} {{special=@{weapon_5_special}}} {{weapon=@{weapon_5_name}}} {{result=[[[[@{weapon_5_damage}+?{Bonus Damage|0}]]d10]]}}"></button>
+                    <button type="roll" name="roll_weapon_5" value="@{output_option} &{template:damage} {{name=@{character_name}}} {{basedamage=@{weapon_5_damage}}} {{bonus=?{Bonus Dice|0}}} {{special=@{weapon_5_special}}} {{weapon=@{weapon_5_name}}} {{result=[[[[@{weapon_5_damage}+?{Bonus Dice|0}]]d10]]}}"></button>
                 </td>
             </tr>
         </table>
@@ -7652,6 +7652,25 @@
             result = speed + "(" + turn_speed[speed] + ")";
             setAttrs({
                 secondary_attribute_movement_result: result
+            });
+        });
+    });
+
+    on("change:secondary_attribute_actions_alt change:attribute_agility change:attribute_perception", function(eventInfo) {
+        getAttrs(["secondary_attribute_actions_alt", "attribute_agility", "attribute_perception"], function(values) {
+            let check = parseInt(values.attribute_agility) + parseInt(values.attribute_perception);
+            check = Math.floor(check / 2);
+            if (check <= 6) {
+                result = 1;
+            } else if (check <= 8) {
+                result = 2;
+            } else {
+                result = 3;
+            }
+
+            result = result + parseInt(values.secondary_attribute_actions_alt);
+            setAttrs({
+                secondary_attribute_actions_auto_calc: result
             });
         });
     });

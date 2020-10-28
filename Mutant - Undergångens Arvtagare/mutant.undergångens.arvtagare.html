@@ -117,7 +117,7 @@
                 <input class='sheet-table-text' type='number' name='attr_attribute_initiative' />
             </td>
             <td>
-                <button type="roll" name="roll_initiative" value="@{output_option} &{template:attributeroll} {{name=@{character_name}}} {{ability=Initiativbonus}} {{value=[[@{attribute_initiative}]]}} {{roll=[[1d10+@{attribute_initiative}&{tracker}]] }}"></button>
+                <button type="roll" name="roll_initiative" value="@{output_option} &{template:attributeroll} {{name=@{character_name}}} {{ability=Initiativbonus}} {{value=[[@{attribute_initiative}]]}} {{roll=[[1d10+@{attribute_initiative}+?{Bonus|0}&{tracker}]] }}"></button>
             </td>
         </tr>
         <tr>

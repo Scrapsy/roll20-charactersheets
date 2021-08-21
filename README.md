@@ -2,6 +2,10 @@
 
 These are charactersheets created for personal use.
 
+#### Catthulhu
+
+Created for Cats of Catthulhu. Based on the official sheets, with cat-die. [Official information](http://catthulhu.com).
+
 #### Chronicles of Darkness
 
 The Chronicles of Darkness charactersheet is a modified version of the [Official Chronicles of Darkness sheet](https://github.com/Roll20/roll20-character-sheets/tree/master/Chronicles%20of%20Darkness). It has been modified to better support Mage the Awakening games. Though a bit janky.

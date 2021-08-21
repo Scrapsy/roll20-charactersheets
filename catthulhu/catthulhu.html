@@ -1,0 +1,193 @@
+<div class="sheet-header">
+    <table class="sheet-table">
+        <tr>
+            <td class="sheet-link">
+                Call of Catthulhu<br />
+                <a href="http://catthulhu.com">Catthulhu.com</a>
+            </td>
+            <td class="sheet-title">
+                <b>Cat Character Sheet</b>
+            </td>
+            <td class="sheet-reminder">
+                No numbers allowed<br />
+                <i>Don't forget to be awesome!</i>
+            </td>
+        </tr>
+    </table>
+</div>
+<div class="sheet-content">
+    <table class="sheet-table">
+        <tr>
+            <td>
+                <b>Player</b>
+            </td>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_player' />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b>Cat Name(s)</b>
+            </td>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_character_name' />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b>Sex</b>
+            </td>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_sex' />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b>Role</b>
+            </td>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_role' />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b>Background</b>
+            </td>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_background' />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b>Description</b>
+            </td>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_description_1' />
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_description_2' />
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input class='sheet-table-text' type='text' name='attr_description_3' />
+            </td>
+        </tr>
+    </table>
+    <table class="sheet-table">
+        <tr>
+            <td>
+                <b>Story & Experience</b>
+            </td>
+            <td>
+                See "A Cat's Tale" p.12
+            </td>
+            <td>
+                <b>Life</b>
+            </td>
+            <td>
+                <input class='sheet-life-text' type='text' name='attr_life' />
+            </td>
+        </tr>
+    </table>
+    <textarea class='sheet-area-text' type='text' name='attr_experiences'></textarea>
+</div>
+<br />
+<div class="sheet-info">
+    <table>
+        <tr>
+            <td style="width: 50%">
+                <div>
+                    <b>Role: </b>Catrobat, Pussyfoot, Scrapper, Tiger Dreamer, or Twofootologist?
+                </div>
+                <div>
+                    <b>Background: </b>Purebred or Mixed Breed? Feral, Housecat, or Showcat? Hunt for food, for fun, just toys, or can’t be bothered?
+                </div>
+                <div>
+                    <b>Description: </b>Short or long hair? Fur colors? Eye color? Voice? Scars, injuries, markings? Extra toes? Male or female? Neutered?
+                </div>
+                <div>
+                    <b>Life: </b>Start on First; sacrifice to add Glory or recovery instantly from Injury
+                </div>
+                <div>
+                    <b>Scrapping: </b> Winner chooses 1 result<br />
+                    <i>Dodge: </i>Winner avoids all attacks and can flee.<br />
+                    <i>Stun: </i>Loser temporarily unable to act.<br />
+                    <i>Shove: </i>Winner moves loser a little.<br />
+                    <i>Grab: </i>The winner gets a grip on the loser.<br />
+                    <i>Hurt: </i>The winner does her best to draw blood.<br />
+                </div>
+                <div>
+                    <i>Non-cat foes count Sad Cat Faces as Successes, and fail on Happy Cats.</i>
+                </div>
+                <div>
+                    <b><i>Trade in a Treat to retry any roll!—except a Dire Challenge</i></b>
+                </div>
+            </td>
+            <td style="width:50%; padding: 5px;">
+                <button type="roll" name="roll_dice" value="&{template:cat-dice} {{name=@{character_name}}} {{die1=[[1d6]]}} {{die2=[[1d6]]}}">Roll</button>
+                <p />
+                <table style="border: 4px solid black">
+                    <tr>
+                        <td class="sheet-bordered" style="padding: 2px">
+                            <b>Easy Challenge</b><br />
+                            Need one success on either Cat Die
+                        </td>
+                        <td class="sheet-bordered">
+                            <div class="sheet-die-box" style="border: none;"></div><div class="sheet-die-box"></div>/<div class="sheet-die-box"></div><div class="sheet-die-box"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="sheet-bordered">
+                            <b>Normal Challenge</b><br />
+                            One Success: Partial progress<br />
+                            Two Successes: Challenge met
+                        </td>
+                        <td class="sheet-bordered">
+                            <div class="sheet-die-box"></div><div class="sheet-die-box">
+                                <img src="https://raw.githubusercontent.com/Scrapsy/roll20-charactersheets/master/catthulhu/happy-cat.jpg" style="float:left;" width="50" height="50" />
+                            </div>/<div class="sheet-die-box"></div><div class="sheet-die-box"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="sheet-bordered">
+                            <b>Difficult Challenge</b><br />
+                            Need Successes on both Cat Dice
+                        </td>
+                        <td class="sheet-bordered">
+                            <div class="sheet-die-box">
+                                <img src="https://raw.githubusercontent.com/Scrapsy/roll20-charactersheets/master/catthulhu/happy-cat.jpg" style="float:left;" width="50" height="50" />
+                            </div><div class="sheet-die-box">
+                                <img src="https://raw.githubusercontent.com/Scrapsy/roll20-charactersheets/master/catthulhu/happy-cat.jpg" style="float:left;" width="50" height="50" />
+                            </div>/<div class="sheet-die-box"></div><div class="sheet-die-box"></div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<rolltemplate class="sheet-rolltemplate-cat-dice">
+    <div style="border: 2px black dotted; background: white">
+        <div style="border-bottom: 2px black dotted">
+            <b>{{name}}</b> got:
+        </div>
+        {{#rollLess() die1 3}}
+            <img src="https://raw.githubusercontent.com/Scrapsy/roll20-charactersheets/master/catthulhu/sad-cat.jpg" width="50" height="50" />
+        {{/rollLess() die1 3}}
+        {{#^rollLess() die1 3}}
+            <img src="https://raw.githubusercontent.com/Scrapsy/roll20-charactersheets/master/catthulhu/happy-cat.jpg" width="50" height="50" />
+        {{/^rollLess() die1 3}}
+        {{#rollLess() die2 3}}
+            <img src="https://raw.githubusercontent.com/Scrapsy/roll20-charactersheets/master/catthulhu/sad-cat.jpg" width="50" height="50" />
+        {{/rollLess() die2 3}}
+        {{#^rollLess() die2 3}}
+            <img src="https://raw.githubusercontent.com/Scrapsy/roll20-charactersheets/master/catthulhu/happy-cat.jpg" width="50" height="50" />
+        {{/^rollLess() die2 3}}
+    </div>
+</rolltemplate>

@@ -1,0 +1,55 @@
+.sheet-content {
+    margin: auto;
+}
+
+.sheet-title {
+    text-align: center;
+}
+
+.sheet-reminder {
+    text-align: right;
+}
+
+.sheet-table {
+    width: 100%;
+}
+
+.sheet-content {
+    border: 2px black dotted;
+    padding: 10px;
+    width: 820px;
+}
+
+.sheet-table-text {
+    width: 720px;
+    border: none;
+    border-bottom: 1px black solid;
+}
+
+.sheet-life-text {
+    width: 140px;
+    border: none;
+    border-bottom: 1px black solid;
+}
+
+.sheet-area-text {
+    width: 800px !important;
+    border: none;
+    border-bottom: 1px black solid;
+}
+
+.sheet-die-box {
+    border: 2px solid black;
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+}
+
+.sheet-bordered {
+    border: 1px solid black;
+    padding: 2px;
+}
+
+.sheet-rolltemplate-cat-dice {
+    background: white;
+}

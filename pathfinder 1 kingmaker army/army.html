@@ -1,0 +1,43 @@
+<div>
+    <section>
+        <div class="sheet-title">
+            <input type="text" name="attr_character_name" class="sheet-long" /> CR<input type="number" name="attr_cr" class="sheet-short" />
+        </div>
+        <div>
+            Type<input type="text" name="attr_type" class="sheet-long" />
+        </div>
+    </section>
+    <br />
+    <section>
+        <div class="sheet-header">
+            Combat
+        </div>
+        <div>
+            HP<input type="number" name="attr_hp" class="sheet-short" />/<input type="number" name="attr_hp_max" class="sheet-short" /> DV<input type="number" name="attr_dv" class="sheet-short" /> <button type="roll" name="roll_attack" value="@{character_name} attacking: \n/roll d20 + @{om}" ></button>OM<input type="number" name="attr_om" class="sheet-short" /> Morale<input type="number" name="attr_morale" class="sheet-short" />
+        </div>
+        <div>
+            Tactics<input type="text" name="attr_tactics" class="sheet-long" />
+        </div>
+    </section>
+    <br />
+    <section>
+        <div class="sheet-header">
+            Logistics
+        </div>
+        <div>
+            Speed<input type="number" name="attr_speed" class="sheet-short" /> Consumption<input type="number" name="attr_consumption" class="sheet-short" />
+        </div>
+        <div>
+            Leader<input type="text" name="attr_leader" class="sheet-long" />
+        </div>
+    </section>
+    <br />
+    <section>
+        <div class="sheet-header">
+            Extra Information
+        </div>
+        <div>
+            <textarea name="attr_extra"></textarea>
+        </div>
+    </section>
+</div>

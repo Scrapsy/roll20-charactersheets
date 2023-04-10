@@ -1,0 +1,41 @@
+.sheet-title {
+    background: black;
+    color: white;
+}
+
+.sheet-title input {
+    color: white;
+    background: black;
+}
+
+.sheet-header {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+input.sheet-long {
+    width: 250px;
+}
+
+input.sheet-short {
+    width: 20px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input, textarea {
+    background: white;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+}

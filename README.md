@@ -18,6 +18,10 @@ Created for Cthulhu Tech (2007) heavily inspired by the second iteration of the 
 
 Created for Mutant - Undergångens Arvtagare (2001). Based on the official sheets.
 
+#### Pathfinder 1 - Kingmaker Army
+
+Created specifically for the armies without player or kingdom information. Based of the official notes.
+
 #### Unknown Armies
 
 Created for Unknown Armies (3rd edition). Has support for the flipflop mechanic.

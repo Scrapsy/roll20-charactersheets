@@ -39,3 +39,15 @@ input, textarea {
     border-top: 0;
     border-right: 0;
 }
+
+.sheet-rolltemplate-armyroll {
+    border-bottom: 1px solid black;
+    background-color: #971c5c;
+    color: #faa;
+    padding: 2px;
+}
+
+.sheet-rolltemplate-armyroll .inlinerollresult {
+    border: 0;
+    background-color: #ae1e69 !important;
+}

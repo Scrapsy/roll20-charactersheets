@@ -1,7 +1,7 @@
 <div>
     <section>
         <div class="sheet-title">
-            <input type="text" name="attr_character_name" class="sheet-long" /> CR<input type="number" name="attr_cr" class="sheet-short" />
+            <input type="text" name="attr_character_name" class="sheet-long" /> ACR<input type="number" name="attr_cr" class="sheet-short" />
         </div>
         <div>
             Type<input type="text" name="attr_type" class="sheet-long" />
@@ -13,7 +13,7 @@
             Combat
         </div>
         <div>
-            HP<input type="number" name="attr_hp" class="sheet-short" />/<input type="number" name="attr_hp_max" class="sheet-short" /> DV<input type="number" name="attr_dv" class="sheet-short" /> <button type="roll" name="roll_attack" value="@{character_name} attacking: \n/roll d20 + @{om}" ></button>OM<input type="number" name="attr_om" class="sheet-short" /> Morale<input type="number" name="attr_morale" class="sheet-short" />
+            HP<input type="number" name="attr_hp" class="sheet-short" />/<input type="number" name="attr_hp_max" class="sheet-short" /> DV<input type="number" name="attr_dv" class="sheet-short" /> <button type="roll" name="roll_attack" value="&{template:armyroll} {{name=@{character_name}}} {{action=attack}} {{result=[[d20 + @{om} + ?{Modifiers|0}]]}}" ></button>OM<input type="number" name="attr_om" class="sheet-short" /> <button type="roll" name="roll_attack" value="&{template:armyroll} {{name=@{character_name}}} {{action=morale}} {{result=[[1d20 + @{morale} + @{leader_charisma} + @{leader_leadership} + @{leader_profession} + ?{Modifiers|0}]]}}" ></button>Morale<input type="number" name="attr_morale" class="sheet-short" />
         </div>
         <div>
             Tactics<input type="text" name="attr_tactics" class="sheet-long" /> Resources<input type="text" name="attr_resources" class="sheet-long" />
@@ -30,8 +30,17 @@
         <div>
             Speed<input type="number" name="attr_speed" class="sheet-short" /> Consumption<input type="number" name="attr_consumption" class="sheet-short" />
         </div>
+    </section>
+    <br />
+    <section>
+        <div class="sheet-title">
+            <input type="text" name="attr_leader" class="sheet-long" placeholder="Commander" />
+        </div>
         <div>
-            Leader<input type="text" name="attr_leader" class="sheet-long" />
+            Charisma<input type="text" name="attr_leader_charisma" class="sheet-short" value="0" /> Profession (soldier)<input type="text" name="attr_leader_profession" class="sheet-short" value="0" /> Leadership<input type="text" name="attr_leader_leadership" class="sheet-short" value="0" />
+        </div>
+        <div>
+            Boons<input type="text" name="attr_leader_boons" class="sheet-long" />
         </div>
     </section>
     <br />
@@ -44,3 +53,11 @@
         </div>
     </section>
 </div>
+
+
+<!-- ROLL TEMPLATES -->
+<rolltemplate class="sheet-rolltemplate-armyroll">
+    <div class='sheet-table-header'>
+        {{name}} rolled {{action}} {{result}}
+    </div>
+</rolltemplate>
